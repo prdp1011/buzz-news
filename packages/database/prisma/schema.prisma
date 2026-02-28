@@ -1,0 +1,136 @@
+// Gen Z News Platform - Database Schema
+// PostgreSQL with Prisma ORM
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============ CORE MODELS ============
+
+model Category {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  description String?
+  color       String?  // Hex color for UI
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  posts Post[]
+}
+
+model Source {
+  id          String   @id @default(cuid())
+  name        String
+  url         String
+  feedUrl     String   @unique // RSS feed URL
+  favicon     String?
+  isActive    Boolean  @default(true)
+  lastFetched DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  posts Post[]
+}
+
+enum PostStatus {
+  DRAFT
+  PENDING_APPROVAL
+  PUBLISHED
+  REJECTED
+  ARCHIVED
+}
+
+model Post {
+  id              String     @id @default(cuid())
+  slug            String     @unique
+  title           String
+  seoTitle        String?    // AI-generated SEO title
+  summary         String?    @db.Text // AI-generated summary
+  content         String     @db.Text
+  rawContent      String?    @db.Text // Original content before AI rewrite
+  coverImage      String?
+  status          PostStatus @default(DRAFT)
+  publishedAt     DateTime?
+  viewCount       Int        @default(0)
+  trendingScore   Float      @default(0) // For trending algorithm
+  metaDescription String?    @db.Text
+  canonicalUrl    String?
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  sourceId   String
+  source     Source   @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  tags     PostTag[]
+  analytics PostAnalytics[]
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  createdAt DateTime @default(now())
+
+  posts PostTag[]
+}
+
+model PostTag {
+  postId String
+  tagId  String
+  post   Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  tag    Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([postId, tagId])
+}
+
+// ============ ANALYTICS ============
+
+model PostAnalytics {
+  id        String   @id @default(cuid())
+  postId    String
+  date      DateTime @db.Date
+  views     Int      @default(0)
+  shares    Int      @default(0)
+  avgTime   Int      @default(0) // Average read time in seconds
+  createdAt DateTime @default(now())
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, date])
+  @@index([postId])
+  @@index([date])
+}
+
+// ============ ADMIN / AUTH ============
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  passwordHash String
+  name      String?
+  role      String   @default("editor")
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ============ CONTENT DEDUPLICATION ============
+
+model ContentHash {
+  id        String   @id @default(cuid())
+  hash      String   @unique // SHA-256 of normalized content for dedup
+  sourceId  String
+  postId    String?  // Link to post if published
+  createdAt DateTime @default(now())
+
+  @@index([hash])
+  @@index([sourceId])
+}
