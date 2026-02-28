@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "database";
 import { getTrendingPostsByCategory } from "@/lib/trending";
 import { PostCard } from "@/components/PostCard";
+import { CategoryPills } from "@/components/CategoryPills";
 import type { Metadata } from "next";
 
 interface Props {
@@ -32,35 +33,40 @@ export const revalidate = 60;
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
 
-  const category = await prisma.category.findUnique({
-    where: { slug },
-  });
+  const [category, posts, categories] = await Promise.all([
+    prisma.category.findUnique({ where: { slug } }),
+    getTrendingPostsByCategory(slug, 24),
+    prisma.category.findMany({
+      orderBy: { name: "asc" },
+      select: { slug: true, name: true, color: true },
+    }),
+  ]);
 
   if (!category) notFound();
 
-  const posts = await getTrendingPostsByCategory(slug, 24);
-
   return (
     <div>
-      <header className="mb-12">
+      <header className="mb-6">
         <h1
-          className="text-4xl font-bold"
-          style={{ color: category.color ?? undefined }}
+          className="text-2xl font-bold"
+          style={{ color: category.color ?? "#f59e0b" }}
         >
           {category.name}
         </h1>
         {category.description && (
-          <p className="text-zinc-400 text-lg mt-2">{category.description}</p>
+          <p className="mt-1 text-zinc-500 text-sm">{category.description}</p>
         )}
       </header>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <CategoryPills categories={categories} activeSlug={slug} />
+
+      <div className="mt-6 flex flex-col gap-6">
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
       {posts.length === 0 && (
-        <p className="text-zinc-500 py-12 text-center">
+        <p className="py-12 text-center text-zinc-500">
           No posts in this category yet.
         </p>
       )}

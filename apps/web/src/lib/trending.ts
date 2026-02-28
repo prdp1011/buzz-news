@@ -46,7 +46,8 @@ const postSelect = {
   viewCount: true,
   trendingScore: true,
   category: { select: { slug: true, name: true } },
-  tags: { include: { tag: { select: { slug: true, name: true } } } },
+  source: { select: { name: true } },
+  tags: { include: { tag: { select: { id: true, slug: true, name: true } } } },
 } as const;
 
 export async function getTrendingPosts(limit = 12, offset = 0) {

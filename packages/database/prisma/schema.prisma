@@ -24,18 +24,29 @@ model Category {
   posts Post[]
 }
 
+enum SourceType {
+  RSS
+  SOCIAL
+  SCRAPER
+}
+
 model Source {
-  id          String   @id @default(cuid())
+  id          String     @id @default(cuid())
   name        String
   url         String
-  feedUrl     String   @unique // RSS feed URL
+  type        SourceType @default(RSS)
+  feedUrl     String     @unique // RSS feed URL, scraper URL, or API endpoint
+  config      String?    @db.Text // JSON config for social/scraper (API keys, selectors)
   favicon     String?
-  isActive    Boolean  @default(true)
+  isActive    Boolean    @default(true)
   lastFetched DateTime?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
 
   posts Post[]
+
+  @@index([type])
+  @@index([isActive])
 }
 
 enum PostStatus {
@@ -71,6 +82,11 @@ model Post {
 
   tags     PostTag[]
   analytics PostAnalytics[]
+
+  @@index([status])
+  @@index([categoryId])
+  @@index([createdAt])
+  @@index([publishedAt])
 }
 
 model Tag {

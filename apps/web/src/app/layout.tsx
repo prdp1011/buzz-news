@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { LeftSidebar } from "@/components/LeftSidebar";
+import { RightSidebar } from "@/components/RightSidebar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,43 +24,36 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
-        <header className="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur">
-          <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-            <a href="/" className="text-xl font-bold text-cyan-400">
-              Gen Z News
-            </a>
-            <div className="flex gap-6">
-              <a
-                href="/category/tech"
-                className="text-zinc-400 hover:text-white transition"
-              >
-                Tech
-              </a>
-              <a
-                href="/category/culture"
-                className="text-zinc-400 hover:text-white transition"
-              >
-                Culture
-              </a>
-              <a
-                href="/category/lifestyle"
-                className="text-zinc-400 hover:text-white transition"
-              >
-                Lifestyle
-              </a>
-              <a
-                href="/category/news"
-                className="text-zinc-400 hover:text-white transition"
-              >
-                News
-              </a>
-            </div>
+        <LeftSidebar />
+
+        {/* Mobile header - shown when left sidebar is hidden */}
+        <header className="sticky top-0 z-30 flex items-center justify-between border-b border-zinc-800 bg-zinc-950/95 px-4 py-3 backdrop-blur-md lg:hidden">
+          <Link href="/" className="flex items-center gap-2 text-lg font-bold text-amber-400">
+            <span className="text-xl">✨</span>
+            Gen Z News
+          </Link>
+          <nav className="flex gap-2">
+            <Link href="/" className="rounded-lg px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-white">
+              Home
+            </Link>
+            <Link href="/category/tech" className="rounded-lg px-3 py-1.5 text-sm text-zinc-400 hover:bg-zinc-800 hover:text-white">
+              Tech
+            </Link>
           </nav>
         </header>
-        <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
-        <footer className="mt-auto border-t border-zinc-800 py-8 text-center text-zinc-500 text-sm">
-          © {new Date().getFullYear()} Gen Z News. Built for the next gen.
-        </footer>
+
+        {/* Main content - offset for left sidebar on desktop */}
+        <div className="lg:pl-16">
+          <div className="mx-auto flex max-w-6xl gap-8 px-0 py-0 md:px-4 md:py-6">
+            {/* Center - main feed: 470px width on desktop, full width on mobile */}
+            <main className="w-full shrink-0 md:mx-auto md:max-w-[470px] md:flex-1">
+              {children}
+            </main>
+
+            {/* Right sidebar */}
+            <RightSidebar />
+          </div>
+        </div>
       </body>
     </html>
   );

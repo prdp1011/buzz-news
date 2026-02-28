@@ -5,6 +5,7 @@ import { prisma } from "database";
 import { AdminLayout } from "@/components/AdminLayout";
 import { PostForm } from "@/components/PostForm";
 import { ApproveRejectButtons } from "@/components/ApproveRejectButtons";
+import { DeleteButton } from "@/components/DeleteButton";
 
 export default async function EditPostPage({
   params,
@@ -32,10 +33,16 @@ export default async function EditPostPage({
     <AdminLayout>
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Edit Post</h1>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           {post.status === "PENDING_APPROVAL" && (
             <ApproveRejectButtons postId={post.id} />
           )}
+          <DeleteButton
+            postId={post.id}
+            postTitle={post.title}
+            variant="text"
+            redirectTo="/posts"
+          />
           <Link
             href="/posts"
             className="rounded-lg border border-zinc-700 px-4 py-2 text-zinc-300 hover:bg-zinc-800"

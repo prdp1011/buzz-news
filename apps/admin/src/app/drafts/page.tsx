@@ -4,6 +4,8 @@ import { getSession } from "@/lib/auth";
 import { prisma } from "database";
 import { AdminLayout } from "@/components/AdminLayout";
 import { ApproveRejectButtons } from "@/components/ApproveRejectButtons";
+import { DeleteButton } from "@/components/DeleteButton";
+import { MarkAllApprovedButton } from "@/components/MarkAllApprovedButton";
 
 export default async function DraftsPage() {
   const session = await getSession();
@@ -17,12 +19,19 @@ export default async function DraftsPage() {
     include: { category: true, source: true },
   });
 
+  const pendingCount = drafts.filter((p) => p.status === "PENDING_APPROVAL").length;
+
   return (
     <AdminLayout>
-      <h1 className="text-2xl font-bold">Drafts & Pending Approval</h1>
-      <p className="mt-2 text-zinc-400">
-        Review and approve content from the worker or manual drafts.
-      </p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold">Drafts & Pending Approval</h1>
+          <p className="mt-2 text-zinc-400">
+            Review and approve content from the worker or manual drafts.
+          </p>
+        </div>
+        <MarkAllApprovedButton pendingCount={pendingCount} />
+      </div>
       <div className="mt-6 space-y-4">
         {drafts.map((post) => (
           <div
@@ -60,6 +69,7 @@ export default async function DraftsPage() {
               >
                 Edit
               </Link>
+              <DeleteButton postId={post.id} postTitle={post.title} variant="text" />
             </div>
           </div>
         ))}

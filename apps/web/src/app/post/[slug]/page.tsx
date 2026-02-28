@@ -70,7 +70,7 @@ export default async function PostPage({ params }: Props) {
       <header className="mb-8">
         <a
           href={`/category/${post.category.slug}`}
-          className="text-cyan-400 text-sm font-medium hover:underline"
+          className="text-amber-400 text-sm font-medium hover:underline"
         >
           {post.category.name}
         </a>
@@ -119,7 +119,7 @@ export default async function PostPage({ params }: Props) {
             <a
               key={tag.id}
               href={`/tag/${tag.slug}`}
-              className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-sm hover:bg-zinc-700"
+              className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-sm hover:bg-amber-500/20 hover:text-amber-400"
             >
               {tag.name}
             </a>

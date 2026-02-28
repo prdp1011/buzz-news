@@ -2,13 +2,27 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Category, Source, Tag, Post } from "database";
+import type { Category, Source, Tag } from "database";
+
+type PostWithTags = {
+  id: string;
+  title: string;
+  slug: string;
+  summary?: string | null;
+  content?: string;
+  coverImage?: string | null;
+  canonicalUrl?: string | null;
+  categoryId?: string;
+  sourceId?: string;
+  status?: string;
+  tags?: { tagId: string }[];
+};
 
 interface PostFormProps {
   categories: Category[];
   sources: Source[];
   tags: Tag[];
-  post: Post | null;
+  post: PostWithTags | null;
 }
 
 export function PostForm({
@@ -20,8 +34,56 @@ export function PostForm({
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [content, setContent] = useState(post?.content ?? "");
+  const [actionLoading, setActionLoading] = useState<"rewrite" | "fetch" | null>(null);
 
   const isEdit = !!post;
+
+  async function handleAiRewrite() {
+    if (!post) return;
+    setActionLoading("rewrite");
+    setError("");
+    try {
+      const res = await fetch(`/api/posts/${post.id}/ai-rewrite`, { method: "POST" });
+      const data = await res.json();
+      if (res.ok) {
+        setContent(data.content);
+      } else {
+        const msg = [data.error, data.hint].filter(Boolean).join(" ");
+        setError(msg || "AI rewrite failed");
+      }
+    } catch {
+      setError("AI rewrite failed");
+    } finally {
+      setActionLoading(null);
+    }
+  }
+
+  async function handleFetchFull() {
+    if (!post) return;
+    setActionLoading("fetch");
+    setError("");
+    const urlInput = document.querySelector<HTMLInputElement>('input[name="canonicalUrl"]');
+    const url = urlInput?.value?.trim();
+    try {
+      const res = await fetch(`/api/posts/${post.id}/fetch-full`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(url ? { url } : {}),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setContent(data.content);
+        if (data.canonicalUrl && urlInput) urlInput.value = data.canonicalUrl;
+      } else {
+        setError(data.error ?? "Fetch failed");
+      }
+    } catch {
+      setError("Fetch failed");
+    } finally {
+      setActionLoading(null);
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -36,8 +98,9 @@ export function PostForm({
       title: formData.get("title") as string,
       slug: formData.get("slug") as string,
       summary: (formData.get("summary") as string) || null,
-      content: formData.get("content") as string,
+      content: content,
       coverImage: (formData.get("coverImage") as string) || null,
+      canonicalUrl: (formData.get("canonicalUrl") as string) || null,
       categoryId: formData.get("categoryId") as string,
       sourceId: formData.get("sourceId") as string,
       status: formData.get("status") as string,
@@ -104,13 +167,50 @@ export function PostForm({
           className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2"
         />
       </div>
+      {isEdit && (
+        <div>
+          <label className="block text-sm font-medium text-zinc-300">
+            Article URL (for Fetch Full Story)
+          </label>
+          <input
+            name="canonicalUrl"
+            type="url"
+            defaultValue={post?.canonicalUrl ?? ""}
+            placeholder="https://..."
+            className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2"
+          />
+        </div>
+      )}
       <div>
-        <label className="block text-sm font-medium text-zinc-300">
-          Content (HTML)
-        </label>
+        <div className="mb-2 flex items-center justify-between">
+          <label className="block text-sm font-medium text-zinc-300">
+            Content (HTML)
+          </label>
+          {isEdit && (
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={handleFetchFull}
+                disabled={!!actionLoading}
+                className="rounded-lg border border-amber-600 px-3 py-1.5 text-sm text-amber-400 hover:bg-amber-600/20 disabled:opacity-50"
+              >
+                {actionLoading === "fetch" ? "..." : "Fetch Full Story"}
+              </button>
+              <button
+                type="button"
+                onClick={handleAiRewrite}
+                disabled={!!actionLoading}
+                className="rounded-lg border border-violet-600 px-3 py-1.5 text-sm text-violet-400 hover:bg-violet-600/20 disabled:opacity-50"
+              >
+                {actionLoading === "rewrite" ? "..." : "AI Rewrite"}
+              </button>
+            </div>
+          )}
+        </div>
         <textarea
           name="content"
-          defaultValue={post?.content}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
           required
           rows={12}
           className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2 font-mono text-sm"
