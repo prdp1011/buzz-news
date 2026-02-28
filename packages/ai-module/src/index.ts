@@ -44,7 +44,9 @@ async function callOpenAI(
  * Rewrites raw content for Gen Z audience
  */
 export async function rewriteContent(rawText: string): Promise<string> {
+  console.log('[ai-module] - > Start ');
   const clean = rawText.replace(/\s+/g, " ").trim().slice(0, 8000);
+  console.log('[ai-module] - > Start 2');
   const hasKey = !!process.env.OPENAI_API_KEY;
   console.log("[ai-module] rewriteContent", {
     inputLen: rawText.length,
@@ -64,6 +66,7 @@ export async function rewriteContent(rawText: string): Promise<string> {
         content: `Rewrite this article excerpt for a Gen Z audience. Keep the key facts, make it engaging and casual:\n\n${clean}`,
       },
     ]);
+    console.log('[ai-module] - > rewriteContent ', result);
     console.log("[ai-module] rewriteContent success", { outputLen: result?.length ?? 0 });
     return result.slice(0, 10000);
   } catch (err) {
