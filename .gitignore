@@ -1,7 +1,7 @@
 # Dependencies
 node_modules
 .pnpm-store
-
+#nbm777777
 # Build outputs
 dist
 .next
