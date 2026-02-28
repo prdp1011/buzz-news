@@ -1,14 +1,12 @@
 /**
- * RSS Feed Ingestion Pipeline
+ * Content Ingestion Pipeline
  *
- * 1. Fetch RSS feeds from active sources
+ * 1. Fetch from sources (RSS, Scraper, Social)
  * 2. Parse and deduplicate
- * 3. Send to AI processing
+ * 3. AI processing (rewrite, SEO, summary, tags)
  * 4. Save as draft in DB
  */
 
-import { XMLParser } from "fast-xml-parser";
-import fetch from "node-fetch";
 import { createHash } from "node:crypto";
 import { prisma } from "database";
 import {
@@ -17,27 +15,8 @@ import {
   generateSummary,
   generateTags,
 } from "ai-module";
-
-const parser = new XMLParser({
-  ignoreAttributes: false,
-  attributeNamePrefix: "@_",
-});
-
-interface RssItem {
-  title?: string;
-  link?: string;
-  description?: string;
-  content?: string;
-  "content:encoded"?: string;
-  pubDate?: string;
-  guid?: string;
-}
-
-interface RssChannel {
-  item?: RssItem | RssItem[];
-  title?: string;
-  link?: string;
-}
+import { getAdapter } from "./adapters/index.js";
+import { logger } from "./lib/logger.js";
 
 function normalizeContent(text: string): string {
   return text
@@ -61,14 +40,16 @@ function slugify(text: string): string {
 }
 
 export async function runIngestion() {
+  logger.info("Step: Loading active sources");
   const sources = await prisma.source.findMany({
     where: { isActive: true },
   });
 
   if (sources.length === 0) {
-    console.log("No active sources. Skipping.");
+    logger.info("No active sources. Skipping.");
     return;
   }
+  logger.info("Step: Sources loaded", { count: sources.length, names: sources.map((s) => s.name) });
 
   let totalProcessed = 0;
   let totalDeduplicated = 0;
@@ -76,65 +57,50 @@ export async function runIngestion() {
 
   for (const source of sources) {
     try {
-      const res = await fetch(source.feedUrl, {
-        headers: {
-          "User-Agent":
-            "GenZNewsBot/1.0 (+https://genznews.com; ingestion)",
-        },
-      });
-
-      if (!res.ok) {
-        console.warn(`Failed to fetch ${source.name}: ${res.status}`);
-        continue;
-      }
-
-      const xml = await res.text();
-      const parsed = parser.parse(xml);
-      const channel: RssChannel =
-        parsed.rss?.channel ?? parsed.feed ?? parsed;
-
-      const items: RssItem[] = Array.isArray(channel.item)
-        ? channel.item
-        : channel.item
-          ? [channel.item]
-          : [];
+      logger.info("Step: Processing source", { source: source.name, type: source.type });
+      const adapter = getAdapter(source.type);
+      logger.info("Step: Fetching items", { source: source.name, url: source.feedUrl });
+      const items = await adapter.fetchItems(
+        source.feedUrl,
+        source.config ?? undefined
+      );
+      logger.info("Step: Items fetched", { source: source.name, count: items.length });
 
       for (const item of items) {
         totalProcessed++;
 
-        const rawContent =
-          item["content:encoded"] ??
-          item.content ??
-          item.description ??
-          "";
-        const title = item.title ?? "Untitled";
-        const link = item.link ?? item.guid ?? "";
+        const rawContent = item.content || item.title;
+        const title = item.title || "Untitled";
 
-        if (!rawContent && !title) continue;
+        if (!rawContent && !title) {
+          logger.debug("Step: Skipping item (no content)", { title: item.title });
+          continue;
+        }
 
-        const hash = contentHash(rawContent || title);
+        const hash = contentHash(rawContent);
+        logger.debug("Step: Checking deduplication", { hash: hash.slice(0, 12) });
 
-        // Deduplicate
         const existing = await prisma.contentHash.findUnique({
           where: { hash },
         });
         if (existing) {
           totalDeduplicated++;
+          logger.debug("Step: Duplicate skipped", { title });
           continue;
         }
 
-        // AI processing
+        logger.info("Step: AI processing", { title });
         const [rewrittenContent, seoTitle, summary, tagNames] = await Promise.all(
           [
-            rewriteContent(rawContent || title),
+            rewriteContent(rawContent),
             generateSEOTitle(title),
-            generateSummary(rawContent || title),
-            generateTags(rawContent || title),
+            generateSummary(rawContent),
+            generateTags(rawContent),
           ]
         );
 
-        // Get or create tags
         const tagSlugs = tagNames.map((t) => slugify(t)).filter(Boolean);
+        logger.debug("Step: Upserting tags", { tagSlugs });
         const tags = await Promise.all(
           tagSlugs.slice(0, 5).map(async (slug) => {
             return prisma.tag.upsert({
@@ -145,14 +111,14 @@ export async function runIngestion() {
           })
         );
 
-        // Default category (tech) - in production, use AI to classify
+        logger.debug("Step: Resolving category");
         const defaultCategory = await prisma.category.findFirst({
           where: { slug: "tech" },
         });
         const categoryId = defaultCategory?.id;
 
         if (!categoryId) {
-          console.warn("No default category. Skipping item.");
+          logger.warn("No default category. Skipping item.", { title });
           continue;
         }
 
@@ -162,6 +128,7 @@ export async function runIngestion() {
         while (await prisma.post.findUnique({ where: { slug } })) {
           slug = `${baseSlug}-${++suffix}`;
         }
+        logger.debug("Step: Creating post", { slug });
 
         const post = await prisma.post.create({
           data: {
@@ -173,6 +140,7 @@ export async function runIngestion() {
               ? `<p>${rewrittenContent.replace(/\n/g, "</p><p>")}</p>`
               : `<p>${rawContent.slice(0, 5000)}</p>`,
             rawContent: rawContent.slice(0, 10000),
+            canonicalUrl: item.link || null,
             status: "PENDING_APPROVAL",
             categoryId,
             sourceId: source.id,
@@ -182,6 +150,7 @@ export async function runIngestion() {
           },
         });
 
+        logger.debug("Step: Storing content hash");
         await prisma.contentHash.create({
           data: {
             hash,
@@ -191,19 +160,25 @@ export async function runIngestion() {
         });
 
         totalCreated++;
-        console.log(`Created draft: ${post.title} (${post.slug})`);
+        logger.info("Step: Draft created", { slug: post.slug, title: post.title });
       }
 
+      logger.info("Step: Updating source lastFetched", { source: source.name });
       await prisma.source.update({
         where: { id: source.id },
         data: { lastFetched: new Date() },
       });
     } catch (err) {
-      console.error(`Error processing ${source.name}:`, err);
+      logger.error("Source processing failed", {
+        source: source.name,
+        err: err instanceof Error ? err.message : String(err),
+      });
     }
   }
 
-  console.log(
-    `Done. Processed: ${totalProcessed}, Deduplicated: ${totalDeduplicated}, Created: ${totalCreated}`
-  );
+  logger.info("Ingestion complete", {
+    processed: totalProcessed,
+    deduplicated: totalDeduplicated,
+    created: totalCreated,
+  });
 }

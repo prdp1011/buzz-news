@@ -12,7 +12,7 @@ genz-news-platform/
 │   └── worker/       # RSS ingestion worker (cron-ready)
 ├── packages/
 │   ├── database/     # Prisma schema & client
-│   ├── ai-module/    # AI content processing (placeholders)
+│   ├── ai-module/    # AI content processing (OpenAI + fallbacks)
 │   └── shared/       # Shared types
 ├── docker-compose.yml
 ├── Dockerfile
@@ -96,6 +96,7 @@ pnpm db:seed
 
 ### Public (web)
 
+- `GET /api/health` - Health check
 - `GET /api/posts` - List posts (query: `category`, `limit`, `offset`)
 - `GET /api/posts/[slug]` - Get single post
 
@@ -103,6 +104,7 @@ pnpm db:seed
 
 - `POST /api/auth/login` - Login
 - `POST /api/auth/logout` - Logout
+- `GET /api/health` - Health check
 - `GET/POST /api/posts` - List/Create posts
 - `GET/PUT /api/posts/[id]` - Get/Update post
 - `POST /api/posts/[id]/approve` - Approve draft
@@ -110,11 +112,14 @@ pnpm db:seed
 
 ## AI Module
 
-Placeholder implementations in `packages/ai-module`. Replace with:
+OpenAI integration in `packages/ai-module` with fallback to placeholders when `OPENAI_API_KEY` is not set:
 
-- **OpenAI GPT-4** - `rewriteContent`, `generateSEOTitle`, `generateSummary`, `generateTags`
-- **Anthropic Claude** - Same functions
-- **Local (Ollama)** - For cost-effective processing
+- **rewriteContent** - Gen Z tone, casual language
+- **generateSEOTitle** - 50-60 char SEO titles
+- **generateSummary** - Meta descriptions
+- **generateTags** - Topic extraction
+
+Set `OPENAI_API_KEY` for production. Uses `gpt-4o-mini` by default (override with `OPENAI_MODEL`).
 
 ## Worker (Cron)
 
@@ -135,6 +140,9 @@ Or use the built-in interval (set `CRON_INTERVAL_MS`).
 | `JWT_SECRET`        | Admin session signing (32+ chars) |
 | `NEXT_PUBLIC_SITE_URL` | Public site URL (JSON-LD)  |
 | `CRON_INTERVAL_MS`  | Worker interval (default: 1h)  |
+| `OPENAI_API_KEY`    | OpenAI API key (optional, fallback to placeholders) |
+| `OPENAI_MODEL`      | Model name (default: gpt-4o-mini) |
+| `LOG_LEVEL`         | Worker log level (debug/info/warn/error) |
 
 ## License
 

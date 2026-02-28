@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "database";
 import { getTrendingPosts, getTrendingPostsByCategory } from "@/lib/trending";
 
 export async function GET(request: NextRequest) {

@@ -53,12 +53,13 @@ async function main() {
   // Create sample sources
   const sources = await Promise.all([
     prisma.source.upsert({
-      where: { feedUrl: "https://example.com/feed.xml" },
+      where: { feedUrl: "https://techcrunch.com/feed/" },
       update: {},
       create: {
         name: "TechCrunch",
         url: "https://techcrunch.com",
         feedUrl: "https://techcrunch.com/feed/",
+        type: "RSS",
         favicon: "https://techcrunch.com/favicon.ico",
         isActive: true,
       },
@@ -70,6 +71,7 @@ async function main() {
         name: "The Verge",
         url: "https://theverge.com",
         feedUrl: "https://theverge.com/rss/index.xml",
+        type: "RSS",
         favicon: "https://theverge.com/favicon.ico",
         isActive: true,
       },

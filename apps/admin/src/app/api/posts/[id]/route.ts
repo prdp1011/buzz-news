@@ -43,6 +43,7 @@ export async function PUT(
       summary,
       content,
       coverImage,
+      canonicalUrl,
       categoryId,
       sourceId,
       status,
@@ -78,6 +79,7 @@ export async function PUT(
         summary: summary || null,
         content,
         coverImage: coverImage || null,
+        canonicalUrl: canonicalUrl || null,
         categoryId,
         sourceId,
         status: status ?? "DRAFT",
@@ -96,6 +98,37 @@ export async function PUT(
     console.error("Update post error:", error);
     return NextResponse.json(
       { error: "Failed to update post" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function DELETE(
+  _request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const { id } = await params;
+  const post = await prisma.post.findUnique({ where: { id } });
+  if (!post) {
+    return NextResponse.json({ error: "Post not found" }, { status: 404 });
+  }
+
+  try {
+    await prisma.contentHash.updateMany({
+      where: { postId: id },
+      data: { postId: null },
+    });
+    await prisma.post.delete({ where: { id } });
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Delete post error:", error);
+    return NextResponse.json(
+      { error: "Failed to delete post" },
       { status: 500 }
     );
   }

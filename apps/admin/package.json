@@ -9,15 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ai-module": "workspace:^",
+    "bcryptjs": "^2.4.3",
     "database": "workspace:*",
+    "dotenv": "^17.3.1",
+    "jose": "^5.9.6",
     "next": "^15.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "shared": "workspace:*",
-    "bcryptjs": "^2.4.3",
-    "jose": "^5.9.6"
+    "shared": "workspace:*"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22.10.1",
     "@types/react": "^19.0.1",

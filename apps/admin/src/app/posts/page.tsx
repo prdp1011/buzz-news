@@ -3,6 +3,8 @@ import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { prisma } from "database";
 import { AdminLayout } from "@/components/AdminLayout";
+import { DeleteButton } from "@/components/DeleteButton";
+import { MarkAllApprovedButton } from "@/components/MarkAllApprovedButton";
 
 export default async function PostsPage() {
   const session = await getSession();
@@ -16,16 +18,21 @@ export default async function PostsPage() {
     },
   });
 
+  const pendingCount = posts.filter((p) => p.status === "PENDING_APPROVAL").length;
+
   return (
     <AdminLayout>
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Posts</h1>
-        <Link
-          href="/posts/new"
-          className="rounded-lg bg-cyan-600 px-4 py-2 font-medium text-white hover:bg-cyan-500"
-        >
-          New Post
-        </Link>
+        <div className="flex gap-2">
+          <MarkAllApprovedButton pendingCount={pendingCount} />
+          <Link
+            href="/posts/new"
+            className="rounded-lg bg-cyan-600 px-4 py-2 font-medium text-white hover:bg-cyan-500"
+          >
+            New Post
+          </Link>
+        </div>
       </div>
       <div className="mt-6 overflow-x-auto">
         <table className="w-full">
@@ -57,12 +64,19 @@ export default async function PostsPage() {
                   {post.updatedAt.toLocaleDateString()}
                 </td>
                 <td className="py-4">
-                  <Link
-                    href={`/posts/${post.id}`}
-                    className="text-cyan-400 text-sm hover:underline"
-                  >
-                    Edit
-                  </Link>
+                  <div className="flex items-center gap-3">
+                    <Link
+                      href={`/posts/${post.id}`}
+                      className="text-cyan-400 text-sm hover:underline"
+                    >
+                      Edit
+                    </Link>
+                    <DeleteButton
+                      postId={post.id}
+                      postTitle={post.title}
+                      variant="text"
+                    />
+                  </div>
                 </td>
               </tr>
             ))}
