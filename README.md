@@ -132,6 +132,17 @@ Run ingestion on a schedule:
 
 Or use the built-in interval (set `CRON_INTERVAL_MS`).
 
+## Deploying to Vercel
+
+1. **Import** the repo to Vercel and create a project for the web app.
+2. **Set Root Directory** to `apps/web` in Project Settings → Build & Development.
+3. **Environment variables**: Add `DATABASE_URL`, `DIRECT_URL`, and any `NEXT_PUBLIC_*` vars in Vercel.
+4. **Deploy** – the build uses `cd ../.. && pnpm run build:web` from `apps/web`.
+
+If you see "No Output Directory named 'public' found", ensure:
+- Framework Preset is **Next.js** (not "Other")
+- Root Directory is **apps/web**
+
 ## Environment Variables
 
 | Variable            | Description                    |
