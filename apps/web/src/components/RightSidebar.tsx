@@ -50,21 +50,15 @@ export async function RightSidebar() {
           </div>
         )}
         <div className="space-y-2 text-xs text-zinc-500">
-          <Link href="/category/tech" className="block hover:underline">
-            Tech
+          <Link href="/privacy" className="block hover:underline">
+            Privacy
           </Link>
-          <Link href="/category/culture" className="block hover:underline">
-            Culture
+          <Link href="/terms" className="block hover:underline">
+            Terms
           </Link>
-          <Link href="/category/lifestyle" className="block hover:underline">
-            Lifestyle
+          <Link href="/about" className="block hover:underline">
+            About
           </Link>
-          <Link href="/category/news" className="block hover:underline">
-            News
-          </Link>
-          <p className="pt-4">
-            © {new Date().getFullYear()} Buzz News
-          </p>
         </div>
       </div>
     </aside>

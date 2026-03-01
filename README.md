@@ -1,6 +1,6 @@
-# Gen Z News Platform
+# Buzz News Platform
 
-Production-ready monorepo for an AI-powered Gen Z news platform.
+Production-ready monorepo for an AI-powered Buzz news platform.
 
 ## Architecture
 
@@ -114,7 +114,7 @@ pnpm db:seed
 
 OpenAI integration in `packages/ai-module` with fallback to placeholders when `OPENAI_API_KEY` is not set:
 
-- **rewriteContent** - Gen Z tone, casual language
+- **rewriteContent** - Buzz tone, casual language
 - **generateSEOTitle** - 50-60 char SEO titles
 - **generateSummary** - Meta descriptions
 - **generateTags** - Topic extraction

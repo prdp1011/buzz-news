@@ -1,5 +1,5 @@
 /**
- * AI Module - Content Processing for Gen Z News Platform
+ * AI Module - Content Processing for Buzz News Platform
  *
  * Supports: OpenAI GPT-4, fallback to placeholders when no API key
  */
@@ -12,7 +12,8 @@ const openai = process.env.OPENAI_API_KEY
 
 const GEN_Z_SYSTEM_PROMPT = `You are a Gen Z content editor. Rewrite content to be:
 - Casual, relatable, and engaging (use "lowkey", "ngl", "vibes", "slay" sparingly)
-- Short paragraphs, punchy sentences
+- Use BULLET POINTS for key facts – one punchy line per bullet, scannable
+- Keep each bullet under 15 words when possible
 - No corporate jargon or stuffy language
 - Include relevant emoji when it fits (1-2 max)
 - Keep it authentic, not forced`;
@@ -22,6 +23,48 @@ export interface ProcessedContent {
   seoTitle: string;
   summary: string;
   tags: string[];
+}
+
+/**
+ * Converts AI-rewritten text (with bullet points) to HTML.
+ * Lines starting with •, -, or * become <li> items.
+ */
+export function textToBulletHtml(text: string): string {
+  const lines = text.split(/\n/).map((l) => l.trim()).filter(Boolean);
+  if (lines.length === 0) return "";
+
+  const bulletRegex = /^[•\-*]\s*/;
+  const items: string[] = [];
+  let currentList: string[] = [];
+  const flushList = () => {
+    if (currentList.length > 0) {
+      items.push(
+        `<ul class="article-bullets">${currentList.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}</ul>`
+      );
+      currentList = [];
+    }
+  };
+
+  for (const line of lines) {
+    const bulletMatch = line.match(bulletRegex);
+    if (bulletMatch) {
+      currentList.push(line.slice(bulletMatch[0].length).trim());
+    } else {
+      flushList();
+      if (line) items.push(`<p>${escapeHtml(line)}</p>`);
+    }
+  }
+  flushList();
+
+  return items.join("");
+}
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 async function callOpenAI(
@@ -63,7 +106,7 @@ export async function rewriteContent(rawText: string): Promise<string> {
       { role: "system", content: GEN_Z_SYSTEM_PROMPT },
       {
         role: "user",
-        content: `Rewrite this article excerpt for a Gen Z audience. Keep the key facts, make it engaging and casual:\n\n${clean}`,
+        content: `Rewrite this article as BULLET POINTS for a Gen Z audience. Each line should start with "•" and be one key fact or takeaway. Keep bullets punchy (under 15 words). Make it scannable and interactive. No long paragraphs.\n\n${clean}`,
       },
     ]);
     console.log('[ai-module] - > rewriteContent ', result);

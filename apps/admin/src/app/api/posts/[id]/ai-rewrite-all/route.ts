@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 import { prisma } from "database";
-import { rewriteContent, textToBulletHtml } from "ai-module";
+import { slugify } from "@/lib/slugify";
+import { processContent, textToBulletHtml } from "ai-module";
 
 export async function POST(
   _request: NextRequest,
@@ -19,50 +20,62 @@ export async function POST(
   }
 
   const hasOpenAiKey = !!process.env.OPENAI_API_KEY;
-  console.log("[ai-rewrite] Start", {
-    postId: id,
-    hasOpenAiKey,
-    contentLen: post.content?.length ?? 0,
-    rawContentLen: post.rawContent?.length ?? 0,
-  });
-
   const rawText =
     post.rawContent ||
     post.content.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
 
   if (!rawText || rawText.length < 10) {
-    console.warn("[ai-rewrite] Empty or too short input", { rawTextLen: rawText.length });
     return NextResponse.json(
-      { error: "Post has no content to rewrite. Add content or use Fetch Full Story first." },
+      {
+        error:
+          "Post has no content to rewrite. Add content or use Fetch Full Story first.",
+      },
       { status: 400 }
     );
   }
 
   try {
-    console.log("[ai-rewrite] Calling rewriteContent", { inputLen: rawText.length });
-    const rewritten = await rewriteContent(rawText);
-    console.log("[ai-rewrite] Rewrite done", { outputLen: rewritten?.length ?? 0 });
+    const { seoTitle, rewrittenContent, summary } =
+      await processContent(rawText);
 
-    if (!rewritten || rewritten.length < 10) {
-      console.warn("[ai-rewrite] Empty rewrite result");
+    if (!rewrittenContent || rewrittenContent.length < 10) {
       return NextResponse.json(
         { error: "AI returned empty content. Try again or check OPENAI_API_KEY." },
         { status: 500 }
       );
     }
 
-    const content = textToBulletHtml(rewritten) || `<p>${rewritten.replace(/\n/g, "</p><p>")}</p>`;
+    const content = textToBulletHtml(rewrittenContent) || `<p>${rewrittenContent.replace(/\n/g, "</p><p>")}</p>`;
+    const baseSlug = slugify(seoTitle || post.title);
+    let slug = baseSlug;
+    let suffix = 0;
+    while (
+      await prisma.post.findFirst({
+        where: { slug, NOT: { id } },
+      })
+    ) {
+      slug = `${baseSlug}-${++suffix}`;
+    }
 
     await prisma.post.update({
       where: { id },
-      data: { content },
+      data: {
+        title: seoTitle || post.title,
+        slug,
+        content,
+        summary: summary || post.summary,
+      },
     });
 
-    console.log("[ai-rewrite] Success", { contentLen: content.length });
-    return NextResponse.json({ content });
+    return NextResponse.json({
+      title: seoTitle || post.title,
+      slug,
+      content,
+      summary: summary || post.summary,
+    });
   } catch (error) {
     const err = error instanceof Error ? error : new Error(String(error));
-    console.error("[ai-rewrite] Error:", err.message, err);
+    console.error("[ai-rewrite-all] Error:", err.message, err);
     return NextResponse.json(
       {
         error: err.message || "AI rewrite failed",

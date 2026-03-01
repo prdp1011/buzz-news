@@ -3,16 +3,28 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navItems = [
-  { href: "/", icon: "🏠", label: "Home" },
-  { href: "/category/tech", icon: "🔍", label: "Tech" },
-  { href: "/category/culture", icon: "🎬", label: "Culture" },
-  { href: "/category/lifestyle", icon: "✨", label: "Lifestyle" },
-  { href: "/category/news", icon: "📰", label: "News" },
-];
+const CATEGORY_ICONS: Record<string, string> = {
+  tech: "🔍",
+  culture: "🎬",
+  lifestyle: "✨",
+  news: "📰",
+};
 
-export function LeftSidebar() {
+export function LeftSidebar({
+  categories,
+}: {
+  categories: { slug: string; name: string }[];
+}) {
   const pathname = usePathname();
+
+  const navItems = [
+    { href: "/", icon: "🏠", label: "Home" },
+    ...categories.map((cat) => ({
+      href: `/category/${cat.slug}`,
+      icon: CATEGORY_ICONS[cat.slug] ?? "📁",
+      label: cat.name,
+    })),
+  ];
 
   return (
     <aside className="fixed left-0 top-0 z-40 hidden h-screen w-16 flex-col border-r border-zinc-800 bg-zinc-950 lg:flex">
