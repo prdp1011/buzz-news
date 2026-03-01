@@ -12,6 +12,8 @@
     "dev:admin": "pnpm --filter admin dev",
     "dev:worker": "pnpm --filter worker dev",
     "build": "turbo run build",
+    "build:web": "turbo run build --filter=web",
+    "build:admin": "turbo run build --filter=admin",
     "lint": "turbo run lint",
     "db:generate": "pnpm --filter database exec prisma generate",
     "db:push": "pnpm --filter database exec prisma db push",
@@ -22,11 +24,17 @@
     "docker:down": "docker-compose down"
   },
   "devDependencies": {
+    "@jridgewell/sourcemap-codec": "^1.5.5",
     "turbo": "^2.3.0",
     "typescript": "^5.6.3"
   },
   "packageManager": "pnpm@9.14.2",
   "engines": {
     "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "@jridgewell/gen-mapping": "0.3.5"
+    }
   }
 }
