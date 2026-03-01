@@ -47,6 +47,23 @@
         "OPENAI_MODEL"
       ]
     },
+    "admin#build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "env": [
+        "DATABASE_URL",
+        "DIRECT_URL",
+        "JWT_SECRET",
+        "NEXT_PUBLIC_SITE_URL",
+        "OPENAI_API_KEY",
+        "OPENAI_MODEL"
+      ]
+    },
     "dev": {
       "cache": false,
       "persistent": true
