@@ -11,6 +11,8 @@ const envPath = path.basename(cwd) === "web"
   : path.resolve(cwd, ".env");
 config({ path: envPath });
 
+const { PrismaPlugin } = require("@prisma/nextjs-monorepo-workaround-plugin");
+
 const nextConfig: NextConfig = {
   transpilePackages: ["database", "shared"],
   output: "standalone",
