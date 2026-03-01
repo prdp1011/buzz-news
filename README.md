@@ -5,7 +5,7 @@ Production-ready monorepo for an AI-powered Gen Z news platform.
 ## Architecture
 
 ```
-genz-news-platform/
+buzz-news-platform/
 ├── apps/
 │   ├── web/          # Public Next.js site (SSR, SEO)
 │   ├── admin/        # Admin panel (auth, CRUD, approve/reject)
