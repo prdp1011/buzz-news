@@ -1,6 +1,6 @@
-# Gen Z News Platform
+# Buzz News Platform
 
-Production-ready monorepo for an AI-powered Gen Z news platform.
+Production-ready monorepo for an AI-powered Buzz news platform.
 
 ## Architecture
 
@@ -114,7 +114,7 @@ pnpm db:seed
 
 OpenAI integration in `packages/ai-module` with fallback to placeholders when `OPENAI_API_KEY` is not set:
 
-- **rewriteContent** - Gen Z tone, casual language
+- **rewriteContent** - Buzz tone, casual language
 - **generateSEOTitle** - 50-60 char SEO titles
 - **generateSummary** - Meta descriptions
 - **generateTags** - Topic extraction
@@ -138,6 +138,8 @@ Or use the built-in interval (set `CRON_INTERVAL_MS`).
 2. **Set Root Directory** to `apps/web` in Project Settings → Build & Development.
 3. **Environment variables**: Add `DATABASE_URL`, `DIRECT_URL`, and any `NEXT_PUBLIC_*` vars in Vercel.
 4. **Deploy** – the build uses `cd ../.. && pnpm run build:web` from `apps/web`.
+
+**Admin app** (separate Vercel project): Set Root Directory to `apps/admin`, add env var `BUILD_APP=admin` in Project Settings. The shared build uses `BUILD_APP` to build the correct app (defaults to `web`).
 
 If you see "No Output Directory named 'public' found", ensure:
 - Framework Preset is **Next.js** (not "Other")

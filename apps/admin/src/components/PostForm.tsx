@@ -34,10 +34,40 @@ export function PostForm({
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [title, setTitle] = useState(post?.title ?? "");
+  const [slug, setSlug] = useState(post?.slug ?? "");
+  const [summary, setSummary] = useState(post?.summary ?? "");
   const [content, setContent] = useState(post?.content ?? "");
-  const [actionLoading, setActionLoading] = useState<"rewrite" | "fetch" | null>(null);
+  const [actionLoading, setActionLoading] = useState<
+    "rewrite" | "rewriteAll" | "fetch" | null
+  >(null);
 
   const isEdit = !!post;
+
+  async function handleAiRewriteAll() {
+    if (!post) return;
+    setActionLoading("rewriteAll");
+    setError("");
+    try {
+      const res = await fetch(`/api/posts/${post.id}/ai-rewrite-all`, {
+        method: "POST",
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setTitle(data.title);
+        setSlug(data.slug);
+        setSummary(data.summary ?? "");
+        setContent(data.content);
+      } else {
+        const msg = [data.error, data.hint].filter(Boolean).join(" ");
+        setError(msg || "AI rewrite failed");
+      }
+    } catch {
+      setError("AI rewrite failed");
+    } finally {
+      setActionLoading(null);
+    }
+  }
 
   async function handleAiRewrite() {
     if (!post) return;
@@ -95,9 +125,9 @@ export function PostForm({
     const tagIds = formData.getAll("tagIds") as string[];
 
     const body = {
-      title: formData.get("title") as string,
-      slug: formData.get("slug") as string,
-      summary: (formData.get("summary") as string) || null,
+      title,
+      slug,
+      summary: summary || null,
       content: content,
       coverImage: (formData.get("coverImage") as string) || null,
       canonicalUrl: (formData.get("canonicalUrl") as string) || null,
@@ -137,11 +167,31 @@ export function PostForm({
           {error}
         </p>
       )}
+      {isEdit && (
+        <div className="rounded-lg border border-amber-600/50 bg-amber-600/10 p-4">
+          <p className="mb-2 text-sm font-medium text-amber-400">
+            AI Rewrite All (based on full story)
+          </p>
+          <p className="mb-3 text-xs text-zinc-400">
+            Rewrites title, content, and summary from the full article. Use Fetch
+            Full Story first if content is empty.
+          </p>
+          <button
+            type="button"
+            onClick={handleAiRewriteAll}
+            disabled={!!actionLoading}
+            className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white hover:bg-amber-500 disabled:opacity-50"
+          >
+            {actionLoading === "rewriteAll" ? "..." : "AI Rewrite All"}
+          </button>
+        </div>
+      )}
       <div>
         <label className="block text-sm font-medium text-zinc-300">Title</label>
         <input
           name="title"
-          defaultValue={post?.title}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
           required
           className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2"
         />
@@ -150,7 +200,8 @@ export function PostForm({
         <label className="block text-sm font-medium text-zinc-300">Slug</label>
         <input
           name="slug"
-          defaultValue={post?.slug}
+          value={slug}
+          onChange={(e) => setSlug(e.target.value)}
           required
           placeholder="url-friendly-slug"
           className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2"
@@ -162,7 +213,8 @@ export function PostForm({
         </label>
         <textarea
           name="summary"
-          defaultValue={post?.summary ?? ""}
+          value={summary}
+          onChange={(e) => setSummary(e.target.value)}
           rows={2}
           className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2"
         />

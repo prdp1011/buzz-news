@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { prisma } from "database";
 import { generateJsonLd } from "@/lib/json-ld";
+import { PLACEHOLDER_IMAGE } from "@/lib/placeholder";
 import type { Metadata } from "next";
 
 interface Props {
@@ -96,20 +97,18 @@ export default async function PostPage({ params }: Props) {
         </div>
       </header>
 
-      {post.coverImage && (
-        <img
-          src={post.coverImage}
-          alt=""
-          className="w-full rounded-lg mb-8 aspect-video object-cover"
-        />
-      )}
+      <img
+        src={post.coverImage ?? PLACEHOLDER_IMAGE}
+        alt=""
+        className="w-full rounded-lg mb-8 aspect-video object-cover"
+      />
 
       {post.summary && (
         <p className="text-xl text-zinc-400 mb-8">{post.summary}</p>
       )}
 
       <div
-        className="prose prose-invert prose-lg max-w-none"
+        className="article-content prose prose-invert prose-lg max-w-none"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 

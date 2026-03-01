@@ -1,4 +1,15 @@
 import type { NextConfig } from "next";
+import path from "node:path";
+import { config } from "dotenv";
+
+const { PrismaPlugin } = require("@prisma/nextjs-monorepo-workaround-plugin");
+
+// Load root .env so DATABASE_URL is available (monorepo: .env is at repo root)
+const cwd = process.cwd();
+const envPath = path.basename(cwd) === "web"
+  ? path.resolve(cwd, "../../.env")
+  : path.resolve(cwd, ".env");
+config({ path: envPath });
 
 const { PrismaPlugin } = require("@prisma/nextjs-monorepo-workaround-plugin");
 

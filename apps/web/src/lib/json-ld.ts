@@ -18,12 +18,12 @@ export function generateJsonLd(
     dateModified: post.updatedAt.toISOString(),
     author: {
       "@type": "Organization",
-      name: post.source?.name ?? "Gen Z News",
+      name: post.source?.name ?? "Buzz News",
       url: post.source?.url ?? baseUrl,
     },
     publisher: {
       "@type": "Organization",
-      name: "Gen Z News",
+      name: "Buzz News",
       url: baseUrl,
     },
     mainEntityOfPage: {

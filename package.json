@@ -20,7 +20,9 @@
     "db:studio": "pnpm --filter database exec prisma studio",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
-    "build:web": "turbo run build --filter=web"
+    "build:web": "turbo run build --filter=web",
+    "build:admin": "turbo run build --filter=admin",
+    "build:vercel": "turbo run build --filter=${BUILD_APP:-web}"
   },
   "devDependencies": {
     "turbo": "^2.3.0",
