@@ -132,16 +132,6 @@ Run ingestion on a schedule:
 
 Or use the built-in interval (set `CRON_INTERVAL_MS`).
 
-## Vercel Deployment (All Three)
-
-Deploy from the same repo:
-
-1. **News site + Cron** (one project): Root Directory = `.`, uses `vercel.json`. Builds web app and runs ingestion via Vercel Cron every hour (`/api/cron/ingest`). Set `CRON_SECRET` in Vercel env for manual triggers.
-
-2. **Admin panel** (separate project): Create another Vercel project, Root Directory = `apps/admin`. Vercel will install from repo root and build the admin app.
-
-3. **Worker** (optional): For local/custom hosting, run `pnpm --filter worker ingest --once` on a schedule. On Vercel, ingestion runs via the cron API route in the web project.
-
 ## Environment Variables
 
 | Variable            | Description                    |
@@ -150,7 +140,6 @@ Deploy from the same repo:
 | `JWT_SECRET`        | Admin session signing (32+ chars) |
 | `NEXT_PUBLIC_SITE_URL` | Public site URL (JSON-LD)  |
 | `CRON_INTERVAL_MS`  | Worker interval (default: 1h)  |
-| `CRON_SECRET`       | Auth for manual cron trigger (Vercel) |
 | `OPENAI_API_KEY`    | OpenAI API key (optional, fallback to placeholders) |
 | `OPENAI_MODEL`      | Model name (default: gpt-4o-mini) |
 | `LOG_LEVEL`         | Worker log level (debug/info/warn/error) |
