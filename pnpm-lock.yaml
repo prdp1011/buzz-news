@@ -20,6 +20,9 @@ importers:
 
   apps/admin:
     dependencies:
+      '@prisma/nextjs-monorepo-workaround-plugin':
+        specifier: ^7.4.2
+        version: 7.4.2
       ai-module:
         specifier: workspace:^
         version: link:../../packages/ai-module
@@ -78,6 +81,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@prisma/nextjs-monorepo-workaround-plugin':
+        specifier: ^7.4.2
+        version: 7.4.2
       database:
         specifier: workspace:*
         version: link:../../packages/database
@@ -664,6 +670,9 @@ packages:
 
   '@prisma/get-platform@5.22.0':
     resolution: {integrity: sha512-pHhpQdr1UPFpt+zFfnPazhulaZYCUqeIcPpJViYoq9R+D/yw4fjE+CtnsnKzPYm0ddUbeXUzjGVGIRVgPDCk4Q==}
+
+  '@prisma/nextjs-monorepo-workaround-plugin@7.4.2':
+    resolution: {integrity: sha512-kRYfrms66G/jCq5fOEsbK403wbNwUWUCbtwP7ZBb2gEvmVb3WmZ7n4a8qmbyoLNoHVtvm77xzeUPUbSUz2CzrA==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -2643,6 +2652,8 @@ snapshots:
   '@prisma/get-platform@5.22.0':
     dependencies:
       '@prisma/debug': 5.22.0
+
+  '@prisma/nextjs-monorepo-workaround-plugin@7.4.2': {}
 
   '@rtsao/scc@1.1.0': {}
 
