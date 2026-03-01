@@ -1,7 +1,7 @@
 # Folder Structure
 
 ```
-genz-news-platform/
+buzz-news-platform/
 ├── apps/
 │   ├── web/                    # Public website (Next.js App Router)
 │   │   ├── src/
