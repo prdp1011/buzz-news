@@ -139,6 +139,8 @@ Or use the built-in interval (set `CRON_INTERVAL_MS`).
 3. **Environment variables**: Add `DATABASE_URL`, `DIRECT_URL`, and any `NEXT_PUBLIC_*` vars in Vercel.
 4. **Deploy** – the build uses `cd ../.. && pnpm run build:web` from `apps/web`.
 
+**Admin app** (separate Vercel project): Set Root Directory to `apps/admin`, then override Build Command to `cd ../.. && pnpm run build:admin` in Project Settings.
+
 If you see "No Output Directory named 'public' found", ensure:
 - Framework Preset is **Next.js** (not "Other")
 - Root Directory is **apps/web**
