@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PLACEHOLDER_IMAGE } from "@/lib/placeholder";
 
 interface PostCardProps {
   post: {
@@ -51,9 +52,9 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
         isMobile ? "h-full w-full rounded-none" : "rounded-xl"
       }`}
     >
-      {/* Header */}
+      {/* Header - category top right */}
       <div className="flex items-center justify-between gap-3 px-4 py-3">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 min-w-0">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-500/20 text-xs font-bold text-amber-400">
             {post.source ? getInitials(post.source.name) : post.category.name.slice(0, 2)}
           </div>
@@ -64,24 +65,9 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
             <span className="text-xs text-zinc-500">{timeAgo}</span>
           </div>
         </div>
-        <button
-          type="button"
-          className="rounded p-1 text-zinc-500 hover:bg-zinc-800 hover:text-zinc-300"
-          aria-label="More options"
-        >
-          <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="1.5" />
-            <circle cx="6" cy="12" r="1.5" />
-            <circle cx="18" cy="12" r="1.5" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Category tag */}
-      <div className="px-4 pb-2">
         <Link
           href={`/category/${post.category.slug}`}
-          className="inline-block rounded-md bg-amber-500/20 px-2 py-0.5 text-xs font-medium uppercase tracking-wide text-amber-400"
+          className="shrink-0 rounded-md bg-amber-500/20 px-2 py-0.5 text-xs font-medium uppercase tracking-wide text-amber-400 hover:bg-amber-500/30"
         >
           {post.category.name}
         </Link>
@@ -103,17 +89,13 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
 
       {/* Main image - 16:9 aspect ratio */}
       <Link href={`/post/${post.slug}`} className="block">
-        {post.coverImage ? (
-          <div className="aspect-video overflow-hidden bg-zinc-800">
-            <img
-              src={post.coverImage}
-              alt=""
-              className="h-full w-full object-cover"
-            />
-          </div>
-        ) : (
-          <div className="aspect-video bg-zinc-800/50" />
-        )}
+        <div className="aspect-video overflow-hidden bg-zinc-800">
+          <img
+            src={post.coverImage ?? PLACEHOLDER_IMAGE}
+            alt=""
+            className="h-full w-full object-cover"
+          />
+        </div>
       </Link>
 
       {/* Engagement bar */}

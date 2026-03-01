@@ -14,6 +14,7 @@ import {
   generateSEOTitle,
   generateSummary,
   generateTags,
+  textToBulletHtml,
 } from "ai-module";
 import { getAdapter } from "./adapters/index.js";
 import { logger } from "./lib/logger.js";
@@ -137,7 +138,7 @@ export async function runIngestion() {
             seoTitle,
             summary,
             content: rewrittenContent
-              ? `<p>${rewrittenContent.replace(/\n/g, "</p><p>")}</p>`
+              ? textToBulletHtml(rewrittenContent) || `<p>${rewrittenContent.replace(/\n/g, "</p><p>")}</p>`
               : `<p>${rawContent.slice(0, 5000)}</p>`,
             rawContent: rawContent.slice(0, 10000),
             canonicalUrl: item.link || null,

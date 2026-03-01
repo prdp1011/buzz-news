@@ -6,7 +6,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-screen">
       <aside className="w-64 border-r border-zinc-800 bg-zinc-900/30 p-6">
         <Link href="/" className="text-xl font-bold text-cyan-400">
-          Gen Z Admin
+          Buzz Admin
         </Link>
         <nav className="mt-8 space-y-2">
           <Link

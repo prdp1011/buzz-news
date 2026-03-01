@@ -1,5 +1,5 @@
 /**
- * Gen Z News - Content Ingestion Worker
+ * Buzz News - Content Ingestion Worker
  *
  * Cron-ready structure. Run via:
  * - node dist/index.js (continuous loop with interval)
