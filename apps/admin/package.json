@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/nextjs-monorepo-workaround-plugin": "^7.4.2",
     "ai-module": "workspace:^",
     "bcryptjs": "^2.4.3",
     "database": "workspace:*",

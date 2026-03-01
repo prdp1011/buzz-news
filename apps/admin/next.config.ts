@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import path from "node:path";
 import { config } from "dotenv";
 
+const { PrismaPlugin } = require("@prisma/nextjs-monorepo-workaround-plugin");
+
 // Load root .env so OPENAI_API_KEY etc. are available to API routes
 const cwd = process.cwd();
 const envPath = path.basename(cwd) === "admin"
@@ -12,6 +14,12 @@ config({ path: envPath });
 const nextConfig: NextConfig = {
   transpilePackages: ["database", "shared"],
   output: "standalone",
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.plugins = [...(config.plugins ?? []), new PrismaPlugin()];
+    }
+    return config;
+  },
   async headers() {
     return [
       {
