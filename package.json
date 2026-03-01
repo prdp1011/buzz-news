@@ -19,7 +19,8 @@
     "db:seed": "pnpm --filter database exec tsx prisma/seed.ts",
     "db:studio": "pnpm --filter database exec prisma studio",
     "docker:up": "docker-compose up -d",
-    "docker:down": "docker-compose down"
+    "docker:down": "docker-compose down",
+    "build:web": "pnpm --filter web build"
   },
   "devDependencies": {
     "turbo": "^2.3.0",
