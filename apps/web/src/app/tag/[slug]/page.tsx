@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const tag = await prisma.tag.findUnique({ where: { slug } });
   if (!tag) return { title: "Tag Not Found" };
-  return { title: `${tag.name} | Gen Z News` };
+  return { title: `${tag.name} | Buzz News` };
 }
 
 export const revalidate = 60;

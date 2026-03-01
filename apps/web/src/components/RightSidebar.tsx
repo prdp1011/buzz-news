@@ -63,7 +63,7 @@ export async function RightSidebar() {
             News
           </Link>
           <p className="pt-4">
-            © {new Date().getFullYear()} Gen Z News
+            © {new Date().getFullYear()} Buzz News
           </p>
         </div>
       </div>
