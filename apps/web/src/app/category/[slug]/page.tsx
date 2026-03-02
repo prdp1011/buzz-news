@@ -46,27 +46,27 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <div>
-      <header className="mb-6">
+      <header className="mb-4 md:mb-8">
         <h1
-          className="text-2xl font-bold"
+          className="text-lg md:text-2xl font-bold tracking-tight"
           style={{ color: category.color ?? "#f59e0b" }}
         >
           {category.name}
         </h1>
         {category.description && (
-          <p className="mt-1 text-zinc-500 text-sm">{category.description}</p>
+          <p className="mt-1 text-zinc-500 text-sm md:mt-2 md:text-base">{category.description}</p>
         )}
       </header>
 
       <CategoryPills categories={categories} activeSlug={slug} />
 
-      <div className="mt-6 flex flex-col gap-6">
+      <div className="mt-4 flex flex-col gap-4 md:mt-6 md:gap-6">
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
       {posts.length === 0 && (
-        <p className="py-12 text-center text-zinc-500">
+        <p className="py-16 text-center text-zinc-500 text-lg">
           No posts in this category yet.
         </p>
       )}

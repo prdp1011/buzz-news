@@ -42,15 +42,15 @@ export function MobileNav({
       <header className="sticky top-0 z-30 flex items-center justify-between border-b border-zinc-800 bg-zinc-950/95 px-4 py-3 backdrop-blur-md lg:hidden">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold text-amber-400"
+          className="flex items-center gap-1.5 text-base font-bold text-amber-400"
         >
-          <span className="text-xl">✨</span>
+          <span className="text-xl md:text-2xl">✨</span>
           Buzz News
         </Link>
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-400 hover:bg-zinc-800 hover:text-white"
+          className="flex h-11 w-11 min-w-[44px] min-h-[44px] items-center justify-center rounded-lg text-zinc-400 hover:bg-zinc-800 hover:text-white"
           aria-label="Open menu"
         >
           <svg
@@ -89,7 +89,7 @@ export function MobileNav({
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-400 hover:bg-zinc-800 hover:text-white"
+              className="flex h-11 w-11 min-w-[44px] min-h-[44px] items-center justify-center rounded-lg text-zinc-400 hover:bg-zinc-800 hover:text-white"
               aria-label="Close menu"
             >
               <svg
@@ -107,7 +107,7 @@ export function MobileNav({
               </svg>
             </button>
           </div>
-          <nav className="flex flex-col gap-1 p-4">
+          <nav className="flex flex-col gap-0.5 p-4">
             {navItems.map((item) => {
               const isActive =
                 item.href === "/"
@@ -118,7 +118,7 @@ export function MobileNav({
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center gap-3 rounded-lg px-4 py-3 text-base transition ${
+                  className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium transition min-h-[48px] ${
                     isActive
                       ? "bg-zinc-800 text-amber-400"
                       : "text-zinc-400 hover:bg-zinc-800 hover:text-white"

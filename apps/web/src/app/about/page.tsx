@@ -9,28 +9,28 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
+    <div className="mx-auto max-w-3xl px-4 py-6 md:py-12">
       <Link
         href="/"
-        className="mb-8 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400 md:mb-8"
       >
         ← Back to Home
       </Link>
 
-      <div className="flex items-center gap-3">
-        <span className="text-4xl">✨</span>
-        <h1 className="text-3xl font-bold text-zinc-100">About Buzz News</h1>
+      <div className="flex items-center gap-2 md:gap-3">
+        <span className="text-2xl md:text-4xl">✨</span>
+        <h1 className="text-xl md:text-2xl font-bold text-zinc-100">About Buzz News</h1>
       </div>
 
-      <div className="prose prose-invert prose-zinc mt-8 max-w-none space-y-6 text-zinc-300">
-        <p className="text-lg">
+      <div className="prose prose-sm prose-invert prose-zinc mt-6 max-w-none space-y-6 text-zinc-300 md:mt-8">
+        <p className="text-base">
           Buzz News is your daily dose of news that actually hits different. We
           aggregate stories from trusted sources and use AI to deliver clear,
           concise summaries — so you stay informed without the noise.
         </p>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">Our Mission</h2>
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">Our Mission</h2>
           <p>
             We believe everyone deserves access to quality news. By combining
             aggregation, AI summarization, and a clean reading experience, we
@@ -40,7 +40,7 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">What We Do</h2>
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">What We Do</h2>
           <ul className="list-disc space-y-1 pl-6">
             <li>
               <strong>Aggregate:</strong> We pull stories from reputable RSS
@@ -58,7 +58,7 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">Contact</h2>
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">Contact</h2>
           <p>
             Have feedback, partnership ideas, or press inquiries? Reach us at{" "}
             <a

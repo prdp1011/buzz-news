@@ -127,6 +127,32 @@ model PostAnalytics {
   @@index([date])
 }
 
+// ============ SOCIAL POSTS (Instagram, Facebook, YouTube) ============
+
+enum SocialPlatform {
+  INSTAGRAM
+  FACEBOOK
+  YOUTUBE
+}
+
+model SocialPost {
+  id          String         @id @default(cuid())
+  platform    SocialPlatform
+  title       String
+  content     String?        @db.Text
+  imageUrl    String?
+  videoUrl    String?        // For YouTube
+  publishedAt DateTime?
+  status      PostStatus     @default(DRAFT)
+  externalUrl String?        // Link to post on platform
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([platform])
+  @@index([status])
+  @@index([publishedAt])
+}
+
 // ============ ADMIN / AUTH ============
 
 model AdminUser {

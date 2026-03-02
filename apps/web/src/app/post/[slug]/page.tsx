@@ -63,20 +63,20 @@ export default async function PostPage({ params }: Props) {
   const jsonLd = generateJsonLd(post);
 
   return (
-    <article className="max-w-3xl mx-auto">
+    <article className="max-w-3xl mx-auto md:px-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="mb-8">
+      <header className="mb-6 md:mb-10">
         <a
           href={`/category/${post.category.slug}`}
-          className="text-amber-400 text-sm font-medium hover:underline"
+          className="text-amber-400 text-sm font-semibold hover:underline"
         >
           {post.category.name}
         </a>
-        <h1 className="text-4xl font-bold mt-2">{post.title}</h1>
-        <div className="flex gap-4 mt-4 text-zinc-500 text-sm">
+        <h1 className="text-xl md:text-3xl font-bold mt-2 md:mt-3 leading-tight tracking-tight">{post.title}</h1>
+        <div className="flex flex-wrap gap-3 mt-3 text-zinc-500 text-sm md:gap-5 md:mt-5">
           <time dateTime={post.publishedAt?.toISOString()}>
             {post.publishedAt?.toLocaleDateString("en-US", {
               year: "numeric",
@@ -100,25 +100,35 @@ export default async function PostPage({ params }: Props) {
       <img
         src={post.coverImage ?? PLACEHOLDER_IMAGE}
         alt=""
-        className="w-full rounded-lg mb-8 aspect-video object-cover"
+        className="w-full rounded-xl md:rounded-2xl mb-6 md:mb-10 aspect-video object-cover"
       />
 
       {post.summary && (
-        <p className="text-xl text-zinc-400 mb-8">{post.summary}</p>
+        <div className="mb-6 md:mb-10 rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 md:p-5">
+          <div className="mb-3 flex items-center gap-2">
+            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-amber-500/20 text-amber-400">
+              <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+              </svg>
+            </span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-amber-400">AI Summarize</span>
+          </div>
+          <p className="text-base md:text-lg text-zinc-400 leading-relaxed">{post.summary}</p>
+        </div>
       )}
 
       <div
-        className="article-content prose prose-invert prose-lg max-w-none"
+        className="article-content prose prose-invert prose-sm max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-p:text-base prose-p:leading-relaxed"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
       {post.tags.length > 0 && (
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-6 md:mt-10 flex flex-wrap gap-2 md:gap-3">
           {post.tags.map(({ tag }) => (
             <a
               key={tag.id}
               href={`/tag/${tag.slug}`}
-              className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-sm hover:bg-amber-500/20 hover:text-amber-400"
+              className="px-3 py-1.5 rounded-full bg-zinc-800 text-zinc-300 text-sm font-medium hover:bg-amber-500/20 hover:text-amber-400 min-h-[36px] flex items-center"
             >
               {tag.name}
             </a>

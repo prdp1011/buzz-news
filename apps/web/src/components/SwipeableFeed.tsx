@@ -23,7 +23,7 @@ export function SwipeableFeed({ posts }: SwipeableFeedProps) {
   if (posts.length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4 md:gap-8">
       {posts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}

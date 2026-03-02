@@ -51,8 +51,8 @@ export function LeftSidebar({
                   : "text-zinc-400 hover:bg-zinc-800 hover:text-white"
               }`}
             >
-              <span className="text-xl">{item.icon}</span>
-              <span className="text-[10px]">{item.label}</span>
+              <span className="text-2xl">{item.icon}</span>
+              <span className="text-xs font-medium">{item.label}</span>
             </Link>
           );
         })}

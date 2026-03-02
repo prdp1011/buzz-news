@@ -33,6 +33,12 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
           >
             Drafts
           </Link>
+          <Link
+            href="/social-posts"
+            className="block rounded-lg px-4 py-2 text-zinc-300 hover:bg-zinc-800 hover:text-white"
+          >
+            Social Posts
+          </Link>
         </nav>
         <div className="mt-auto pt-8">
           <LogoutButton />

@@ -14,8 +14,8 @@ export async function RightSidebar() {
   return (
     <aside className="hidden w-72 shrink-0 xl:block">
       <div className="sticky top-24 space-y-6">
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
-          <p className="mb-3 text-sm font-semibold text-zinc-300">
+        <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5">
+          <p className="mb-4 text-sm font-bold text-zinc-300">
             Suggested for you
           </p>
           <div className="space-y-3">
@@ -32,8 +32,8 @@ export async function RightSidebar() {
           </div>
         </div>
         {tags.length > 0 && (
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-4">
-            <p className="mb-3 text-sm font-semibold text-zinc-300">
+          <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5">
+            <p className="mb-4 text-sm font-bold text-zinc-300">
               Trending tags
             </p>
             <div className="flex flex-wrap gap-2">
@@ -41,7 +41,7 @@ export async function RightSidebar() {
                 <Link
                   key={tag.id}
                   href={`/tag/${tag.slug}`}
-                  className="rounded-full bg-zinc-800 px-3 py-1 text-xs text-zinc-400 hover:bg-zinc-700 hover:text-amber-400"
+                  className="rounded-full bg-zinc-800 px-3 py-1.5 text-xs font-medium text-zinc-400 hover:bg-zinc-700 hover:text-amber-400"
                 >
                   #{tag.name}
                 </Link>
@@ -49,7 +49,7 @@ export async function RightSidebar() {
             </div>
           </div>
         )}
-        <div className="space-y-2 text-xs text-zinc-500">
+        <div className="space-y-2 text-sm text-zinc-500">
           <Link href="/privacy" className="block hover:underline">
             Privacy
           </Link>

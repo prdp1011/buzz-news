@@ -43,24 +43,24 @@ export default async function TagPage({ params }: Props) {
 
   return (
     <div>
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold text-zinc-100">
+      <header className="mb-4 md:mb-8">
+        <h1 className="text-lg md:text-2xl font-bold tracking-tight text-zinc-100">
           #{tag.name}
         </h1>
-        <p className="mt-2 text-zinc-500 text-sm">
+        <p className="mt-1 text-zinc-500 text-sm md:mt-2">
           {posts.length} post{posts.length !== 1 ? "s" : ""} tagged
         </p>
       </header>
 
       <CategoryPills categories={categories} />
 
-      <div className="mt-8 flex flex-col gap-6">
+      <div className="mt-4 flex flex-col gap-4 md:mt-8 md:gap-6">
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
       {posts.length === 0 && (
-        <p className="py-12 text-center text-zinc-500">
+        <p className="py-16 text-center text-zinc-500 text-lg">
           No posts with this tag yet.
         </p>
       )}

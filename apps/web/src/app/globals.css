@@ -1,12 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Geist", system-ui, sans-serif;
+  /* Gen Z typography - Outfit: bold, readable, modern */
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+  /* Larger base for readability */
+  --font-size-base: 1.0625rem; /* 17px */
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 1.75;
 }
 
 body {
   font-family: var(--font-sans);
+  font-size: 1rem; /* 16px mobile - prevents iOS zoom on input focus */
+  line-height: var(--line-height-relaxed);
   overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem; /* 16px - compact web */
+  }
 }
 
 /* Article content - bullet points, interactive feel */
@@ -24,12 +43,22 @@ body {
 .article-content .article-bullets li,
 .article-content ul li {
   position: relative;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  padding: 0.75rem 1rem 0.75rem 2.25rem;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
   border-radius: 0.5rem;
   background: rgba(255 255 255 / 0.03);
   border-left: 3px solid transparent;
   transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .article-content .article-bullets li,
+  .article-content ul li {
+    padding: 0.75rem 1rem 0.75rem 2.25rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
 }
 
 .article-content .article-bullets li:hover,
@@ -56,8 +85,17 @@ body {
 
 .article-content p {
   margin: 1rem 0;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.65;
   color: rgb(161 161 170); /* zinc-400 */
+}
+
+@media (min-width: 768px) {
+  .article-content p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
 }
 
 .article-content p + .article-bullets,

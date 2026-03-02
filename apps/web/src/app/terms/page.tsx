@@ -9,22 +9,22 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
+    <div className="mx-auto max-w-3xl px-4 py-6 md:py-12">
       <Link
         href="/"
-        className="mb-8 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400 md:mb-8"
       >
         ← Back to Home
       </Link>
 
-      <h1 className="text-3xl font-bold text-zinc-100">Terms of Service</h1>
+      <h1 className="text-xl md:text-2xl font-bold text-zinc-100">Terms of Service</h1>
       <p className="mt-2 text-sm text-zinc-500">
         Last updated: {new Date().toLocaleDateString("en-US")}
       </p>
 
-      <div className="prose prose-invert prose-zinc mt-8 max-w-none space-y-8 text-zinc-300">
+      <div className="prose prose-sm prose-invert prose-zinc mt-6 max-w-none space-y-6 text-zinc-300 md:mt-8 md:space-y-8">
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             1. Acceptance of Terms
           </h2>
           <p>
@@ -35,7 +35,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             2. Description of Service
           </h2>
           <p>
@@ -46,7 +46,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             3. Use of Service
           </h2>
           <p>You agree to use the Service only for lawful purposes. You will not:</p>
@@ -60,7 +60,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             4. Intellectual Property and Content
           </h2>
           <p>
@@ -73,7 +73,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             5. Disclaimer of Warranties
           </h2>
           <p>
@@ -86,7 +86,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             6. Limitation of Liability
           </h2>
           <p>
@@ -98,7 +98,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             7. DMCA and Copyright
           </h2>
           <p>
@@ -115,7 +115,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             8. Termination
           </h2>
           <p>
@@ -126,7 +126,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             9. Governing Law
           </h2>
           <p>
@@ -136,7 +136,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             10. Changes
           </h2>
           <p>
@@ -147,7 +147,7 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">11. Contact</h2>
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">11. Contact</h2>
           <p>
             For questions about these Terms, contact us at{" "}
             <a

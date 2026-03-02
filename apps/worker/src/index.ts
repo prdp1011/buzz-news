@@ -6,7 +6,16 @@
  * - pnpm ingest (one-shot for manual/cron trigger)
  *
  * Set CRON_INTERVAL_MS for loop interval (default: 1 hour)
+ * Set NODE_TLS_REJECT_UNAUTHORIZED=0 for dev (SSL cert issues) - NEVER in production
  */
+
+import { config } from "dotenv";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+// Load root .env (monorepo) so NODE_TLS_REJECT_UNAUTHORIZED etc. are applied
+const __dirname = dirname(fileURLToPath(import.meta.url));
+config({ path: join(__dirname, "../../.env") });
 
 import { logger } from "./lib/logger.js";
 

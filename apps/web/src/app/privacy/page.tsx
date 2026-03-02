@@ -9,22 +9,22 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
+    <div className="mx-auto max-w-3xl px-4 py-6 md:py-12">
       <Link
         href="/"
-        className="mb-8 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400"
+        className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400 md:mb-8"
       >
         ← Back to Home
       </Link>
 
-      <h1 className="text-3xl font-bold text-zinc-100">Privacy Policy</h1>
+      <h1 className="text-xl md:text-2xl font-bold text-zinc-100">Privacy Policy</h1>
       <p className="mt-2 text-sm text-zinc-500">
         Last updated: {new Date().toLocaleDateString("en-US")}
       </p>
 
-      <div className="prose prose-invert prose-zinc mt-8 max-w-none space-y-8 text-zinc-300">
+      <div className="prose prose-sm prose-invert prose-zinc mt-6 max-w-none space-y-6 text-zinc-300 md:mt-8 md:space-y-8">
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             1. Information We Collect
           </h2>
           <p>
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             2. How We Use Your Information
           </h2>
           <p>We use collected information to:</p>
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             3. Cookies and Tracking
           </h2>
           <p>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             4. Third-Party Services
           </h2>
           <p>
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             5. Data Retention and Security
           </h2>
           <p>
@@ -94,7 +94,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             6. Your Rights
           </h2>
           <p>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             7. Children&apos;s Privacy
           </h2>
           <p>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">
             8. Changes to This Policy
           </h2>
           <p>
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-zinc-100">9. Contact</h2>
+          <h2 className="text-base font-semibold text-zinc-100 md:text-lg">9. Contact</h2>
           <p>
             For questions about this Privacy Policy, contact us at{" "}
             <a

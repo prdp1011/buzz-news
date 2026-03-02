@@ -1,6 +1,6 @@
-import { getTrendingPosts } from "@/lib/trending";
+import { getMergedFeed } from "@/lib/feed";
 import { getTrendingTags } from "@/lib/tags";
-import { SwipeableFeed } from "@/components/SwipeableFeed";
+import { MergedFeed } from "@/components/MergedFeed";
 import { TrendingTags } from "@/components/TrendingTags";
 import type { Metadata } from "next";
 
@@ -13,19 +13,19 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const [posts, tags] = await Promise.all([
-    getTrendingPosts(12),
+  const [feedItems, tags] = await Promise.all([
+    getMergedFeed(24),
     getTrendingTags(12),
   ]);
 
   return (
     <div>
-      {/* Header - with padding */}
-      <section className="mb-4 px-4 pt-4 md:mb-6 md:px-0 md:pt-0">
-        <h1 className="mb-1 flex items-center gap-2 text-xl font-bold text-zinc-100">
+      {/* Header - mobile-friendly */}
+      <section className="mb-4 px-0 pt-0 md:mb-8 md:pt-0">
+        <h1 className="mb-1 flex items-center gap-2 text-lg font-bold text-zinc-100 md:mb-2 md:gap-3 md:text-xl">
           Today&apos;s <span className="text-amber-400">☀️</span>
         </h1>
-        <p className="text-zinc-500 text-sm">
+        <p className="text-zinc-500 text-sm md:text-base">
           No fluff. No bias. Just the stories that hit different.
         </p>
       </section>
@@ -35,12 +35,12 @@ export default async function HomePage() {
         <TrendingTags tags={tags} />
       </div>
 
-      {/* Feed - full width on mobile for swipe, 470px on desktop */}
-      <div className="-mx-0 mt-4 md:mx-0 md:mt-6 md:px-4">
-        <SwipeableFeed posts={posts} />
+      {/* Feed - posts + social posts merged, sorted by date */}
+      <div className="mt-4 md:mx-0 md:mt-6 md:px-4">
+        <MergedFeed items={feedItems} />
       </div>
-      {posts.length === 0 && (
-        <div className="rounded-xl border border-dashed border-zinc-700 py-16 text-center text-zinc-500">
+      {feedItems.length === 0 && (
+        <div className="rounded-xl border border-dashed border-zinc-700 py-12 text-center text-zinc-500 text-sm md:rounded-2xl md:py-20 md:text-lg">
           No posts yet. Check back soon!
         </div>
       )}

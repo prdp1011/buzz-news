@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Category, Source, Tag } from "database";
+import { ImageUpload } from "./ImageUpload";
 
 type PostWithTags = {
   id: string;
@@ -38,6 +39,7 @@ export function PostForm({
   const [slug, setSlug] = useState(post?.slug ?? "");
   const [summary, setSummary] = useState(post?.summary ?? "");
   const [content, setContent] = useState(post?.content ?? "");
+  const [coverImage, setCoverImage] = useState(post?.coverImage ?? "");
   const [actionLoading, setActionLoading] = useState<
     "rewrite" | "rewriteAll" | "fetch" | null
   >(null);
@@ -129,7 +131,7 @@ export function PostForm({
       slug,
       summary: summary || null,
       content: content,
-      coverImage: (formData.get("coverImage") as string) || null,
+      coverImage: coverImage || null,
       canonicalUrl: (formData.get("canonicalUrl") as string) || null,
       categoryId: formData.get("categoryId") as string,
       sourceId: formData.get("sourceId") as string,
@@ -270,14 +272,15 @@ export function PostForm({
       </div>
       <div>
         <label className="block text-sm font-medium text-zinc-300">
-          Cover Image URL
+          Cover Image
         </label>
-        <input
-          name="coverImage"
-          type="url"
-          defaultValue={post?.coverImage ?? ""}
-          className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2"
-        />
+        <div className="mt-1">
+          <ImageUpload
+            value={coverImage}
+            onChange={setCoverImage}
+            disabled={loading}
+          />
+        </div>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
