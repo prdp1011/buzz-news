@@ -4,6 +4,8 @@ import { prisma } from "database";
 import { PLACEHOLDER_IMAGE } from "@/lib/placeholder";
 import { getMergedFeed } from "@/lib/feed";
 import { MergedFeed } from "@/components/MergedFeed";
+import { generateSocialPostJsonLd } from "@/lib/json-ld";
+import { getBaseUrl, SITE_NAME } from "@/lib/seo";
 
 const PLATFORM_LABELS: Record<string, string> = {
   INSTAGRAM: "Instagram",
@@ -21,7 +23,28 @@ export async function generateMetadata({
     where: { id, status: "PUBLISHED" },
   });
   if (!post) return { title: "Post Not Found" };
-  return { title: `${post.title} | Buzz News` };
+  const baseUrl = getBaseUrl();
+  const canonicalUrl = `${baseUrl}/social/${id}`;
+  const description = post.content?.slice(0, 160) ?? post.title;
+  return {
+    title: post.title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: `${post.title} | ${SITE_NAME}`,
+      description,
+      images: post.imageUrl ? [post.imageUrl] : undefined,
+      publishedTime: post.publishedAt?.toISOString(),
+      url: canonicalUrl,
+      type: "article",
+    },
+    twitter: {
+      card: post.imageUrl ? "summary_large_image" : "summary",
+      title: `${post.title} | ${SITE_NAME}`,
+      description,
+      images: post.imageUrl ? [post.imageUrl] : undefined,
+    },
+  };
 }
 
 export const revalidate = 60;
@@ -42,8 +65,14 @@ export default async function SocialPostPage({
 
   if (!post) notFound();
 
+  const socialJsonLd = generateSocialPostJsonLd(post);
+
   return (
     <article className="mx-auto max-w-3xl px-4 md:px-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(socialJsonLd) }}
+      />
       <Link
         href="/"
         className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-400"

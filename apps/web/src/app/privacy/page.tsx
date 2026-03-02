@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getBaseUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Buzz News privacy policy. Learn how we collect, use, and protect your information.",
+  alternates: { canonical: `${getBaseUrl()}/privacy` },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {
@@ -130,10 +133,10 @@ export default function PrivacyPage() {
           <p>
             For questions about this Privacy Policy, contact us at{" "}
             <a
-              href="mailto:privacy@buzznews.com"
+              href="mailto:buzznnews@gmail.com"
               className="text-amber-400 hover:underline"
             >
-              privacy@buzznews.com
+              buzznnews@gmail.com
             </a>
             .
           </p>

@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getBaseUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about Buzz News — AI-powered news summaries, no paywalls, multiple perspectives.",
+  alternates: { canonical: `${getBaseUrl()}/about` },
+  openGraph: { url: `${getBaseUrl()}/about`, type: "website" },
 };
 
 export default function AboutPage() {
@@ -62,10 +65,10 @@ export default function AboutPage() {
           <p>
             Have feedback, partnership ideas, or press inquiries? Reach us at{" "}
             <a
-              href="mailto:support@buzznews.com"
+              href="mailto:buzznnews@gmail.com"
               className="text-amber-400 hover:underline"
             >
-              support@buzznews.com
+              buzznnews@gmail.com
             </a>
             .
           </p>

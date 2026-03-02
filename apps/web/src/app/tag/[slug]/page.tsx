@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "database";
 import { PostCard } from "@/components/PostCard";
 import { CategoryPills } from "@/components/CategoryPills";
+import { getBaseUrl, SITE_NAME } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface Props {
@@ -12,7 +13,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const tag = await prisma.tag.findUnique({ where: { slug } });
   if (!tag) return { title: "Tag Not Found" };
-  return { title: `${tag.name} | Buzz News` };
+  const baseUrl = getBaseUrl();
+  const canonicalUrl = `${baseUrl}/tag/${slug}`;
+  return {
+    title: `#${tag.name}`,
+    description: `Posts tagged with ${tag.name}`,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: `#${tag.name} | ${SITE_NAME}`,
+      url: canonicalUrl,
+      type: "website",
+    },
+    twitter: { card: "summary", title: `#${tag.name} | ${SITE_NAME}` },
+  };
 }
 
 export const revalidate = 60;

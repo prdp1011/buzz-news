@@ -3,6 +3,7 @@ import { prisma } from "database";
 import { getTrendingPostsByCategory } from "@/lib/trending";
 import { PostCard } from "@/components/PostCard";
 import { CategoryPills } from "@/components/CategoryPills";
+import { getBaseUrl, SITE_NAME } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface Props {
@@ -15,9 +16,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     where: { slug },
   });
   if (!category) return { title: "Category Not Found" };
+  const baseUrl = getBaseUrl();
+  const canonicalUrl = `${baseUrl}/category/${slug}`;
+  const description =
+    category.description ?? `Latest ${category.name} news and stories`;
   return {
     title: category.name,
-    description: category.description ?? undefined,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: `${category.name} | ${SITE_NAME}`,
+      description,
+      url: canonicalUrl,
+      type: "website",
+    },
+    twitter: { card: "summary", title: `${category.name} | ${SITE_NAME}` },
   };
 }
 

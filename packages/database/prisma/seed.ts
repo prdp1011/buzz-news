@@ -81,10 +81,10 @@ async function main() {
   // Create admin user (password: admin123)
   const passwordHash = await hash("admin123", 12);
   await prisma.adminUser.upsert({
-    where: { email: "admin@genznews.com" },
+    where: { email: "buzznnews@gmail.com" },
     update: {},
     create: {
-      email: "admin@genznews.com",
+      email: "buzznnews@gmail.com",
       passwordHash,
       name: "Admin User",
       role: "admin",
@@ -163,7 +163,7 @@ async function main() {
   console.log(`   - ${categories.length} categories`);
   console.log(`   - ${sources.length} sources`);
   console.log(`   - ${tags.length} tags`);
-  console.log(`   - 1 admin user (admin@genznews.com / admin123)`);
+  console.log(`   - 1 admin user (buzznnews@gmail.com / admin123)`);
   console.log(`   - 1 sample post`);
 }
 

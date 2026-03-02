@@ -56,7 +56,7 @@ buzz-news-platform/
    ```
 
    - Web: http://localhost:3000
-   - Admin: http://localhost:3001 (login: admin@genznews.com / admin123)
+   - Admin: http://localhost:3001
    - Worker: runs in background, fetches RSS every hour
 
 ### Docker

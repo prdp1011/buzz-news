@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { prisma } from "database";
-import { generateJsonLd } from "@/lib/json-ld";
+import { generateJsonLd, generateBreadcrumbJsonLd } from "@/lib/json-ld";
 import { PLACEHOLDER_IMAGE } from "@/lib/placeholder";
+import { getBaseUrl } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface Props {
@@ -24,14 +25,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) return { title: "Post Not Found" };
 
+  const baseUrl = getBaseUrl();
+  const canonicalUrl = `${baseUrl}/post/${slug}`;
+
   return {
     title: post.seoTitle ?? post.title,
     description: post.metaDescription ?? post.summary ?? undefined,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
-      title: post.title,
-      description: post.summary ?? undefined,
+      title: post.seoTitle ?? post.title,
+      description: post.metaDescription ?? post.summary ?? undefined,
       images: post.coverImage ? [post.coverImage] : undefined,
       publishedTime: post.publishedAt?.toISOString(),
+      url: canonicalUrl,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.seoTitle ?? post.title,
+      description: post.metaDescription ?? post.summary ?? undefined,
+      images: post.coverImage ? [post.coverImage] : undefined,
     },
   };
 }
@@ -58,13 +71,23 @@ export default async function PostPage({ params }: Props) {
 
   if (!post) notFound();
 
+  const baseUrl = getBaseUrl();
   const jsonLd = generateJsonLd(post);
+  const breadcrumbLd = generateBreadcrumbJsonLd([
+    { name: "Home", url: baseUrl },
+    { name: post.category.name, url: `${baseUrl}/category/${post.category.slug}` },
+    { name: post.title, url: `${baseUrl}/post/${post.slug}` },
+  ]);
 
   return (
     <article className="max-w-3xl mx-auto md:px-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <header className="mb-6 md:mb-10">
         <a

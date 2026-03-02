@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getBaseUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Buzz News terms of service. Read the terms governing your use of our platform.",
+  alternates: { canonical: `${getBaseUrl()}/terms` },
+  robots: { index: true, follow: true },
 };
 
 export default function TermsPage() {
@@ -105,10 +108,10 @@ export default function TermsPage() {
             We respect intellectual property rights. If you believe content on
             our site infringes your copyright, please send a DMCA notice to{" "}
             <a
-              href="mailto:dmca@buzznews.com"
+              href="mailto:buzznnews@gmail.com"
               className="text-amber-400 hover:underline"
             >
-              dmca@buzznews.com
+              buzznnews@gmail.com
             </a>{" "}
             with the required information under 17 U.S.C. § 512(c)(3).
           </p>
@@ -151,10 +154,10 @@ export default function TermsPage() {
           <p>
             For questions about these Terms, contact us at{" "}
             <a
-              href="mailto:legal@buzznews.com"
+              href="mailto:buzznnews@gmail.com"
               className="text-amber-400 hover:underline"
             >
-              legal@buzznews.com
+              buzznnews@gmail.com
             </a>
             .
           </p>

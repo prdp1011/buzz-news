@@ -62,7 +62,7 @@ export function Footer() {
                 </li>
                 <li>
                 <a
-                  href="mailto:support@buzznews.com"
+                  href="mailto:buzznnews@gmail.com"
                   className="text-sm text-zinc-400 hover:text-amber-400 md:text-base"
                 >
                     Contact
