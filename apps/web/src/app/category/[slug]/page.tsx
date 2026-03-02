@@ -21,11 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Return [] to avoid DB connection pool exhaustion during Vercel build.
+// Pages are generated on-demand with ISR (revalidate: 60).
 export async function generateStaticParams() {
-  const categories = await prisma.category.findMany({
-    select: { slug: true },
-  });
-  return categories.map((c) => ({ slug: c.slug }));
+  return [];
 }
 
 export const revalidate = 60;
