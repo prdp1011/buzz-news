@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getBaseUrl } from "@/lib/seo";
+import { getBaseUrl, SITE_NAME } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Buzz News privacy policy. Learn how we collect, use, and protect your information.",
+    `${SITE_NAME} privacy policy. Learn how we collect, use, and protect your information.`,
   alternates: { canonical: `${getBaseUrl()}/privacy` },
   robots: { index: true, follow: true },
 };
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
             1. Information We Collect
           </h2>
           <p>
-            Buzz News may collect information when you use our website,
+            {SITE_NAME} may collect information when you use our website,
             including:
           </p>
           <ul className="list-disc space-y-1 pl-6">

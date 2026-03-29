@@ -178,3 +178,45 @@ model ContentHash {
   @@index([hash])
   @@index([sourceId])
 }
+
+// ============ QUIZ (public web app) ============
+
+model Quiz {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String?  @db.Text
+  emoji       String?
+  topicSlug   String
+  topicLabel  String
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  questions QuizQuestion[]
+
+  @@index([published, topicSlug])
+}
+
+model QuizQuestion {
+  id     String @id @default(cuid())
+  quizId String
+  quiz   Quiz   @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  order  Int
+  text   String @db.Text
+
+  options QuizOption[]
+
+  @@index([quizId, order])
+}
+
+model QuizOption {
+  id         String       @id @default(cuid())
+  questionId String
+  question   QuizQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  order      Int
+  text       String
+  isCorrect  Boolean      @default(false)
+
+  @@index([questionId, order])
+}

@@ -4,17 +4,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const CATEGORY_ICONS: Record<string, string> = {
-  tech: "🔍",
-  culture: "🎬",
-  lifestyle: "✨",
-  news: "📰",
+const TOPIC_ICONS: Record<string, string> = {
+  "nursery-rhymes": "🎵",
+  general: "🎯",
+  science: "🔬",
+  history: "📜",
 };
 
 export function MobileNav({
-  categories,
+  topics,
 }: {
-  categories: { slug: string; name: string }[];
+  topics: { slug: string; label: string }[];
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -29,23 +29,22 @@ export function MobileNav({
 
   const navItems = [
     { href: "/", icon: "🏠", label: "Home" },
-    ...categories.map((cat) => ({
-      href: `/category/${cat.slug}`,
-      icon: CATEGORY_ICONS[cat.slug] ?? "📁",
-      label: cat.name,
+    ...topics.map((t) => ({
+      href: `/topic/${t.slug}`,
+      icon: TOPIC_ICONS[t.slug] ?? "📂",
+      label: t.label,
     })),
   ];
 
   return (
     <>
-      {/* Mobile header with menu bar */}
       <header className="sticky top-0 z-30 flex items-center justify-between border-b border-zinc-800 bg-zinc-950/95 px-4 py-3 backdrop-blur-md lg:hidden">
         <Link
           href="/"
           className="flex items-center gap-1.5 text-base font-bold text-amber-400"
         >
-          <span className="text-xl md:text-2xl">✨</span>
-          Buzz News
+          <span className="text-xl md:text-2xl">🧠</span>
+          QuizLab
         </Link>
         <button
           type="button"
@@ -69,18 +68,15 @@ export function MobileNav({
         </button>
       </header>
 
-      {/* Slide-out sidebar overlay */}
       <div
         className={`fixed inset-0 z-50 lg:hidden ${open ? "" : "pointer-events-none"}`}
         aria-hidden={!open}
       >
-        {/* Backdrop */}
         <div
           className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-200 ${open ? "opacity-100" : "opacity-0"}`}
           onClick={() => setOpen(false)}
         />
 
-        {/* Sidebar panel */}
         <aside
           className={`absolute left-0 top-0 h-full w-64 border-r border-zinc-800 bg-zinc-950 shadow-xl transition-transform duration-200 ease-out ${open ? "translate-x-0" : "-translate-x-full"}`}
         >

@@ -159,12 +159,101 @@ async function main() {
     },
   });
 
+  // Quiz: Nursery Rhyme Mastermind–style trivia
+  const nurseryQuiz = await prisma.quiz.upsert({
+    where: { slug: "nursery-rhyme-mastermind" },
+    update: {
+      title: "Nursery Rhyme Mastermind",
+      description:
+        "Classic lines, characters, and twists from nursery rhymes — pick the right finish.",
+      emoji: "🎵",
+      topicSlug: "nursery-rhymes",
+      topicLabel: "Nursery rhymes",
+      published: true,
+    },
+    create: {
+      slug: "nursery-rhyme-mastermind",
+      title: "Nursery Rhyme Mastermind",
+      description:
+        "Classic lines, characters, and twists from nursery rhymes — pick the right finish.",
+      emoji: "🎵",
+      topicSlug: "nursery-rhymes",
+      topicLabel: "Nursery rhymes",
+      published: true,
+    },
+  });
+
+  await prisma.quizQuestion.deleteMany({ where: { quizId: nurseryQuiz.id } });
+
+  type Q = { text: string; options: [string, string, string, string]; correctIndex: number };
+  const nurseryQuestions: Q[] = [
+    {
+      text: "Humpty Dumpty sat on a…",
+      options: ["Wall", "Stool", "Fence", "Roof"],
+      correctIndex: 0,
+    },
+    {
+      text: "Jack and Jill went up the…",
+      options: ["Mountain", "Hill", "Tower", "Stairs"],
+      correctIndex: 1,
+    },
+    {
+      text: "Little Miss Muffet sat on a…",
+      options: ["Chair", "Rock", "Tuffet", "Bench"],
+      correctIndex: 2,
+    },
+    {
+      text: "Baa, Baa, Black Sheep, have you any wool? Yes sir, yes sir, ___ bags full.",
+      options: ["Two", "Three", "Four", "Five"],
+      correctIndex: 1,
+    },
+    {
+      text: "Ring-a-ring o' roses / A pocket full of posies / We all fall…",
+      options: ["Asleep", "Down", "Over", "Together"],
+      correctIndex: 1,
+    },
+    {
+      text: "Hickory, dickory, dock / The mouse ran up the…",
+      options: ["House", "Tree", "Clock", "Hill"],
+      correctIndex: 2,
+    },
+    {
+      text: "Mary had a little lamb; its fleece was white as…",
+      options: ["Milk", "Clouds", "Snow", "Cotton"],
+      correctIndex: 2,
+    },
+    {
+      text: "Twinkle, twinkle, little…",
+      options: ["Moon", "Light", "Star", "Dream"],
+      correctIndex: 2,
+    },
+  ];
+
+  for (let i = 0; i < nurseryQuestions.length; i++) {
+    const q = nurseryQuestions[i];
+    await prisma.quizQuestion.create({
+      data: {
+        quizId: nurseryQuiz.id,
+        order: i,
+        text: q.text,
+        options: {
+          create: q.options.map((text, j) => ({
+            order: j,
+            text,
+            isCorrect: j === q.correctIndex,
+          })),
+        },
+      },
+    });
+  }
+
   console.log("✅ Seed completed successfully!");
   console.log(`   - ${categories.length} categories`);
   console.log(`   - ${sources.length} sources`);
   console.log(`   - ${tags.length} tags`);
   console.log(`   - 1 admin user (buzznnews@gmail.com / admin123)`);
   console.log(`   - 1 sample post`);
+  console.log(`   - 1 quiz (nursery-rhyme-mastermind)`);
 }
 
 main()

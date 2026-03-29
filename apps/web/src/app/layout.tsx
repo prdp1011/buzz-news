@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+
+/** Quiz nav and sidebars load topics from DB; avoid static prerender without DATABASE_URL. */
+export const dynamic = "force-dynamic";
 import { Outfit } from "next/font/google";
 import { prisma } from "database";
 import { Footer } from "@/components/Footer";
@@ -20,11 +23,11 @@ const baseUrl = getBaseUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: `${SITE_NAME} | News That Actually Hits Different`,
+    default: `${SITE_NAME} | Trivia quizzes`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  keywords: ["news", "AI summaries", "tech news", "trending", "buzz"],
+  keywords: ["quiz", "trivia", "multiple choice", "games", "nursery rhymes"],
   authors: [{ name: SITE_NAME, url: baseUrl }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
@@ -33,12 +36,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} | News That Actually Hits Different`,
+    title: `${SITE_NAME} | Trivia quizzes`,
     description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | News That Actually Hits Different`,
+    title: `${SITE_NAME} | Trivia quizzes`,
     description: SITE_DESCRIPTION,
   },
   robots: {
@@ -59,10 +62,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const categories = await prisma.category.findMany({
-    orderBy: { name: "asc" },
-    select: { slug: true, name: true },
+  const topicRows = await prisma.quiz.groupBy({
+    by: ["topicSlug", "topicLabel"],
+    where: { published: true },
   });
+  const quizTopics = topicRows
+    .map((t) => ({ slug: t.topicSlug, label: t.topicLabel }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   const organizationJsonLd = {
     "@context": "https://schema.org",
@@ -93,8 +99,8 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <NavigationLoader />
-        <LeftSidebar categories={categories} />
-        <MobileNav categories={categories} />
+        <LeftSidebar topics={quizTopics} />
+        <MobileNav topics={quizTopics} />
 
         {/* Main content - offset for left sidebar on desktop */}
         <div className="flex flex-1 flex-col lg:pl-16 px-3 py-4 md:p-2 md:py-0">

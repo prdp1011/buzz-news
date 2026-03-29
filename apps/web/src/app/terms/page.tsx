@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getBaseUrl } from "@/lib/seo";
+import { getBaseUrl, SITE_NAME } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Buzz News terms of service. Read the terms governing your use of our platform.",
+    `${SITE_NAME} terms of service. Read the terms governing your use of our platform.`,
   alternates: { canonical: `${getBaseUrl()}/terms` },
   robots: { index: true, follow: true },
 };
@@ -31,7 +31,7 @@ export default function TermsPage() {
             1. Acceptance of Terms
           </h2>
           <p>
-            By accessing or using Buzz News (&quot;the Service&quot;), you agree
+            By accessing or using {SITE_NAME} (&quot;the Service&quot;), you agree
             to be bound by these Terms of Service. If you do not agree, do not
             use the Service.
           </p>
@@ -42,9 +42,9 @@ export default function TermsPage() {
             2. Description of Service
           </h2>
           <p>
-            Buzz News provides aggregated news content, summaries, and related
-            features. Content is sourced from third-party publishers and RSS
-            feeds. We use AI to generate summaries and enhance readability.
+            {SITE_NAME} provides trivia quizzes and related features. Quiz
+            content may reference facts, rhymes, or general knowledge for
+            entertainment.
           </p>
         </section>
 
@@ -67,11 +67,10 @@ export default function TermsPage() {
             4. Intellectual Property and Content
           </h2>
           <p>
-            Original articles and images are owned by their respective
-            publishers. Buzz News does not claim ownership of sourced content.
-            Our summaries, design, and branding are our intellectual property.
-            Use of our content for commercial purposes without permission is
-            prohibited.
+            Third-party facts or works may appear in quiz questions for
+            educational or entertainment use. {SITE_NAME} branding, design, and
+            original quiz wording are our intellectual property. Use of our
+            content for commercial purposes without permission is prohibited.
           </p>
         </section>
 
@@ -83,8 +82,8 @@ export default function TermsPage() {
             THE SERVICE IS PROVIDED &quot;AS IS&quot; AND &quot;AS
             AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.
             We do not warrant that the Service will be uninterrupted, error-free,
-            or free of harmful components. AI-generated content may contain
-            inaccuracies.
+            or free of harmful components. Quiz answers are provided in good
+            faith but may contain errors.
           </p>
         </section>
 

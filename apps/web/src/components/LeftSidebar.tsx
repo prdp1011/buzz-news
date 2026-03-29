@@ -3,26 +3,26 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const CATEGORY_ICONS: Record<string, string> = {
-  tech: "🔍",
-  culture: "🎬",
-  lifestyle: "✨",
-  news: "📰",
+const TOPIC_ICONS: Record<string, string> = {
+  "nursery-rhymes": "🎵",
+  general: "🎯",
+  science: "🔬",
+  history: "📜",
 };
 
 export function LeftSidebar({
-  categories,
+  topics,
 }: {
-  categories: { slug: string; name: string }[];
+  topics: { slug: string; label: string }[];
 }) {
   const pathname = usePathname();
 
   const navItems = [
     { href: "/", icon: "🏠", label: "Home" },
-    ...categories.map((cat) => ({
-      href: `/category/${cat.slug}`,
-      icon: CATEGORY_ICONS[cat.slug] ?? "📁",
-      label: cat.name,
+    ...topics.map((t) => ({
+      href: `/topic/${t.slug}`,
+      icon: TOPIC_ICONS[t.slug] ?? "📂",
+      label: t.label,
     })),
   ];
 
@@ -32,8 +32,9 @@ export function LeftSidebar({
         <Link
           href="/"
           className="flex items-center justify-center rounded-lg p-2 transition hover:bg-zinc-800"
+          title="QuizLab"
         >
-          <span className="text-2xl">✨</span>
+          <span className="text-2xl">🧠</span>
         </Link>
         {navItems.map((item) => {
           const isActive =

@@ -13,12 +13,11 @@ export function Footer() {
               href="/"
               className="flex items-center gap-1.5 text-base font-bold text-amber-400 md:gap-2"
             >
-              <span className="text-lg md:text-xl">✨</span>
-              Buzz News
+              <span className="text-lg md:text-xl">🧠</span>
+              QuizLab
             </Link>
             <p className="mt-2 max-w-xs text-sm text-zinc-500 leading-relaxed md:mt-3">
-              Your daily dose of news that matters. AI-powered summaries, no
-              paywalls, multiple perspectives.
+              Free trivia quizzes — topics, multiple choice, and instant results.
             </p>
           </div>
 
@@ -76,11 +75,10 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-8 flex flex-col gap-3 border-t border-zinc-800 pt-6 md:mt-12 md:gap-4 md:pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-zinc-500">
-            © {currentYear} Buzz News. All rights reserved.
+            © {currentYear} QuizLab. All rights reserved.
           </p>
           <p className="text-xs text-zinc-600">
-            News content is aggregated from external sources. We do not claim
-            ownership of original articles.
+            Quiz content is for entertainment. Questions may reference public-domain rhymes and facts.
           </p>
         </div>
       </div>
