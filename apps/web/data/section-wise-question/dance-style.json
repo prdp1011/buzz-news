@@ -1,0 +1,285 @@
+{
+  "slug": "dance-style",
+  "title": "Dance Style Quiz",
+  "description": "Master dance style with 12 practical and engaging questions.",
+  "emoji": "🎯",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "You are starting with dance style. What is the most sensible first move?",
+      "description": "Foundations matter: Dance Style rewards patience more than impulse buys.",
+      "options": [
+        {
+          "text": "Learn the basics, then add gear or complexity gradually",
+          "isCorrect": true
+        },
+        {
+          "text": "Buy every popular accessory on day one",
+          "isCorrect": false
+        },
+        {
+          "text": "Skip safety or setup steps to save time",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy a random viral trend without context",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which habit usually hurts progress in dance style?",
+      "description": "Consistency beats intensity for most people exploring Dance Style.",
+      "options": [
+        {
+          "text": "Doing nothing regularly and only binge-practicing",
+          "isCorrect": true
+        },
+        {
+          "text": "Tracking small wins week to week",
+          "isCorrect": false
+        },
+        {
+          "text": "Asking experienced people targeted questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Adjusting your approach when something clearly fails",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "In dance style, why is it risky to ignore fundamentals?",
+      "description": "Core concepts in Dance Style prevent expensive or discouraging setbacks.",
+      "options": [
+        {
+          "text": "Mistakes compound and become harder to untangle later",
+          "isCorrect": true
+        },
+        {
+          "text": "Fundamentals never matter for hobbies",
+          "isCorrect": false
+        },
+        {
+          "text": "You will automatically absorb basics without study",
+          "isCorrect": false
+        },
+        {
+          "text": "Only experts need to understand the basics",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is a realistic expectation when learning dance style?",
+      "description": "Dance Style is a skill curve: early progress can feel slow.",
+      "options": [
+        {
+          "text": "Noticeable improvement often takes weeks of steady practice",
+          "isCorrect": true
+        },
+        {
+          "text": "You should master it perfectly within a few days",
+          "isCorrect": false
+        },
+        {
+          "text": "If it feels hard, you are not suited for it",
+          "isCorrect": false
+        },
+        {
+          "text": "Talent alone replaces practice",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which approach helps you learn dance style from feedback?",
+      "description": "Useful feedback speeds up learning in Dance Style.",
+      "options": [
+        {
+          "text": "Change one variable at a time and observe the outcome",
+          "isCorrect": true
+        },
+        {
+          "text": "Change five things at once every session",
+          "isCorrect": false
+        },
+        {
+          "text": "Ignore results that contradict your assumptions",
+          "isCorrect": false
+        },
+        {
+          "text": "Avoid ever repeating a failed attempt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "When budgeting time for dance style, what usually works best?",
+      "description": "Short regular sessions often beat rare marathons for Dance Style.",
+      "options": [
+        {
+          "text": "Short, frequent sessions that fit your calendar",
+          "isCorrect": true
+        },
+        {
+          "text": "Only practice once a month for eight hours straight",
+          "isCorrect": false
+        },
+        {
+          "text": "Wait until you feel 100% motivated",
+          "isCorrect": false
+        },
+        {
+          "text": "Quit the first day you miss a session",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "How can you avoid misinformation about dance style?",
+      "description": "Cross-checking sources helps with Dance Style, where myths spread quickly.",
+      "options": [
+        {
+          "text": "Compare multiple reputable sources and look for consensus",
+          "isCorrect": true
+        },
+        {
+          "text": "Trust the first bold claim you see online",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume older advice is always outdated",
+          "isCorrect": false
+        },
+        {
+          "text": "Believe anything that uses technical jargon",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What role does community play in dance style?",
+      "description": "Many people improve faster in Dance Style with peers or mentors.",
+      "options": [
+        {
+          "text": "Communities can answer niche questions and share sane defaults",
+          "isCorrect": true
+        },
+        {
+          "text": "Communities always agree and never argue",
+          "isCorrect": false
+        },
+        {
+          "text": "You should never share your beginner questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Online advice is never useful",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which goal-setting style fits dance style for most beginners?",
+      "description": "Small measurable goals keep motivation for Dance Style.",
+      "options": [
+        {
+          "text": "One clear, achievable milestone per week",
+          "isCorrect": true
+        },
+        {
+          "text": "A vague goal to be the best in the world immediately",
+          "isCorrect": false
+        },
+        {
+          "text": "No goals—only random experimentation forever",
+          "isCorrect": false
+        },
+        {
+          "text": "Only goals you cannot measure or verify",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is a sign you should slow down in dance style?",
+      "description": "Pacing prevents injury, burnout, or wasted money in Dance Style.",
+      "options": [
+        {
+          "text": "You feel constant frustration, pain, or overspending",
+          "isCorrect": true
+        },
+        {
+          "text": "You still enjoy it and stay within your limits",
+          "isCorrect": false
+        },
+        {
+          "text": "You completed a small task successfully",
+          "isCorrect": false
+        },
+        {
+          "text": "You asked a thoughtful question",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "text": "How should you document what you learn in dance style?",
+      "description": "Notes turn experiments into reusable knowledge for Dance Style.",
+      "options": [
+        {
+          "text": "Keep a simple log: what you tried, what happened, what next",
+          "isCorrect": true
+        },
+        {
+          "text": "Rely only on memory for every detail",
+          "isCorrect": false
+        },
+        {
+          "text": "Never write anything because it feels slow",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy others' notes without understanding them",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "text": "Which attitude helps long-term growth in dance style?",
+      "description": "\"Dance Style Quiz\" rewards curiosity over perfectionism.",
+      "options": [
+        {
+          "text": "Treat mistakes as data and iterate calmly",
+          "isCorrect": true
+        },
+        {
+          "text": "Quit after the first imperfect attempt",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume you must never ask basic questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Compare your day one to someone else's year five",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

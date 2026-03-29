@@ -1,7 +1,8 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getQuizMeta } from "@/lib/quiz";
 import { SITE_NAME } from "@/lib/seo";
+import { QuizResumeRedirect } from "./QuizResumeRedirect";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -19,5 +20,6 @@ export default async function QuizSlugPage({ params }: Props) {
   const { slug } = await params;
   const meta = await getQuizMeta(slug);
   if (!meta) notFound();
-  redirect(`/quiz/${slug}/1`);
+
+  return <QuizResumeRedirect slug={slug} totalQuestions={meta.totalQuestions} />;
 }

@@ -1,0 +1,802 @@
+{
+  "slug": "baking-basics",
+  "title": "Are You A Baker Or A Faker?",
+  "description": "Are You A Baker Or A Faker? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83e\uddc1",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "What makes bread rise?",
+      "description": "Yeast ferments sugars to produce CO\u2082, which makes dough expand.",
+      "options": [
+        {
+          "text": "Yeast",
+          "isCorrect": true
+        },
+        {
+          "text": "Baking soda",
+          "isCorrect": false
+        },
+        {
+          "text": "Salt",
+          "isCorrect": false
+        },
+        {
+          "text": "Butter",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which ingredient adds flakiness to pastries?",
+      "description": "Cold fat creates layers that puff when baked.",
+      "options": [
+        {
+          "text": "Butter",
+          "isCorrect": true
+        },
+        {
+          "text": "Water",
+          "isCorrect": false
+        },
+        {
+          "text": "Sugar",
+          "isCorrect": false
+        },
+        {
+          "text": "Milk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "What does al dente mean for pasta?",
+      "description": "It means the pasta is cooked but still firm to the bite.",
+      "options": [
+        {
+          "text": "Firm to the bite",
+          "isCorrect": true
+        },
+        {
+          "text": "Very soft",
+          "isCorrect": false
+        },
+        {
+          "text": "Overcooked",
+          "isCorrect": false
+        },
+        {
+          "text": "Crunchy raw",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Which spice gives curry its yellow color?",
+      "description": "Turmeric provides the signature golden hue.",
+      "options": [
+        {
+          "text": "Turmeric",
+          "isCorrect": true
+        },
+        {
+          "text": "Cumin",
+          "isCorrect": false
+        },
+        {
+          "text": "Paprika",
+          "isCorrect": false
+        },
+        {
+          "text": "Coriander",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "What is the main ingredient in guacamole?",
+      "description": "Ripe avocados are mashed to make guacamole.",
+      "options": [
+        {
+          "text": "Avocado",
+          "isCorrect": true
+        },
+        {
+          "text": "Tomato",
+          "isCorrect": false
+        },
+        {
+          "text": "Onion",
+          "isCorrect": false
+        },
+        {
+          "text": "Cucumber",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Which cooking method uses dry heat in an oven?",
+      "description": "Baking uses surrounding dry heat to cook food.",
+      "options": [
+        {
+          "text": "Baking",
+          "isCorrect": true
+        },
+        {
+          "text": "Boiling",
+          "isCorrect": false
+        },
+        {
+          "text": "Steaming",
+          "isCorrect": false
+        },
+        {
+          "text": "Poaching",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "What does saut\u00e9 mean?",
+      "description": "To cook quickly in a small amount of oil over high heat.",
+      "options": [
+        {
+          "text": "Cook quickly in a little oil",
+          "isCorrect": true
+        },
+        {
+          "text": "Deep fry slowly",
+          "isCorrect": false
+        },
+        {
+          "text": "Bake at low heat",
+          "isCorrect": false
+        },
+        {
+          "text": "Boil in water",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Which flour has the highest protein for bread?",
+      "description": "Bread flour forms stronger gluten networks.",
+      "options": [
+        {
+          "text": "Bread flour",
+          "isCorrect": true
+        },
+        {
+          "text": "Cake flour",
+          "isCorrect": false
+        },
+        {
+          "text": "All-purpose (low)",
+          "isCorrect": false
+        },
+        {
+          "text": "Rice flour",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "What is tempering chocolate used for?",
+      "description": "It stabilizes cocoa butter for a glossy snap finish.",
+      "options": [
+        {
+          "text": "To create shine and snap",
+          "isCorrect": true
+        },
+        {
+          "text": "To sweeten chocolate",
+          "isCorrect": false
+        },
+        {
+          "text": "To melt faster",
+          "isCorrect": false
+        },
+        {
+          "text": "To thicken batter",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What does resting dough do?",
+      "description": "It relaxes gluten and improves texture and elasticity.",
+      "options": [
+        {
+          "text": "Relaxes gluten",
+          "isCorrect": true
+        },
+        {
+          "text": "Adds flavoring",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduces moisture",
+          "isCorrect": false
+        },
+        {
+          "text": "Cools the oven",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "text": "What happens if you over-knead bread dough?",
+      "description": "Over-kneading can make dough too tight and result in dense bread.",
+      "options": [
+        { "text": "Bread becomes dense and tough", "isCorrect": true },
+        { "text": "Bread becomes fluffier", "isCorrect": false },
+        { "text": "Dough rises faster", "isCorrect": false },
+        { "text": "Bread becomes sweeter", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 11,
+      "text": "Why is cold butter used in pastry making?",
+      "description": "Cold butter creates layers that produce a flaky texture.",
+      "options": [
+        { "text": "To create flaky layers", "isCorrect": true },
+        { "text": "To melt faster", "isCorrect": false },
+        { "text": "To sweeten dough", "isCorrect": false },
+        { "text": "To reduce baking time", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 12,
+      "text": "What does baking powder do in recipes?",
+      "description": "It releases gas that helps baked goods rise.",
+      "options": [
+        { "text": "Leavening agent", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Adds moisture", "isCorrect": false },
+        { "text": "Changes color", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 13,
+      "text": "Why do cookies spread too much while baking?",
+      "description": "Too much butter or low flour can cause spreading.",
+      "options": [
+        { "text": "Excess butter or low flour", "isCorrect": true },
+        { "text": "Too much sugar only", "isCorrect": false },
+        { "text": "Cold oven", "isCorrect": false },
+        { "text": "Too much salt", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 14,
+      "text": "What is the purpose of preheating an oven?",
+      "description": "It ensures consistent baking temperature from the start.",
+      "options": [
+        { "text": "Ensure even cooking", "isCorrect": true },
+        { "text": "Reduce baking time", "isCorrect": false },
+        { "text": "Add moisture", "isCorrect": false },
+        { "text": "Improve flavor", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 15,
+      "text": "What happens if you skip preheating the oven?",
+      "description": "Baked goods may cook unevenly or fail to rise properly.",
+      "options": [
+        { "text": "Uneven baking and poor rise", "isCorrect": true },
+        { "text": "Faster cooking", "isCorrect": false },
+        { "text": "Better texture", "isCorrect": false },
+        { "text": "No effect", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 16,
+      "text": "Why is measuring ingredients accurately important in baking?",
+      "description": "Baking is precise, and small changes affect results.",
+      "options": [
+        { "text": "Ensures correct texture and structure", "isCorrect": true },
+        { "text": "Makes baking faster", "isCorrect": false },
+        { "text": "Adds more flavor", "isCorrect": false },
+        { "text": "Reduces oven heat", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 17,
+      "text": "What does sugar do in baking besides adding sweetness?",
+      "description": "Sugar also affects texture and browning.",
+      "options": [
+        { "text": "Helps with browning and moisture", "isCorrect": true },
+        { "text": "Only adds color", "isCorrect": false },
+        { "text": "Only sweetens", "isCorrect": false },
+        { "text": "Reduces volume", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 18,
+      "text": "Why do cakes sink in the middle after baking?",
+      "description": "Often caused by underbaking or opening the oven too early.",
+      "options": [
+        { "text": "Underbaking or temperature changes", "isCorrect": true },
+        { "text": "Too much sugar only", "isCorrect": false },
+        { "text": "Using butter", "isCorrect": false },
+        { "text": "Using flour", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 19,
+      "text": "What is the role of eggs in baking?",
+      "description": "Eggs provide structure, moisture, and binding.",
+      "options": [
+        { "text": "Structure and binding", "isCorrect": true },
+        { "text": "Only color", "isCorrect": false },
+        { "text": "Only flavor", "isCorrect": false },
+        { "text": "Only sweetness", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 20,
+      "text": "What happens if you use too much baking soda?",
+      "description": "It can create a bitter taste and uneven texture.",
+      "options": [
+        { "text": "Bitter taste and poor texture", "isCorrect": true },
+        { "text": "Better rise", "isCorrect": false },
+        { "text": "Sweeter cake", "isCorrect": false },
+        { "text": "No effect", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 21,
+      "text": "Why should ingredients be at room temperature?",
+      "description": "It helps ingredients mix evenly and improves texture.",
+      "options": [
+        { "text": "Ensures smooth mixing", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Improves color only", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 22,
+      "text": "What is folding in baking?",
+      "description": "A gentle mixing method to retain air in the batter.",
+      "options": [
+        { "text": "Gently combining ingredients", "isCorrect": true },
+        { "text": "Kneading dough", "isCorrect": false },
+        { "text": "Whisking rapidly", "isCorrect": false },
+        { "text": "Cutting dough", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 23,
+      "text": "Why does bread dough need proofing?",
+      "description": "Proofing allows yeast to produce gas and expand dough.",
+      "options": [
+        { "text": "To let yeast create air bubbles", "isCorrect": true },
+        { "text": "To cool dough", "isCorrect": false },
+        { "text": "To reduce moisture", "isCorrect": false },
+        { "text": "To add flavor instantly", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 24,
+      "text": "What happens if dough is under-proofed?",
+      "description": "The bread may be dense and not rise properly.",
+      "options": [
+        { "text": "Dense bread with poor rise", "isCorrect": true },
+        { "text": "Fluffy bread", "isCorrect": false },
+        { "text": "Sweeter taste", "isCorrect": false },
+        { "text": "Better crust", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 25,
+      "text": "What happens if dough is over-proofed?",
+      "description": "The dough can collapse and lose structure.",
+      "options": [
+        { "text": "Dough collapses", "isCorrect": true },
+        { "text": "Stronger bread", "isCorrect": false },
+        { "text": "More sweetness", "isCorrect": false },
+        { "text": "Better texture", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 26,
+      "text": "What is the function of salt in baking?",
+      "description": "Salt enhances flavor and controls yeast activity.",
+      "options": [
+        { "text": "Enhances flavor and controls yeast", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Adds moisture", "isCorrect": false },
+        { "text": "Adds color", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 27,
+      "text": "Why is kneading important in bread making?",
+      "description": "It develops gluten, giving structure to bread.",
+      "options": [
+        { "text": "Develops gluten", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Cools dough", "isCorrect": false },
+        { "text": "Adds color", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 28,
+      "text": "What is gluten?",
+      "description": "A protein that gives structure and elasticity to dough.",
+      "options": [
+        { "text": "Protein in flour", "isCorrect": true },
+        { "text": "Sugar compound", "isCorrect": false },
+        { "text": "Fat component", "isCorrect": false },
+        { "text": "Mineral", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 29,
+      "text": "Why do cakes need leavening agents?",
+      "description": "They help cakes rise and become light.",
+      "options": [
+        { "text": "To create air and rise", "isCorrect": true },
+        { "text": "To add color", "isCorrect": false },
+        { "text": "To reduce sweetness", "isCorrect": false },
+        { "text": "To add moisture only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 30,
+      "text": "What is the purpose of adding mulch around plants?",
+      "description": "Mulch helps retain moisture, suppress weeds, and regulate soil temperature.",
+      "options": [
+        { "text": "Retain moisture and reduce weeds", "isCorrect": true },
+        { "text": "Increase sunlight exposure", "isCorrect": false },
+        { "text": "Harden soil", "isCorrect": false },
+        { "text": "Reduce nutrients", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 31,
+      "text": "Why should you rotate crops in a garden?",
+      "description": "Crop rotation prevents soil nutrient depletion and reduces pests.",
+      "options": [
+        { "text": "Maintain soil health and reduce pests", "isCorrect": true },
+        { "text": "Increase watering needs", "isCorrect": false },
+        { "text": "Make plants grow faster instantly", "isCorrect": false },
+        { "text": "Reduce sunlight", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 32,
+      "text": "What is a common sign of underwatering plants?",
+      "description": "Dry soil and wilting leaves indicate lack of water.",
+      "options": [
+        { "text": "Wilting and dry soil", "isCorrect": true },
+        { "text": "Yellow leaves only", "isCorrect": false },
+        { "text": "Excess moisture", "isCorrect": false },
+        { "text": "Fungal growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 33,
+      "text": "Why is spacing between plants important?",
+      "description": "Proper spacing allows airflow and reduces disease risk.",
+      "options": [
+        { "text": "Allows airflow and growth space", "isCorrect": true },
+        { "text": "Reduces sunlight", "isCorrect": false },
+        { "text": "Adds nutrients", "isCorrect": false },
+        { "text": "Increases water retention only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 34,
+      "text": "What does leggy plant growth indicate?",
+      "description": "Plants become leggy when they lack sufficient light.",
+      "options": [
+        { "text": "Insufficient sunlight", "isCorrect": true },
+        { "text": "Too much water", "isCorrect": false },
+        { "text": "Too much fertilizer", "isCorrect": false },
+        { "text": "Healthy growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 35,
+      "text": "What is the role of nitrogen in plant growth?",
+      "description": "Nitrogen promotes healthy leaf and stem growth.",
+      "options": [
+        { "text": "Promotes leafy growth", "isCorrect": true },
+        { "text": "Improves flowering only", "isCorrect": false },
+        { "text": "Adds color only", "isCorrect": false },
+        { "text": "Reduces growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 36,
+      "text": "Why should you avoid compacted soil?",
+      "description": "Compacted soil restricts root growth and water absorption.",
+      "options": [
+        { "text": "Limits root development", "isCorrect": true },
+        { "text": "Improves drainage", "isCorrect": false },
+        { "text": "Adds nutrients", "isCorrect": false },
+        { "text": "Increases oxygen", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 37,
+      "text": "What is deadheading in gardening?",
+      "description": "Removing spent flowers encourages new blooms.",
+      "options": [
+        { "text": "Removing old flowers", "isCorrect": true },
+        { "text": "Cutting roots", "isCorrect": false },
+        { "text": "Adding fertilizer", "isCorrect": false },
+        { "text": "Watering plants", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 38,
+      "text": "Why is organic fertilizer beneficial?",
+      "description": "It improves soil structure and adds nutrients naturally.",
+      "options": [
+        { "text": "Improves soil naturally", "isCorrect": true },
+        { "text": "Damages roots", "isCorrect": false },
+        { "text": "Removes nutrients", "isCorrect": false },
+        { "text": "Stops plant growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 39,
+      "text": "What does root rot usually result from?",
+      "description": "Root rot is caused by excessive moisture and poor drainage.",
+      "options": [
+        { "text": "Overwatering", "isCorrect": true },
+        { "text": "Too much sunlight", "isCorrect": false },
+        { "text": "Too much air", "isCorrect": false },
+        { "text": "Cold weather", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 40,
+      "text": "What is the benefit of raised garden beds?",
+      "description": "They improve drainage and soil control.",
+      "options": [
+        { "text": "Better drainage and soil control", "isCorrect": true },
+        { "text": "Reduce sunlight", "isCorrect": false },
+        { "text": "Eliminate watering", "isCorrect": false },
+        { "text": "Stop plant growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 41,
+      "text": "Why are earthworms beneficial in soil?",
+      "description": "They improve soil aeration and nutrient availability.",
+      "options": [
+        { "text": "Improve soil health", "isCorrect": true },
+        { "text": "Damage roots", "isCorrect": false },
+        { "text": "Remove nutrients", "isCorrect": false },
+        { "text": "Dry soil", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 42,
+      "text": "What is companion planting?",
+      "description": "Growing plants together that benefit each other.",
+      "options": [
+        { "text": "Plants that support each other", "isCorrect": true },
+        { "text": "Random planting", "isCorrect": false },
+        { "text": "Only indoor plants", "isCorrect": false },
+        { "text": "Artificial planting", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 43,
+      "text": "Why is pruning roots important when repotting?",
+      "description": "It encourages new root growth and prevents overcrowding.",
+      "options": [
+        { "text": "Promotes new root growth", "isCorrect": true },
+        { "text": "Stops growth", "isCorrect": false },
+        { "text": "Adds nutrients", "isCorrect": false },
+        { "text": "Reduces oxygen", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 44,
+      "text": "What does slow plant growth usually indicate?",
+      "description": "It may indicate lack of nutrients or poor conditions.",
+      "options": [
+        { "text": "Nutrient deficiency", "isCorrect": true },
+        { "text": "Too much sunlight", "isCorrect": false },
+        { "text": "Excess oxygen", "isCorrect": false },
+        { "text": "Healthy condition", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 45,
+      "text": "Why should you avoid watering during strong sunlight?",
+      "description": "Water evaporates quickly and can scorch leaves.",
+      "options": [
+        { "text": "Water evaporates quickly", "isCorrect": true },
+        { "text": "Plants absorb more water", "isCorrect": false },
+        { "text": "Improves growth", "isCorrect": false },
+        { "text": "Adds nutrients", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 46,
+      "text": "What is the purpose of seed germination?",
+      "description": "It is the process where seeds begin to grow into plants.",
+      "options": [
+        { "text": "Start plant growth", "isCorrect": true },
+        { "text": "Add nutrients", "isCorrect": false },
+        { "text": "Increase sunlight", "isCorrect": false },
+        { "text": "Stop growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 47,
+      "text": "What happens if plants receive too much fertilizer?",
+      "description": "Excess fertilizer can burn roots and damage plants.",
+      "options": [
+        { "text": "Root burn and damage", "isCorrect": true },
+        { "text": "Faster growth always", "isCorrect": false },
+        { "text": "Better flowers", "isCorrect": false },
+        { "text": "Improved soil only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 48,
+      "text": "Why is sunlight direction important in gardening?",
+      "description": "Different plants require different light exposure.",
+      "options": [
+        { "text": "Affects plant growth patterns", "isCorrect": true },
+        { "text": "Changes soil color", "isCorrect": false },
+        { "text": "Adds nutrients", "isCorrect": false },
+        { "text": "Stops watering", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 49,
+      "text": "What is the role of phosphorus in plants?",
+      "description": "Phosphorus supports root development and flowering.",
+      "options": [
+        { "text": "Supports roots and flowers", "isCorrect": true },
+        { "text": "Only leaf growth", "isCorrect": false },
+        { "text": "Only water retention", "isCorrect": false },
+        { "text": "Reduces growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 50,
+      "text": "Why should tools be cleaned after gardening?",
+      "description": "Cleaning tools prevents disease spread between plants.",
+      "options": [
+        { "text": "Prevent disease spread", "isCorrect": true },
+        { "text": "Improve soil", "isCorrect": false },
+        { "text": "Add nutrients", "isCorrect": false },
+        { "text": "Increase water retention", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 51,
+      "text": "What is transplant shock?",
+      "description": "Stress plants experience after being moved.",
+      "options": [
+        { "text": "Stress after moving plants", "isCorrect": true },
+        { "text": "Growth boost", "isCorrect": false },
+        { "text": "Better flowering", "isCorrect": false },
+        { "text": "Improved roots", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 52,
+      "text": "Why is air circulation important for plants?",
+      "description": "Good airflow reduces disease and improves growth.",
+      "options": [
+        { "text": "Prevents disease", "isCorrect": true },
+        { "text": "Adds nutrients", "isCorrect": false },
+        { "text": "Reduces sunlight", "isCorrect": false },
+        { "text": "Stops growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 53,
+      "text": "What is the benefit of shade for certain plants?",
+      "description": "Some plants need protection from direct sunlight.",
+      "options": [
+        { "text": "Protects from excessive heat", "isCorrect": true },
+        { "text": "Adds nutrients", "isCorrect": false },
+        { "text": "Increases water loss", "isCorrect": false },
+        { "text": "Stops growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 54,
+      "text": "Why is repotting necessary for growing plants?",
+      "description": "It provides more space for roots to expand.",
+      "options": [
+        { "text": "Allows root expansion", "isCorrect": true },
+        { "text": "Stops growth", "isCorrect": false },
+        { "text": "Adds color", "isCorrect": false },
+        { "text": "Reduces sunlight", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 55,
+      "text": "What does soil aeration improve?",
+      "description": "It allows roots to access oxygen more easily.",
+      "options": [
+        { "text": "Root oxygen supply", "isCorrect": true },
+        { "text": "Leaf color only", "isCorrect": false },
+        { "text": "Water evaporation", "isCorrect": false },
+        { "text": "Pest growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 56,
+      "text": "Why is weed control important?",
+      "description": "Weeds compete with plants for nutrients and water.",
+      "options": [
+        { "text": "Reduce competition for resources", "isCorrect": true },
+        { "text": "Add nutrients", "isCorrect": false },
+        { "text": "Improve soil color", "isCorrect": false },
+        { "text": "Increase pests", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 57,
+      "text": "What is the purpose of greenhouse gardening?",
+      "description": "It allows controlled growing conditions.",
+      "options": [
+        { "text": "Control environment for plants", "isCorrect": true },
+        { "text": "Increase weeds", "isCorrect": false },
+        { "text": "Reduce sunlight completely", "isCorrect": false },
+        { "text": "Stop watering", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 58,
+      "text": "Why are seasonal plants important in gardening?",
+      "description": "They grow best in specific climate conditions.",
+      "options": [
+        { "text": "Match climate conditions", "isCorrect": true },
+        { "text": "Grow all year equally", "isCorrect": false },
+        { "text": "Reduce sunlight", "isCorrect": false },
+        { "text": "Add nutrients only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 59,
+      "text": "What defines healthy plant growth?",
+      "description": "Balanced nutrients, proper light, and watering.",
+      "options": [
+        { "text": "Balanced care conditions", "isCorrect": true },
+        { "text": "Only watering", "isCorrect": false },
+        { "text": "Only sunlight", "isCorrect": false },
+        { "text": "Only fertilizer", "isCorrect": false }
+      ]
+    }
+
+  ]
+}

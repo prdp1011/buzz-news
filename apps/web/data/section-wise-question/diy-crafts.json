@@ -1,0 +1,239 @@
+{
+  "slug": "diy-crafts",
+  "title": "DIY Master Or Beginner?",
+  "description": "DIY Master Or Beginner? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83d\udee0\ufe0f",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "What tool cuts wood?",
+      "description": "A saw is used to cut wood.",
+      "options": [
+        {
+          "text": "Saw",
+          "isCorrect": true
+        },
+        {
+          "text": "Hammer",
+          "isCorrect": false
+        },
+        {
+          "text": "Screwdriver",
+          "isCorrect": false
+        },
+        {
+          "text": "Drill",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "What is glue used for?",
+      "description": "To stick materials together.",
+      "options": [
+        {
+          "text": "Joining materials",
+          "isCorrect": true
+        },
+        {
+          "text": "Cutting",
+          "isCorrect": false
+        },
+        {
+          "text": "Measuring",
+          "isCorrect": false
+        },
+        {
+          "text": "Painting",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Which tool drives screws?",
+      "description": "Screwdriver drives screws.",
+      "options": [
+        {
+          "text": "Screwdriver",
+          "isCorrect": true
+        },
+        {
+          "text": "Saw",
+          "isCorrect": false
+        },
+        {
+          "text": "Hammer",
+          "isCorrect": false
+        },
+        {
+          "text": "Pliers",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is sanding?",
+      "description": "Smoothing surfaces with abrasive.",
+      "options": [
+        {
+          "text": "Smoothing surface",
+          "isCorrect": true
+        },
+        {
+          "text": "Cutting",
+          "isCorrect": false
+        },
+        {
+          "text": "Painting",
+          "isCorrect": false
+        },
+        {
+          "text": "Joining",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "What is a paint primer?",
+      "description": "Base coat before painting.",
+      "options": [
+        {
+          "text": "Base coat",
+          "isCorrect": true
+        },
+        {
+          "text": "Top coat",
+          "isCorrect": false
+        },
+        {
+          "text": "Cleaner",
+          "isCorrect": false
+        },
+        {
+          "text": "Polish",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Which material is flexible?",
+      "description": "Paper is flexible for crafts.",
+      "options": [
+        {
+          "text": "Paper",
+          "isCorrect": true
+        },
+        {
+          "text": "Glass",
+          "isCorrect": false
+        },
+        {
+          "text": "Stone",
+          "isCorrect": false
+        },
+        {
+          "text": "Metal bar",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "What is measuring tape used for?",
+      "description": "To measure length.",
+      "options": [
+        {
+          "text": "Measure length",
+          "isCorrect": true
+        },
+        {
+          "text": "Cutting",
+          "isCorrect": false
+        },
+        {
+          "text": "Gluing",
+          "isCorrect": false
+        },
+        {
+          "text": "Drilling",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Which tool drills holes?",
+      "description": "Drill machine makes holes.",
+      "options": [
+        {
+          "text": "Drill",
+          "isCorrect": true
+        },
+        {
+          "text": "Hammer",
+          "isCorrect": false
+        },
+        {
+          "text": "Saw",
+          "isCorrect": false
+        },
+        {
+          "text": "Glue gun",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "What is origami?",
+      "description": "Art of paper folding.",
+      "options": [
+        {
+          "text": "Paper folding",
+          "isCorrect": true
+        },
+        {
+          "text": "Wood carving",
+          "isCorrect": false
+        },
+        {
+          "text": "Metal work",
+          "isCorrect": false
+        },
+        {
+          "text": "Painting",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Which tool paints walls?",
+      "description": "Roller is used for walls.",
+      "options": [
+        {
+          "text": "Roller",
+          "isCorrect": true
+        },
+        {
+          "text": "Saw",
+          "isCorrect": false
+        },
+        {
+          "text": "Hammer",
+          "isCorrect": false
+        },
+        {
+          "text": "Chisel",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

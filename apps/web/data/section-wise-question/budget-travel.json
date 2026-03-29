@@ -1,0 +1,395 @@
+{
+  "slug": "budget-travel",
+  "title": "Budget Travel Quiz",
+  "description": "Master budget travel with 12 practical and engaging questions.",
+  "emoji": "🎯",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "You are starting with budget travel. What is the most sensible first move?",
+      "description": "Foundations matter: Budget Travel rewards patience more than impulse buys.",
+      "options": [
+        {
+          "text": "Learn the basics, then add gear or complexity gradually",
+          "isCorrect": true
+        },
+        {
+          "text": "Buy every popular accessory on day one",
+          "isCorrect": false
+        },
+        {
+          "text": "Skip safety or setup steps to save time",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy a random viral trend without context",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which habit usually hurts progress in budget travel?",
+      "description": "Consistency beats intensity for most people exploring Budget Travel.",
+      "options": [
+        {
+          "text": "Doing nothing regularly and only binge-practicing",
+          "isCorrect": true
+        },
+        {
+          "text": "Tracking small wins week to week",
+          "isCorrect": false
+        },
+        {
+          "text": "Asking experienced people targeted questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Adjusting your approach when something clearly fails",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "In budget travel, why is it risky to ignore fundamentals?",
+      "description": "Core concepts in Budget Travel prevent expensive or discouraging setbacks.",
+      "options": [
+        {
+          "text": "Mistakes compound and become harder to untangle later",
+          "isCorrect": true
+        },
+        {
+          "text": "Fundamentals never matter for hobbies",
+          "isCorrect": false
+        },
+        {
+          "text": "You will automatically absorb basics without study",
+          "isCorrect": false
+        },
+        {
+          "text": "Only experts need to understand the basics",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is a realistic expectation when learning budget travel?",
+      "description": "Budget Travel is a skill curve: early progress can feel slow.",
+      "options": [
+        {
+          "text": "Noticeable improvement often takes weeks of steady practice",
+          "isCorrect": true
+        },
+        {
+          "text": "You should master it perfectly within a few days",
+          "isCorrect": false
+        },
+        {
+          "text": "If it feels hard, you are not suited for it",
+          "isCorrect": false
+        },
+        {
+          "text": "Talent alone replaces practice",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which approach helps you learn budget travel from feedback?",
+      "description": "Useful feedback speeds up learning in Budget Travel.",
+      "options": [
+        {
+          "text": "Change one variable at a time and observe the outcome",
+          "isCorrect": true
+        },
+        {
+          "text": "Change five things at once every session",
+          "isCorrect": false
+        },
+        {
+          "text": "Ignore results that contradict your assumptions",
+          "isCorrect": false
+        },
+        {
+          "text": "Avoid ever repeating a failed attempt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "When budgeting time for budget travel, what usually works best?",
+      "description": "Short regular sessions often beat rare marathons for Budget Travel.",
+      "options": [
+        {
+          "text": "Short, frequent sessions that fit your calendar",
+          "isCorrect": true
+        },
+        {
+          "text": "Only practice once a month for eight hours straight",
+          "isCorrect": false
+        },
+        {
+          "text": "Wait until you feel 100% motivated",
+          "isCorrect": false
+        },
+        {
+          "text": "Quit the first day you miss a session",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "How can you avoid misinformation about budget travel?",
+      "description": "Cross-checking sources helps with Budget Travel, where myths spread quickly.",
+      "options": [
+        {
+          "text": "Compare multiple reputable sources and look for consensus",
+          "isCorrect": true
+        },
+        {
+          "text": "Trust the first bold claim you see online",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume older advice is always outdated",
+          "isCorrect": false
+        },
+        {
+          "text": "Believe anything that uses technical jargon",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What role does community play in budget travel?",
+      "description": "Many people improve faster in Budget Travel with peers or mentors.",
+      "options": [
+        {
+          "text": "Communities can answer niche questions and share sane defaults",
+          "isCorrect": true
+        },
+        {
+          "text": "Communities always agree and never argue",
+          "isCorrect": false
+        },
+        {
+          "text": "You should never share your beginner questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Online advice is never useful",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which goal-setting style fits budget travel for most beginners?",
+      "description": "Small measurable goals keep motivation for Budget Travel.",
+      "options": [
+        {
+          "text": "One clear, achievable milestone per week",
+          "isCorrect": true
+        },
+        {
+          "text": "A vague goal to be the best in the world immediately",
+          "isCorrect": false
+        },
+        {
+          "text": "No goals—only random experimentation forever",
+          "isCorrect": false
+        },
+        {
+          "text": "Only goals you cannot measure or verify",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is a sign you should slow down in budget travel?",
+      "description": "Pacing prevents injury, burnout, or wasted money in Budget Travel.",
+      "options": [
+        {
+          "text": "You feel constant frustration, pain, or overspending",
+          "isCorrect": true
+        },
+        {
+          "text": "You still enjoy it and stay within your limits",
+          "isCorrect": false
+        },
+        {
+          "text": "You completed a small task successfully",
+          "isCorrect": false
+        },
+        {
+          "text": "You asked a thoughtful question",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "text": "How should you document what you learn in budget travel?",
+      "description": "Notes turn experiments into reusable knowledge for Budget Travel.",
+      "options": [
+        {
+          "text": "Keep a simple log: what you tried, what happened, what next",
+          "isCorrect": true
+        },
+        {
+          "text": "Rely only on memory for every detail",
+          "isCorrect": false
+        },
+        {
+          "text": "Never write anything because it feels slow",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy others' notes without understanding them",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "text": "Which attitude helps long-term growth in budget travel?",
+      "description": "\"Budget Travel Quiz\" rewards curiosity over perfectionism.",
+      "options": [
+        {
+          "text": "Treat mistakes as data and iterate calmly",
+          "isCorrect": true
+        },
+        {
+          "text": "Quit after the first imperfect attempt",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume you must never ask basic questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Compare your day one to someone else's year five",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "text": "What is a common way to save money on accommodation?",
+      "description": "Hostels and shared stays are cheaper than hotels.",
+      "options": [
+        { "text": "Stay in hostels or shared accommodations", "isCorrect": true },
+        { "text": "Book luxury hotels always", "isCorrect": false },
+        { "text": "Avoid booking in advance", "isCorrect": false },
+        { "text": "Choose only resorts", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 13,
+      "text": "Why is booking flights early often cheaper?",
+      "description": "Airlines increase prices as seats fill up.",
+      "options": [
+        { "text": "Prices rise as availability decreases", "isCorrect": true },
+        { "text": "Flights get cheaper last minute always", "isCorrect": false },
+        { "text": "Airlines reduce prices daily", "isCorrect": false },
+        { "text": "It has no impact", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 14,
+      "text": "What is the benefit of traveling during off-season?",
+      "description": "Off-season travel usually offers lower prices and fewer crowds.",
+      "options": [
+        { "text": "Lower costs and fewer crowds", "isCorrect": true },
+        { "text": "Higher prices", "isCorrect": false },
+        { "text": "No availability", "isCorrect": false },
+        { "text": "Limited transport", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 15,
+      "text": "What is a budget-friendly way to eat while traveling?",
+      "description": "Local street food and small eateries are often cheaper.",
+      "options": [
+        { "text": "Eat at local food stalls", "isCorrect": true },
+        { "text": "Only eat in luxury restaurants", "isCorrect": false },
+        { "text": "Skip meals", "isCorrect": false },
+        { "text": "Order expensive room service", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 16,
+      "text": "Why is using public transport better for budget travel?",
+      "description": "It is cheaper than taxis or private vehicles.",
+      "options": [
+        { "text": "Lower cost compared to taxis", "isCorrect": true },
+        { "text": "Always slower", "isCorrect": false },
+        { "text": "More expensive", "isCorrect": false },
+        { "text": "Not available anywhere", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 17,
+      "text": "What is a common mistake that increases travel costs?",
+      "description": "Last-minute bookings are usually more expensive.",
+      "options": [
+        { "text": "Booking everything last minute", "isCorrect": true },
+        { "text": "Planning ahead", "isCorrect": false },
+        { "text": "Comparing prices", "isCorrect": false },
+        { "text": "Using deals", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 18,
+      "text": "What is the benefit of packing light?",
+      "description": "It avoids extra baggage fees and makes travel easier.",
+      "options": [
+        { "text": "Avoid baggage fees", "isCorrect": true },
+        { "text": "Carry more items", "isCorrect": false },
+        { "text": "Increase luggage cost", "isCorrect": false },
+        { "text": "Make travel harder", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 19,
+      "text": "Why should you compare hotel prices across platforms?",
+      "description": "Different platforms may offer different rates.",
+      "options": [
+        { "text": "To find the best deal", "isCorrect": true },
+        { "text": "Prices are always same", "isCorrect": false },
+        { "text": "Only one site is enough", "isCorrect": false },
+        { "text": "To increase cost", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 20,
+      "text": "What is a smart way to handle currency exchange while traveling?",
+      "description": "Avoid airport exchanges due to higher fees.",
+      "options": [
+        { "text": "Use local ATMs or banks", "isCorrect": true },
+        { "text": "Exchange at airport always", "isCorrect": false },
+        { "text": "Carry only cash", "isCorrect": false },
+        { "text": "Avoid exchange completely", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 21,
+      "text": "Why should you track your travel expenses?",
+      "description": "Tracking helps you stay within budget.",
+      "options": [
+        { "text": "To control spending", "isCorrect": true },
+        { "text": "To spend more", "isCorrect": false },
+        { "text": "No reason", "isCorrect": false },
+        { "text": "Only for luxury travel", "isCorrect": false }
+      ]
+    }
+  ]
+}

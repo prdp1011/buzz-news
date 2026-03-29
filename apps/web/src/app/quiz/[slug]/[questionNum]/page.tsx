@@ -11,8 +11,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, questionNum } = await params;
   const quiz = await getQuizMeta(slug);
   if (!quiz) return { title: "Quiz" };
+  const idx = Number.parseInt(questionNum, 10);
+  const human = Number.isFinite(idx) && idx >= 0 ? idx + 1 : questionNum;
   return {
-    title: `${quiz.title} · Question ${questionNum}`,
+    title: `${quiz.title} · Question ${human}`,
     description: quiz.description ?? `Play ${quiz.title} on ${SITE_NAME}.`,
   };
 }
@@ -23,8 +25,9 @@ export default async function QuizQuestionPage({ params }: Props) {
   if (!meta) notFound();
 
   const n = Number.parseInt(questionNum, 10);
-  if (!Number.isFinite(n) || n < 1) redirect(`/quiz/${slug}/1`);
-  if (n > meta.totalQuestions) redirect(`/quiz/${slug}/${meta.totalQuestions}`);
+  const last = meta.totalQuestions - 1;
+  if (!Number.isFinite(n) || n < 0) redirect(`/quiz/${slug}/0`);
+  if (n > last) redirect(`/quiz/${slug}/${Math.max(0, last)}`);
 
   return (
     <div>
@@ -34,7 +37,7 @@ export default async function QuizQuestionPage({ params }: Props) {
       >
         ← All quizzes
       </Link>
-      <QuizPlayer slug={slug} questionNum={n} meta={meta} />
+      <QuizPlayer slug={slug} questionIndex={n} meta={meta} />
     </div>
   );
 }

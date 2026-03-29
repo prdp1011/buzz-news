@@ -1,0 +1,239 @@
+{
+  "slug": "fitness-basics",
+  "title": "Are You Fitness Savvy?",
+  "description": "Are You Fitness Savvy? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83d\udcaa",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Which exercise targets chest muscles?",
+      "description": "Push-ups engage the chest.",
+      "options": [
+        {
+          "text": "Push-ups",
+          "isCorrect": true
+        },
+        {
+          "text": "Squats",
+          "isCorrect": false
+        },
+        {
+          "text": "Lunges",
+          "isCorrect": false
+        },
+        {
+          "text": "Plank",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "What does cardio improve?",
+      "description": "Heart and lung endurance.",
+      "options": [
+        {
+          "text": "Heart health",
+          "isCorrect": true
+        },
+        {
+          "text": "Bone density only",
+          "isCorrect": false
+        },
+        {
+          "text": "Hair growth",
+          "isCorrect": false
+        },
+        {
+          "text": "Vision",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "How many minutes of activity weekly (approx)?",
+      "description": "About 150 minutes moderate activity.",
+      "options": [
+        {
+          "text": "150 minutes",
+          "isCorrect": true
+        },
+        {
+          "text": "30 minutes",
+          "isCorrect": false
+        },
+        {
+          "text": "10 minutes",
+          "isCorrect": false
+        },
+        {
+          "text": "3000 minutes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Best time to stretch?",
+      "description": "After workout when muscles are warm.",
+      "options": [
+        {
+          "text": "After workout",
+          "isCorrect": true
+        },
+        {
+          "text": "Before sleep only",
+          "isCorrect": false
+        },
+        {
+          "text": "During meals",
+          "isCorrect": false
+        },
+        {
+          "text": "Never",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which nutrient builds muscle?",
+      "description": "Protein supports muscle repair.",
+      "options": [
+        {
+          "text": "Protein",
+          "isCorrect": true
+        },
+        {
+          "text": "Sugar",
+          "isCorrect": false
+        },
+        {
+          "text": "Salt",
+          "isCorrect": false
+        },
+        {
+          "text": "Fiber only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "What is BMI?",
+      "description": "A measure of body mass relative to height.",
+      "options": [
+        {
+          "text": "Body Mass Index",
+          "isCorrect": true
+        },
+        {
+          "text": "Bone Mass Index",
+          "isCorrect": false
+        },
+        {
+          "text": "Body Muscle Index",
+          "isCorrect": false
+        },
+        {
+          "text": "Basic Metabolism Index",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "Which exercise builds legs?",
+      "description": "Squats strengthen lower body.",
+      "options": [
+        {
+          "text": "Squats",
+          "isCorrect": true
+        },
+        {
+          "text": "Bench press",
+          "isCorrect": false
+        },
+        {
+          "text": "Pull-ups",
+          "isCorrect": false
+        },
+        {
+          "text": "Crunches",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Hydration importance?",
+      "description": "Prevents fatigue and improves performance.",
+      "options": [
+        {
+          "text": "Prevents fatigue",
+          "isCorrect": true
+        },
+        {
+          "text": "Adds fat",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduces oxygen",
+          "isCorrect": false
+        },
+        {
+          "text": "Slows heart",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Warm-up purpose?",
+      "description": "Prepares muscles and reduces injury risk.",
+      "options": [
+        {
+          "text": "Prepare muscles",
+          "isCorrect": true
+        },
+        {
+          "text": "Cool body",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduce oxygen",
+          "isCorrect": false
+        },
+        {
+          "text": "Increase fat",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Rest days are needed?",
+      "description": "Yes, for recovery and growth.",
+      "options": [
+        {
+          "text": "Yes",
+          "isCorrect": true
+        },
+        {
+          "text": "No",
+          "isCorrect": false
+        },
+        {
+          "text": "Only monthly",
+          "isCorrect": false
+        },
+        {
+          "text": "Only yearly",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

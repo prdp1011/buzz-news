@@ -1,0 +1,239 @@
+{
+  "slug": "general-knowledge",
+  "title": "World Facts Challenge",
+  "description": "Test your awareness of global facts and geography.",
+  "emoji": "🌍",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Which country has the largest population in the world?",
+      "description": "India recently became the most populous country.",
+      "options": [
+        {
+          "text": "India",
+          "isCorrect": true
+        },
+        {
+          "text": "USA",
+          "isCorrect": false
+        },
+        {
+          "text": "China",
+          "isCorrect": false
+        },
+        {
+          "text": "Brazil",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which is the smallest continent?",
+      "description": "Australia is the smallest continent.",
+      "options": [
+        {
+          "text": "Australia",
+          "isCorrect": true
+        },
+        {
+          "text": "Europe",
+          "isCorrect": false
+        },
+        {
+          "text": "Asia",
+          "isCorrect": false
+        },
+        {
+          "text": "Antarctica",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Which river is the longest?",
+      "description": "The Nile River is widely considered the longest.",
+      "options": [
+        {
+          "text": "Nile",
+          "isCorrect": true
+        },
+        {
+          "text": "Amazon",
+          "isCorrect": false
+        },
+        {
+          "text": "Yangtze",
+          "isCorrect": false
+        },
+        {
+          "text": "Ganga",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Where is the Eiffel Tower located?",
+      "description": "Located in Paris, France.",
+      "options": [
+        {
+          "text": "France",
+          "isCorrect": true
+        },
+        {
+          "text": "Italy",
+          "isCorrect": false
+        },
+        {
+          "text": "Germany",
+          "isCorrect": false
+        },
+        {
+          "text": "Spain",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which desert is the largest?",
+      "description": "Antarctica is the largest desert.",
+      "options": [
+        {
+          "text": "Antarctic Desert",
+          "isCorrect": true
+        },
+        {
+          "text": "Sahara",
+          "isCorrect": false
+        },
+        {
+          "text": "Gobi",
+          "isCorrect": false
+        },
+        {
+          "text": "Thar",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Most spoken language globally?",
+      "description": "Mandarin Chinese has the most native speakers.",
+      "options": [
+        {
+          "text": "Mandarin Chinese",
+          "isCorrect": true
+        },
+        {
+          "text": "English",
+          "isCorrect": false
+        },
+        {
+          "text": "Hindi",
+          "isCorrect": false
+        },
+        {
+          "text": "Spanish",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "Land of Rising Sun?",
+      "description": "Japan is called this due to its eastern location.",
+      "options": [
+        {
+          "text": "Japan",
+          "isCorrect": true
+        },
+        {
+          "text": "China",
+          "isCorrect": false
+        },
+        {
+          "text": "Korea",
+          "isCorrect": false
+        },
+        {
+          "text": "Thailand",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Ocean between Africa & Australia?",
+      "description": "The Indian Ocean lies between them.",
+      "options": [
+        {
+          "text": "Indian Ocean",
+          "isCorrect": true
+        },
+        {
+          "text": "Pacific",
+          "isCorrect": false
+        },
+        {
+          "text": "Atlantic",
+          "isCorrect": false
+        },
+        {
+          "text": "Arctic",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "2016 Olympics host country?",
+      "description": "Held in Rio de Janeiro, Brazil.",
+      "options": [
+        {
+          "text": "Brazil",
+          "isCorrect": true
+        },
+        {
+          "text": "China",
+          "isCorrect": false
+        },
+        {
+          "text": "UK",
+          "isCorrect": false
+        },
+        {
+          "text": "Japan",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Dark Continent refers to?",
+      "description": "Africa was historically called this.",
+      "options": [
+        {
+          "text": "Africa",
+          "isCorrect": true
+        },
+        {
+          "text": "Asia",
+          "isCorrect": false
+        },
+        {
+          "text": "Europe",
+          "isCorrect": false
+        },
+        {
+          "text": "Australia",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

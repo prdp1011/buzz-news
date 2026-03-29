@@ -1,0 +1,679 @@
+{
+  "slug": "aquarium-life",
+  "title": "Aquarium Life Quiz",
+  "description": "Test your real-world knowledge of aquarium care, fish behavior, water chemistry, and maintaining a healthy aquatic ecosystem.",
+  "emoji": "🐠",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "What is the ideal temperature range for most tropical aquarium fish?",
+      "description": "Most tropical fish thrive between 24°C and 27°C.",
+      "options": [
+        { "text": "24°C to 27°C", "isCorrect": true },
+        { "text": "10°C to 15°C", "isCorrect": false },
+        { "text": "30°C to 35°C", "isCorrect": false },
+        { "text": "0°C to 5°C", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "What causes ammonia buildup in an aquarium?",
+      "description": "Fish waste, leftover food, and decaying plants release ammonia.",
+      "options": [
+        { "text": "Fish waste and uneaten food", "isCorrect": true },
+        { "text": "Clean water", "isCorrect": false },
+        { "text": "Air bubbles", "isCorrect": false },
+        { "text": "Tank glass", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Why is cycling a new aquarium important?",
+      "description": "Cycling establishes beneficial bacteria that break down toxic waste.",
+      "options": [
+        { "text": "To build beneficial bacteria", "isCorrect": true },
+        { "text": "To make water colorful", "isCorrect": false },
+        { "text": "To heat water faster", "isCorrect": false },
+        { "text": "To grow fish instantly", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What does a filter primarily do in an aquarium?",
+      "description": "It removes waste and circulates water to maintain quality.",
+      "options": [
+        { "text": "Clean and circulate water", "isCorrect": true },
+        { "text": "Feed fish", "isCorrect": false },
+        { "text": "Decorate tank", "isCorrect": false },
+        { "text": "Increase light", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "How often should partial water changes be done in a typical aquarium?",
+      "description": "Weekly changes help maintain stable water conditions.",
+      "options": [
+        { "text": "Once a week", "isCorrect": true },
+        { "text": "Once a year", "isCorrect": false },
+        { "text": "Never", "isCorrect": false },
+        { "text": "Every hour", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 5,
+      "text": "What happens if you overfeed fish?",
+      "description": "Excess food decomposes and pollutes the water.",
+      "options": [
+        { "text": "Water becomes toxic", "isCorrect": true },
+        { "text": "Fish grow faster", "isCorrect": false },
+        { "text": "Water becomes cleaner", "isCorrect": false },
+        { "text": "Fish need less oxygen", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 6,
+      "text": "What is a common beginner fish?",
+      "description": "Guppies are hardy and easy to care for.",
+      "options": [
+        { "text": "Guppy", "isCorrect": true },
+        { "text": "Shark", "isCorrect": false },
+        { "text": "Octopus", "isCorrect": false },
+        { "text": "Stingray", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 7,
+      "text": "What does cloudy water usually indicate?",
+      "description": "It often means bacterial bloom or poor filtration.",
+      "options": [
+        { "text": "Bacterial bloom", "isCorrect": true },
+        { "text": "Perfect water", "isCorrect": false },
+        { "text": "Too much oxygen", "isCorrect": false },
+        { "text": "Healthy balance", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 8,
+      "text": "Why are live plants beneficial in aquariums?",
+      "description": "They help absorb waste and produce oxygen.",
+      "options": [
+        { "text": "Improve water quality", "isCorrect": true },
+        { "text": "Heat the tank", "isCorrect": false },
+        { "text": "Reduce oxygen", "isCorrect": false },
+        { "text": "Feed fish directly", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 9,
+      "text": "What does a heater do in an aquarium?",
+      "description": "Maintains a stable temperature for fish health.",
+      "options": [
+        { "text": "Stabilizes temperature", "isCorrect": true },
+        { "text": "Filters water", "isCorrect": false },
+        { "text": "Feeds fish", "isCorrect": false },
+        { "text": "Adds oxygen", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 10,
+      "text": "What pH range is suitable for most freshwater aquarium fish?",
+      "description": "Most freshwater fish thrive in slightly neutral water conditions.",
+      "options": [
+        { "text": "6.5 to 7.5", "isCorrect": true },
+        { "text": "2 to 4", "isCorrect": false },
+        { "text": "9 to 11", "isCorrect": false },
+        { "text": "12+", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 11,
+      "text": "What is the main purpose of beneficial bacteria in an aquarium?",
+      "description": "They convert toxic ammonia into nitrites and then nitrates.",
+      "options": [
+        { "text": "Break down toxic waste", "isCorrect": true },
+        { "text": "Feed fish", "isCorrect": false },
+        { "text": "Add oxygen", "isCorrect": false },
+        { "text": "Clean glass", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 12,
+      "text": "What happens if aquarium water has low oxygen levels?",
+      "description": "Fish may gasp at the surface and become stressed.",
+      "options": [
+        { "text": "Fish struggle to breathe", "isCorrect": true },
+        { "text": "Fish grow faster", "isCorrect": false },
+        { "text": "Water becomes clearer", "isCorrect": false },
+        { "text": "Temperature drops", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 13,
+      "text": "Why should new fish be acclimated before adding to a tank?",
+      "description": "Sudden temperature or water changes can shock fish.",
+      "options": [
+        { "text": "To prevent shock from water changes", "isCorrect": true },
+        { "text": "To feed them early", "isCorrect": false },
+        { "text": "To clean the tank", "isCorrect": false },
+        { "text": "To increase oxygen", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 14,
+      "text": "What is a common sign of stress in aquarium fish?",
+      "description": "Fish may hide, lose color, or swim erratically.",
+      "options": [
+        { "text": "Hiding or erratic swimming", "isCorrect": true },
+        { "text": "Bright colors always", "isCorrect": false },
+        { "text": "Sleeping constantly", "isCorrect": false },
+        { "text": "Floating calmly", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 15,
+      "text": "Why is tank size important when keeping fish?",
+      "description": "Overcrowding leads to stress and poor water quality.",
+      "options": [
+        { "text": "Prevents overcrowding and stress", "isCorrect": true },
+        { "text": "Makes fish grow faster", "isCorrect": false },
+        { "text": "Reduces need for feeding", "isCorrect": false },
+        { "text": "Eliminates cleaning", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 16,
+      "text": "What does nitrate buildup indicate?",
+      "description": "It suggests waste accumulation over time.",
+      "options": [
+        { "text": "Need for water change", "isCorrect": true },
+        { "text": "Perfect tank condition", "isCorrect": false },
+        { "text": "Low oxygen", "isCorrect": false },
+        { "text": "Fish growth", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 17,
+      "text": "Why should tap water be treated before adding to an aquarium?",
+      "description": "Chlorine in tap water can harm fish.",
+      "options": [
+        { "text": "To remove chlorine", "isCorrect": true },
+        { "text": "To add color", "isCorrect": false },
+        { "text": "To feed bacteria", "isCorrect": false },
+        { "text": "To heat water", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 18,
+      "text": "What is the purpose of aquarium lighting?",
+      "description": "It supports plant growth and maintains fish rhythm.",
+      "options": [
+        { "text": "Support plants and fish cycles", "isCorrect": true },
+        { "text": "Heat water", "isCorrect": false },
+        { "text": "Filter waste", "isCorrect": false },
+        { "text": "Add oxygen", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 19,
+      "text": "Why is overstocking an aquarium harmful?",
+      "description": "Too many fish increase waste and reduce oxygen.",
+      "options": [
+        { "text": "Increases waste and stress", "isCorrect": true },
+        { "text": "Improves water quality", "isCorrect": false },
+        { "text": "Adds oxygen", "isCorrect": false },
+        { "text": "Helps fish grow", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 20,
+      "text": "What is the purpose of gravel or substrate in an aquarium?",
+      "description": "It supports plant roots and houses beneficial bacteria.",
+      "options": [
+        { "text": "Support plants and bacteria", "isCorrect": true },
+        { "text": "Increase fish speed", "isCorrect": false },
+        { "text": "Add oxygen", "isCorrect": false },
+        { "text": "Heat tank", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 21,
+      "text": "Why should aquarium filters not be cleaned with tap water?",
+      "description": "Tap water can kill beneficial bacteria.",
+      "options": [
+        { "text": "It destroys beneficial bacteria", "isCorrect": true },
+        { "text": "It improves filtration", "isCorrect": false },
+        { "text": "It adds oxygen", "isCorrect": false },
+        { "text": "It cools water", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 22,
+      "text": "What is a quarantine tank used for?",
+      "description": "It isolates new or sick fish to prevent disease spread.",
+      "options": [
+        { "text": "Isolate fish for observation", "isCorrect": true },
+        { "text": "Grow plants faster", "isCorrect": false },
+        { "text": "Increase fish size", "isCorrect": false },
+        { "text": "Improve lighting", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 23,
+      "text": "What does algae growth in an aquarium usually indicate?",
+      "description": "It often means excess nutrients or light.",
+      "options": [
+        { "text": "Too much light or nutrients", "isCorrect": true },
+        { "text": "Perfect balance", "isCorrect": false },
+        { "text": "Low oxygen", "isCorrect": false },
+        { "text": "Cold water", "isCorrect": false }
+      ]
+    },
+
+    {
+      "order": 24,
+      "text": "Why is aeration important in an aquarium?",
+      "description": "It increases oxygen levels in water.",
+      "options": [
+        { "text": "Adds oxygen to water", "isCorrect": true },
+        { "text": "Feeds fish", "isCorrect": false },
+        { "text": "Cleans tank", "isCorrect": false },
+        { "text": "Changes pH", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 25,
+      "text": "What is a ristretto shot in espresso?",
+      "description": "A ristretto uses less water, producing a more concentrated shot.",
+      "options": [
+        { "text": "A shorter, more concentrated espresso", "isCorrect": true },
+        { "text": "A diluted espresso", "isCorrect": false },
+        { "text": "Cold espresso", "isCorrect": false },
+        { "text": "Espresso with milk", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 26,
+      "text": "What is the main purpose of tamping espresso grounds?",
+      "description": "Tamping creates even resistance for proper extraction.",
+      "options": [
+        { "text": "To compress grounds evenly", "isCorrect": true },
+        { "text": "To heat the coffee", "isCorrect": false },
+        { "text": "To add flavor", "isCorrect": false },
+        { "text": "To reduce caffeine", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 27,
+      "text": "Which factor most affects coffee extraction speed?",
+      "description": "Grind size controls how quickly water passes through coffee.",
+      "options": [
+        { "text": "Grind size", "isCorrect": true },
+        { "text": "Cup size", "isCorrect": false },
+        { "text": "Bean color", "isCorrect": false },
+        { "text": "Milk type", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 28,
+      "text": "What is the purpose of a coffee scale in brewing?",
+      "description": "It ensures consistent coffee-to-water ratios.",
+      "options": [
+        { "text": "Measure precise ratios", "isCorrect": true },
+        { "text": "Heat the coffee", "isCorrect": false },
+        { "text": "Grind beans", "isCorrect": false },
+        { "text": "Filter water", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 29,
+      "text": "Why should you store coffee beans in an airtight container?",
+      "description": "Exposure to air causes oxidation and flavor loss.",
+      "options": [
+        { "text": "To prevent oxidation", "isCorrect": true },
+        { "text": "To increase bitterness", "isCorrect": false },
+        { "text": "To add moisture", "isCorrect": false },
+        { "text": "To change color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 30,
+      "text": "What does over-extracted coffee taste like?",
+      "description": "Over-extraction pulls too many bitter compounds.",
+      "options": [
+        { "text": "Bitter and harsh", "isCorrect": true },
+        { "text": "Sweet and smooth", "isCorrect": false },
+        { "text": "Fruity", "isCorrect": false },
+        { "text": "Neutral", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 31,
+      "text": "What does under-extracted coffee taste like?",
+      "description": "Under-extraction leads to sour and weak flavors.",
+      "options": [
+        { "text": "Sour and weak", "isCorrect": true },
+        { "text": "Rich and bold", "isCorrect": false },
+        { "text": "Chocolatey", "isCorrect": false },
+        { "text": "Balanced", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 32,
+      "text": "Which brew method is known for clean and bright flavors?",
+      "description": "Pour-over uses paper filters for clarity.",
+      "options": [
+        { "text": "Pour-over", "isCorrect": true },
+        { "text": "French press", "isCorrect": false },
+        { "text": "Espresso", "isCorrect": false },
+        { "text": "Turkish coffee", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 33,
+      "text": "What is crema in espresso?",
+      "description": "It’s the golden foam formed by emulsified oils and gases.",
+      "options": [
+        { "text": "Foam layer on espresso", "isCorrect": true },
+        { "text": "Milk foam", "isCorrect": false },
+        { "text": "Sugar layer", "isCorrect": false },
+        { "text": "Water bubbles", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 34,
+      "text": "Why is freshly ground coffee preferred?",
+      "description": "Grinding releases aromas that fade quickly.",
+      "options": [
+        { "text": "Better aroma and flavor", "isCorrect": true },
+        { "text": "Less caffeine", "isCorrect": false },
+        { "text": "Longer shelf life", "isCorrect": false },
+        { "text": "Darker color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 35,
+      "text": "What is cold brew coffee?",
+      "description": "It is brewed using cold water over a long period.",
+      "options": [
+        { "text": "Coffee steeped in cold water", "isCorrect": true },
+        { "text": "Hot coffee cooled down", "isCorrect": false },
+        { "text": "Espresso with ice", "isCorrect": false },
+        { "text": "Instant coffee", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 36,
+      "text": "Why is water quality important in coffee brewing?",
+      "description": "Impurities in water affect taste extraction.",
+      "options": [
+        { "text": "It affects flavor extraction", "isCorrect": true },
+        { "text": "It changes bean size", "isCorrect": false },
+        { "text": "It reduces caffeine", "isCorrect": false },
+        { "text": "It thickens coffee", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 37,
+      "text": "What does a burr grinder do better than a blade grinder?",
+      "description": "It produces uniform grind size.",
+      "options": [
+        { "text": "Consistent grind size", "isCorrect": true },
+        { "text": "Faster grinding only", "isCorrect": false },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Heats beans", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 38,
+      "text": "What is the role of agitation in brewing?",
+      "description": "It helps even extraction by mixing grounds and water.",
+      "options": [
+        { "text": "Improves extraction uniformity", "isCorrect": true },
+        { "text": "Cools coffee", "isCorrect": false },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Reduces aroma", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 39,
+      "text": "What is a latte primarily made of?",
+      "description": "Latte consists mostly of steamed milk with espresso.",
+      "options": [
+        { "text": "Espresso and steamed milk", "isCorrect": true },
+        { "text": "Only milk", "isCorrect": false },
+        { "text": "Only espresso", "isCorrect": false },
+        { "text": "Water and sugar", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 40,
+      "text": "What is the difference between a cappuccino and latte?",
+      "description": "Cappuccino has more foam and less milk.",
+      "options": [
+        { "text": "Cappuccino has more foam", "isCorrect": true },
+        { "text": "Latte has more foam", "isCorrect": false },
+        { "text": "No difference", "isCorrect": false },
+        { "text": "Latte has no milk", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 41,
+      "text": "Why is preheating a cup useful?",
+      "description": "It helps maintain coffee temperature.",
+      "options": [
+        { "text": "Keeps coffee warm longer", "isCorrect": true },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Changes caffeine", "isCorrect": false },
+        { "text": "Makes foam thicker", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 42,
+      "text": "What is a flat white?",
+      "description": "It is espresso with microfoam milk.",
+      "options": [
+        { "text": "Espresso with thin milk foam", "isCorrect": true },
+        { "text": "Black coffee", "isCorrect": false },
+        { "text": "Cold coffee", "isCorrect": false },
+        { "text": "Only milk", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 43,
+      "text": "What affects coffee strength the most?",
+      "description": "Coffee-to-water ratio determines strength.",
+      "options": [
+        { "text": "Coffee-to-water ratio", "isCorrect": true },
+        { "text": "Cup size", "isCorrect": false },
+        { "text": "Bean color only", "isCorrect": false },
+        { "text": "Milk amount", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 44,
+      "text": "Why should espresso be consumed quickly?",
+      "description": "Flavor degrades as crema dissipates.",
+      "options": [
+        { "text": "Flavor changes quickly", "isCorrect": true },
+        { "text": "It becomes cold only", "isCorrect": false },
+        { "text": "It gains sweetness", "isCorrect": false },
+        { "text": "It loses caffeine", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 45,
+      "text": "What is a mocha?",
+      "description": "Mocha is coffee combined with chocolate.",
+      "options": [
+        { "text": "Coffee with chocolate", "isCorrect": true },
+        { "text": "Only espresso", "isCorrect": false },
+        { "text": "Milk only", "isCorrect": false },
+        { "text": "Water-based drink", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 46,
+      "text": "What does roast level affect most?",
+      "description": "Roast level impacts flavor and aroma.",
+      "options": [
+        { "text": "Flavor profile", "isCorrect": true },
+        { "text": "Bean size", "isCorrect": false },
+        { "text": "Water content only", "isCorrect": false },
+        { "text": "Milk foam", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 47,
+      "text": "What is the purpose of a coffee filter?",
+      "description": "It separates grounds from brewed coffee.",
+      "options": [
+        { "text": "Separate grounds", "isCorrect": true },
+        { "text": "Add flavor", "isCorrect": false },
+        { "text": "Heat water", "isCorrect": false },
+        { "text": "Increase caffeine", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 48,
+      "text": "What is espresso extraction time usually?",
+      "description": "Typical extraction takes around 25–30 seconds.",
+      "options": [
+        { "text": "25–30 seconds", "isCorrect": true },
+        { "text": "2 seconds", "isCorrect": false },
+        { "text": "5 minutes", "isCorrect": false },
+        { "text": "10 minutes", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 49,
+      "text": "Why is grind consistency important?",
+      "description": "Uneven grind causes uneven extraction.",
+      "options": [
+        { "text": "Ensures balanced extraction", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Changes caffeine", "isCorrect": false },
+        { "text": "Improves color only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 50,
+      "text": "What does acidity mean in coffee?",
+      "description": "It refers to bright, tangy flavors.",
+      "options": [
+        { "text": "Bright, tangy flavor", "isCorrect": true },
+        { "text": "Sour spoilage", "isCorrect": false },
+        { "text": "Bitterness", "isCorrect": false },
+        { "text": "Saltiness", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 51,
+      "text": "What is decaf coffee?",
+      "description": "Most caffeine has been removed.",
+      "options": [
+        { "text": "Low caffeine coffee", "isCorrect": true },
+        { "text": "No flavor coffee", "isCorrect": false },
+        { "text": "Cold coffee", "isCorrect": false },
+        { "text": "Instant coffee", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 52,
+      "text": "What is espresso crema color?",
+      "description": "It is typically golden brown.",
+      "options": [
+        { "text": "Golden brown", "isCorrect": true },
+        { "text": "Blue", "isCorrect": false },
+        { "text": "Green", "isCorrect": false },
+        { "text": "Transparent", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 53,
+      "text": "What affects coffee bitterness most?",
+      "description": "Over-extraction increases bitterness.",
+      "options": [
+        { "text": "Over-extraction", "isCorrect": true },
+        { "text": "Cold water", "isCorrect": false },
+        { "text": "Milk foam", "isCorrect": false },
+        { "text": "Cup size", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 54,
+      "text": "What is a macchiato?",
+      "description": "Espresso with a small amount of milk.",
+      "options": [
+        { "text": "Espresso with a dash of milk", "isCorrect": true },
+        { "text": "Milk with coffee", "isCorrect": false },
+        { "text": "Cold drink", "isCorrect": false },
+        { "text": "Only foam", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 55,
+      "text": "Why is fresh coffee preferred over old beans?",
+      "description": "Fresh beans retain aroma and flavor.",
+      "options": [
+        { "text": "Better aroma and taste", "isCorrect": true },
+        { "text": "Less caffeine", "isCorrect": false },
+        { "text": "More bitterness", "isCorrect": false },
+        { "text": "Different color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 56,
+      "text": "What is a lungo?",
+      "description": "A longer espresso with more water.",
+      "options": [
+        { "text": "Longer espresso shot", "isCorrect": true },
+        { "text": "Short espresso", "isCorrect": false },
+        { "text": "Cold brew", "isCorrect": false },
+        { "text": "Milk drink", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 57,
+      "text": "What is the best way to clean coffee equipment?",
+      "description": "Regular cleaning prevents residue buildup.",
+      "options": [
+        { "text": "Clean regularly with proper tools", "isCorrect": true },
+        { "text": "Never clean", "isCorrect": false },
+        { "text": "Use only water once a year", "isCorrect": false },
+        { "text": "Add sugar to clean", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 58,
+      "text": "Why is brew time important?",
+      "description": "It controls extraction balance.",
+      "options": [
+        { "text": "Controls flavor extraction", "isCorrect": true },
+        { "text": "Changes bean size", "isCorrect": false },
+        { "text": "Adds sweetness directly", "isCorrect": false },
+        { "text": "Reduces oxygen", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 59,
+      "text": "What defines a good cup of coffee?",
+      "description": "Balance between acidity, sweetness, and bitterness.",
+      "options": [
+        { "text": "Balanced flavor profile", "isCorrect": true },
+        { "text": "Maximum bitterness", "isCorrect": false },
+        { "text": "Only strong taste", "isCorrect": false },
+        { "text": "No aroma", "isCorrect": false }
+      ]
+    }
+  ]
+}

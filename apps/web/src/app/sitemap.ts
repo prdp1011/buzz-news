@@ -21,24 +21,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const data = (await res.json()) as {
       quizzes: { slug: string; updatedAt: string }[];
-      sections: { slug: string; updatedAt: string }[];
     };
 
     const quizUrls: MetadataRoute.Sitemap = data.quizzes.map((q) => ({
-      url: `${baseUrl}/quiz/${q.slug}/1`,
+      url: `${baseUrl}/quiz/${q.slug}/0`,
       lastModified: new Date(q.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.85,
     }));
 
-    const sectionUrls: MetadataRoute.Sitemap = data.sections.map((s) => ({
-      url: `${baseUrl}/section/${s.slug}`,
-      lastModified: new Date(s.updatedAt),
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    }));
-
-    return [...staticPages, ...sectionUrls, ...quizUrls];
+    return [...staticPages, ...quizUrls];
   } catch {
     return staticPages;
   }

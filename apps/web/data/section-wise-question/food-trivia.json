@@ -1,0 +1,239 @@
+{
+  "slug": "food-trivia",
+  "title": "Foodie Or Fake?",
+  "description": "Foodie Or Fake? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83c\udf54",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Which cuisine uses sushi?",
+      "description": "Japanese cuisine features sushi.",
+      "options": [
+        {
+          "text": "Japanese",
+          "isCorrect": true
+        },
+        {
+          "text": "Italian",
+          "isCorrect": false
+        },
+        {
+          "text": "Indian",
+          "isCorrect": false
+        },
+        {
+          "text": "Mexican",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "What is pasta made from?",
+      "description": "Typically wheat flour and water.",
+      "options": [
+        {
+          "text": "Wheat flour",
+          "isCorrect": true
+        },
+        {
+          "text": "Rice only",
+          "isCorrect": false
+        },
+        {
+          "text": "Corn only",
+          "isCorrect": false
+        },
+        {
+          "text": "Soy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Which spice is hottest?",
+      "description": "Chili peppers are very hot.",
+      "options": [
+        {
+          "text": "Chili",
+          "isCorrect": true
+        },
+        {
+          "text": "Salt",
+          "isCorrect": false
+        },
+        {
+          "text": "Sugar",
+          "isCorrect": false
+        },
+        {
+          "text": "Peppercorn (mild)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is pizza origin?",
+      "description": "Pizza originated in Italy.",
+      "options": [
+        {
+          "text": "Italy",
+          "isCorrect": true
+        },
+        {
+          "text": "USA",
+          "isCorrect": false
+        },
+        {
+          "text": "France",
+          "isCorrect": false
+        },
+        {
+          "text": "Spain",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which drink is made from tea leaves?",
+      "description": "Tea is brewed from leaves.",
+      "options": [
+        {
+          "text": "Tea",
+          "isCorrect": true
+        },
+        {
+          "text": "Coffee",
+          "isCorrect": false
+        },
+        {
+          "text": "Juice",
+          "isCorrect": false
+        },
+        {
+          "text": "Milk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Which fruit is citrus?",
+      "description": "Orange is a citrus fruit.",
+      "options": [
+        {
+          "text": "Orange",
+          "isCorrect": true
+        },
+        {
+          "text": "Apple",
+          "isCorrect": false
+        },
+        {
+          "text": "Banana",
+          "isCorrect": false
+        },
+        {
+          "text": "Grapes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "What is chocolate made from?",
+      "description": "Cocoa beans.",
+      "options": [
+        {
+          "text": "Cocoa beans",
+          "isCorrect": true
+        },
+        {
+          "text": "Coffee beans",
+          "isCorrect": false
+        },
+        {
+          "text": "Sugar cane",
+          "isCorrect": false
+        },
+        {
+          "text": "Corn",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Which dish is Indian?",
+      "description": "Biryani is Indian.",
+      "options": [
+        {
+          "text": "Biryani",
+          "isCorrect": true
+        },
+        {
+          "text": "Sushi",
+          "isCorrect": false
+        },
+        {
+          "text": "Taco",
+          "isCorrect": false
+        },
+        {
+          "text": "Pasta",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "What is a vegan diet?",
+      "description": "No animal products.",
+      "options": [
+        {
+          "text": "No animal products",
+          "isCorrect": true
+        },
+        {
+          "text": "Only meat",
+          "isCorrect": false
+        },
+        {
+          "text": "Only dairy",
+          "isCorrect": false
+        },
+        {
+          "text": "Only fish",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Which is dairy product?",
+      "description": "Cheese is dairy.",
+      "options": [
+        {
+          "text": "Cheese",
+          "isCorrect": true
+        },
+        {
+          "text": "Rice",
+          "isCorrect": false
+        },
+        {
+          "text": "Bread",
+          "isCorrect": false
+        },
+        {
+          "text": "Beans",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

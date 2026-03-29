@@ -27,8 +27,8 @@ export function SiteHeader({ sections }: { sections: SectionNavItem[] }) {
   const navItems = [
     { href: "/", icon: "🏠", label: "Home" },
     ...sections.map((s) => ({
-      href: `/section/${s.slug}`,
-      icon: SECTION_ICONS[s.slug] ?? "📂",
+      href: `/quiz/${s.slug}`,
+      icon: s.emoji ?? SECTION_ICONS[s.slug] ?? "📂",
       label: s.label,
     })),
   ];

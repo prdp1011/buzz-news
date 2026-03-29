@@ -5,8 +5,15 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { GradeResult, QuizMeta } from "@/lib/quiz";
 
+type CheckResult = {
+  wasRight: boolean;
+  correctOptionId: string;
+  explanation: string | null;
+};
+
 type QuestionPayload = {
   index: number;
+  displayNumber: number;
   total: number;
   title: string;
   description: string | null;
@@ -14,43 +21,45 @@ type QuestionPayload = {
   question: { id: string; text: string; options: { id: string; text: string }[] };
 };
 
-const STORAGE_PREFIX = "quizlab:journey:v1:";
+function answersKey(slug: string) {
+  return `${slug}:answers`;
+}
 
 function readAnswers(slug: string): Record<string, string> {
   if (typeof window === "undefined") return {};
   try {
-    const raw = localStorage.getItem(STORAGE_PREFIX + slug);
+    const raw = localStorage.getItem(answersKey(slug));
     if (!raw) return {};
-    const p = JSON.parse(raw) as { answers?: unknown };
-    if (!p.answers || typeof p.answers !== "object" || Array.isArray(p.answers)) return {};
-    return p.answers as Record<string, string>;
+    const p = JSON.parse(raw) as unknown;
+    if (!p || typeof p !== "object" || Array.isArray(p)) return {};
+    return p as Record<string, string>;
   } catch {
     return {};
   }
 }
 
 function writeAnswers(slug: string, answers: Record<string, string>) {
-  localStorage.setItem(
-    STORAGE_PREFIX + slug,
-    JSON.stringify({
-      v: 1,
-      answers,
-      updatedAt: new Date().toISOString(),
-    }),
-  );
+  localStorage.setItem(answersKey(slug), JSON.stringify(answers));
+}
+
+/** 0-based question index */
+function persistQuestionProgress(slug: string, questionIndex: number) {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(slug, String(questionIndex));
 }
 
 function clearJourney(slug: string) {
-  localStorage.removeItem(STORAGE_PREFIX + slug);
+  localStorage.removeItem(slug);
+  localStorage.removeItem(answersKey(slug));
 }
 
 export function QuizPlayer({
   slug,
-  questionNum,
+  questionIndex,
   meta,
 }: {
   slug: string;
-  questionNum: number;
+  questionIndex: number;
   meta: QuizMeta;
 }) {
   const router = useRouter();
@@ -61,7 +70,11 @@ export function QuizPlayer({
   const [phase, setPhase] = useState<"playing" | "results">("playing");
   const [result, setResult] = useState<GradeResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [reveal, setReveal] = useState<CheckResult | null>(null);
+  const [checkError, setCheckError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+
+  const lastIndex = Math.max(0, meta.totalQuestions - 1);
 
   useEffect(() => {
     setAnswers(readAnswers(slug));
@@ -69,50 +82,108 @@ export function QuizPlayer({
   }, [slug]);
 
   useEffect(() => {
+    setReveal(null);
+    setCheckError(null);
+    setError(null);
+  }, [questionIndex]);
+
+  useEffect(() => {
     let cancelled = false;
     setLoadError(null);
     setPayload(null);
     (async () => {
-      const res = await fetch(`/api/quiz/${encodeURIComponent(slug)}/question/${questionNum}`);
+      const res = await fetch(
+        `/api/quiz/${encodeURIComponent(slug)}/question/${questionIndex}`,
+      );
       if (cancelled) return;
       if (!res.ok) {
-        setLoadError(res.status === 404 ? "Question not found." : "Could not load question.");
+        setLoadError(
+          res.status === 404 ? "Question not found." : "Could not load question.",
+        );
         return;
       }
       const data = (await res.json()) as QuestionPayload;
       setPayload(data);
+      persistQuestionProgress(slug, questionIndex);
     })();
     return () => {
       cancelled = true;
     };
-  }, [slug, questionNum]);
+  }, [slug, questionIndex]);
 
-  const persistPick = useCallback((questionId: string, optionId: string) => {
-    setAnswers((prev) => {
-      const next = { ...prev, [questionId]: optionId };
-      writeAnswers(slug, next);
-      return next;
-    });
-  }, [slug]);
+  useEffect(() => {
+    if (!payload || !hydrated) return;
+    const saved = readAnswers(slug)[payload.question.id];
+    if (!saved) return;
+    let cancelled = false;
+    (async () => {
+      const res = await fetch(
+        `/api/quiz/${encodeURIComponent(slug)}/question/${questionIndex}/check`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ optionId: saved }),
+        },
+      );
+      const data = (await res.json()) as CheckResult | { error?: string };
+      if (cancelled) return;
+      if (!res.ok || ("error" in data && data.error)) {
+        setCheckError("Could not restore answer state.");
+        return;
+      }
+      setReveal(data as CheckResult);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [slug, questionIndex, payload?.question.id, hydrated]);
+
+  const persistPick = useCallback(
+    (questionId: string, optionId: string) => {
+      setAnswers((prev) => {
+        const next = { ...prev, [questionId]: optionId };
+        writeAnswers(slug, next);
+        return next;
+      });
+    },
+    [slug],
+  );
 
   function pick(optionId: string) {
-    if (!payload || phase !== "playing" || pending) return;
-    persistPick(payload.question.id, optionId);
+    if (!payload || phase !== "playing" || reveal !== null || pending) return;
+    startTransition(async () => {
+      setCheckError(null);
+      const res = await fetch(
+        `/api/quiz/${encodeURIComponent(slug)}/question/${questionIndex}/check`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ optionId }),
+        },
+      );
+      const data = (await res.json()) as CheckResult | { error?: string };
+      if (!res.ok || ("error" in data && data.error)) {
+        setCheckError("Could not check answer. Try again.");
+        return;
+      }
+      persistPick(payload.question.id, optionId);
+      setReveal(data as CheckResult);
+    });
   }
 
   const selectedForCurrent =
     payload && hydrated ? answers[payload.question.id] : undefined;
+  const correctId = reveal?.correctOptionId;
 
   function goPrev() {
-    if (questionNum <= 1 || pending) return;
-    router.push(`/quiz/${slug}/${questionNum - 1}`);
+    if (questionIndex <= 0 || pending) return;
+    router.push(`/quiz/${slug}/${questionIndex - 1}`);
   }
 
   function goNext() {
-    if (!payload || !selectedForCurrent || pending) return;
-    const isLast = questionNum >= meta.totalQuestions;
-    if (!isLast) {
-      router.push(`/quiz/${slug}/${questionNum + 1}`);
+    if (!payload || reveal === null || pending) return;
+    if (questionIndex < lastIndex) {
+      router.push(`/quiz/${slug}/${questionIndex + 1}`);
       return;
     }
     startTransition(async () => {
@@ -125,7 +196,11 @@ export function QuizPlayer({
       });
       const data = (await res.json()) as GradeResult | { error?: string };
       if (!res.ok) {
-        setError(typeof data === "object" && data && "error" in data ? String(data.error) : "Grading failed");
+        setError(
+          typeof data === "object" && data && "error" in data
+            ? String(data.error)
+            : "Grading failed",
+        );
         return;
       }
       if ("error" in data && data.error) {
@@ -163,7 +238,9 @@ export function QuizPlayer({
               <li
                 key={d.questionId}
                 className={`rounded-xl border p-4 ${
-                  d.wasRight ? "border-emerald-800/60 bg-emerald-950/20" : "border-red-900/50 bg-red-950/15"
+                  d.wasRight
+                    ? "border-emerald-800/60 bg-emerald-950/20"
+                    : "border-red-900/50 bg-red-950/15"
                 }`}
               >
                 <p className="font-medium text-zinc-200">{d.questionText}</p>
@@ -203,7 +280,7 @@ export function QuizPlayer({
 
   const current = payload.question;
   const total = meta.totalQuestions;
-  const answeredCount = Object.keys(answers).length;
+  const displayNum = payload.displayNumber;
 
   return (
     <div className="space-y-6">
@@ -215,13 +292,10 @@ export function QuizPlayer({
           <p className="mt-2 text-center text-sm text-zinc-500">{meta.description}</p>
         )}
 
-        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-zinc-500">
+        <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-zinc-500">
           <span aria-hidden>💬</span>
           <span>
-            Question {questionNum} of {total}
-          </span>
-          <span className="text-zinc-600">
-            · {answeredCount} answered (saved for resume)
+            Question {displayNum} of {total}
           </span>
         </div>
 
@@ -230,40 +304,96 @@ export function QuizPlayer({
         </h2>
 
         <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {current.options.map((opt, i) => {
+          {current.options.map((opt) => {
             const isPicked = selectedForCurrent === opt.id;
-            const boxClass =
-              "relative rounded-2xl border-2 bg-zinc-950/50 px-4 py-4 text-left shadow-md transition " +
-              (isPicked
-                ? "border-amber-400/80 bg-amber-400/5"
-                : "border-zinc-700 hover:border-zinc-500");
-            const textClass = isPicked ? "font-medium text-zinc-200" : "text-zinc-300";
+            const isCorrect = Boolean(reveal && correctId === opt.id);
+            const isWrongPick = Boolean(reveal && isPicked && !reveal.wasRight);
+
+            let boxClass =
+              "relative rounded-2xl border-2 bg-zinc-950/50 px-4 py-4 text-left shadow-md transition ";
+            let textClass = "text-zinc-300";
+
+            if (reveal) {
+              if (isCorrect) {
+                boxClass +=
+                  " border-emerald-500 bg-emerald-950/30 shadow-emerald-500/15 ring-1 ring-emerald-500/25";
+                textClass = "font-semibold text-emerald-200";
+              } else if (isWrongPick) {
+                boxClass +=
+                  " border-red-500 bg-red-950/25 shadow-red-500/15 ring-1 ring-red-500/25";
+                textClass = "font-semibold text-red-200";
+              } else {
+                boxClass += " border-zinc-700/80 opacity-55";
+                textClass = "text-zinc-500";
+              }
+            } else {
+              boxClass += isPicked
+                ? " border-amber-400/70 bg-amber-400/5"
+                : " border-zinc-600 hover:border-zinc-500";
+            }
+
+            const showWrongBadge = isWrongPick;
+            const showRightBadge = isCorrect && reveal;
 
             return (
               <button
                 key={opt.id}
                 type="button"
-                disabled={pending}
+                disabled={Boolean(reveal) || pending}
                 onClick={() => pick(opt.id)}
-                className={`${boxClass} disabled:opacity-50`}
+                className={`${boxClass} disabled:cursor-default`}
               >
-                <span className="mb-1 block text-xs font-medium text-zinc-500">{i + 1}</span>
-                <span className={`block text-sm md:text-base ${textClass}`}>{opt.text}</span>
+                {(showWrongBadge || showRightBadge) && (
+                  <span
+                    className={`absolute left-1/2 top-0 flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-zinc-950 text-xs font-bold text-white ${
+                      showRightBadge ? "bg-emerald-500" : "bg-red-500"
+                    }`}
+                    aria-hidden
+                  >
+                    {showRightBadge ? "✓" : "✕"}
+                  </span>
+                )}
+                <span className={`block text-sm leading-snug md:text-base ${textClass}`}>
+                  {opt.text}
+                </span>
               </button>
             );
           })}
         </div>
 
-        <p className="mt-4 text-xs text-zinc-600">
-          Choices are saved in your browser. Use the URL to resume (bookmark or share this page).
-        </p>
+        {reveal && (
+          <div
+            className={`mt-6 rounded-2xl border-2 p-4 md:p-5 ${
+              reveal.wasRight
+                ? "border-emerald-800/60 bg-emerald-950/25"
+                : "border-red-800/60 bg-red-950/25"
+            }`}
+          >
+            <p
+              className={`text-base font-bold ${
+                reveal.wasRight ? "text-emerald-300" : "text-red-300"
+              }`}
+            >
+              {reveal.wasRight ? "Correct! 🎉" : "Wrong answer 😔"}
+            </p>
+            {reveal.explanation ? (
+              <p className="mt-2 text-sm leading-relaxed text-zinc-400">{reveal.explanation}</p>
+            ) : !reveal.wasRight ? (
+              <p className="mt-2 text-sm text-zinc-500">
+                The correct choice is highlighted in green above.
+              </p>
+            ) : null}
+          </div>
+        )}
 
-        {error && <p className="mt-4 text-sm text-red-400">{error}</p>}
+        {(checkError || error) && (
+          <p className="mt-4 text-sm text-red-400">{checkError ?? error}</p>
+        )}
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-between">
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center">
           <button
             type="button"
-            disabled={questionNum <= 1 || pending}
+            disabled={questionIndex <= 0 || pending}
             onClick={goPrev}
             className="rounded-full border border-zinc-600 px-6 py-3 text-sm font-semibold text-zinc-300 hover:border-zinc-500 disabled:opacity-30"
           >
@@ -271,15 +401,21 @@ export function QuizPlayer({
           </button>
           <button
             type="button"
-            disabled={!selectedForCurrent || pending}
+            disabled={reveal === null || pending}
             onClick={goNext}
-            className="w-full rounded-full bg-rose-600 py-4 text-base font-bold text-white shadow-lg shadow-rose-900/30 transition hover:bg-rose-500 disabled:opacity-35 disabled:shadow-none sm:w-auto sm:min-w-[200px] sm:flex-1"
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-rose-600 py-4 text-base font-bold text-white shadow-lg shadow-rose-900/30 transition hover:bg-rose-500 disabled:opacity-35 disabled:shadow-none sm:w-auto sm:min-w-[220px] sm:flex-1"
           >
-            {pending && questionNum >= total
-              ? "Loading results…"
-              : questionNum >= total
-                ? "See results >>"
-                : "Next question >>"}
+            {pending && questionIndex >= lastIndex ? (
+              "Loading results…"
+            ) : questionIndex >= lastIndex ? (
+              <>
+                See results <span aria-hidden>&gt;&gt;</span>
+              </>
+            ) : (
+              <>
+                Next question <span aria-hidden>&gt;&gt;</span>
+              </>
+            )}
           </button>
         </div>
       </div>

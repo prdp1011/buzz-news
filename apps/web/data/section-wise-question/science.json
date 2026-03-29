@@ -1,0 +1,239 @@
+{
+  "slug": "science",
+  "title": "Science Basics",
+  "description": "Test your science knowledge.",
+  "emoji": "🔬",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Boiling point of water?",
+      "description": "Water boils at 100°C at sea level.",
+      "options": [
+        {
+          "text": "100°C",
+          "isCorrect": true
+        },
+        {
+          "text": "90°C",
+          "isCorrect": false
+        },
+        {
+          "text": "80°C",
+          "isCorrect": false
+        },
+        {
+          "text": "120°C",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Closest planet to sun?",
+      "description": "Mercury is nearest to the sun.",
+      "options": [
+        {
+          "text": "Mercury",
+          "isCorrect": true
+        },
+        {
+          "text": "Venus",
+          "isCorrect": false
+        },
+        {
+          "text": "Earth",
+          "isCorrect": false
+        },
+        {
+          "text": "Mars",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Gas humans breathe?",
+      "description": "Oxygen is essential for respiration.",
+      "options": [
+        {
+          "text": "Oxygen",
+          "isCorrect": true
+        },
+        {
+          "text": "CO2",
+          "isCorrect": false
+        },
+        {
+          "text": "Nitrogen",
+          "isCorrect": false
+        },
+        {
+          "text": "Hydrogen",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Center of atom?",
+      "description": "Called the nucleus.",
+      "options": [
+        {
+          "text": "Nucleus",
+          "isCorrect": true
+        },
+        {
+          "text": "Electron",
+          "isCorrect": false
+        },
+        {
+          "text": "Proton",
+          "isCorrect": false
+        },
+        {
+          "text": "Neutron",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Organ pumping blood?",
+      "description": "Heart circulates blood.",
+      "options": [
+        {
+          "text": "Heart",
+          "isCorrect": true
+        },
+        {
+          "text": "Brain",
+          "isCorrect": false
+        },
+        {
+          "text": "Lungs",
+          "isCorrect": false
+        },
+        {
+          "text": "Liver",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Force pulling objects?",
+      "description": "Gravity pulls objects to Earth.",
+      "options": [
+        {
+          "text": "Gravity",
+          "isCorrect": true
+        },
+        {
+          "text": "Magnetism",
+          "isCorrect": false
+        },
+        {
+          "text": "Friction",
+          "isCorrect": false
+        },
+        {
+          "text": "Electricity",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "Vitamin from sunlight?",
+      "description": "Vitamin D is produced via sunlight.",
+      "options": [
+        {
+          "text": "Vitamin D",
+          "isCorrect": true
+        },
+        {
+          "text": "Vitamin C",
+          "isCorrect": false
+        },
+        {
+          "text": "Vitamin A",
+          "isCorrect": false
+        },
+        {
+          "text": "Vitamin B",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Symbol for gold?",
+      "description": "Gold’s chemical symbol is Au.",
+      "options": [
+        {
+          "text": "Au",
+          "isCorrect": true
+        },
+        {
+          "text": "Ag",
+          "isCorrect": false
+        },
+        {
+          "text": "Go",
+          "isCorrect": false
+        },
+        {
+          "text": "Gd",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Food-making plant part?",
+      "description": "Leaves perform photosynthesis.",
+      "options": [
+        {
+          "text": "Leaf",
+          "isCorrect": true
+        },
+        {
+          "text": "Root",
+          "isCorrect": false
+        },
+        {
+          "text": "Stem",
+          "isCorrect": false
+        },
+        {
+          "text": "Flower",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Planet with rings?",
+      "description": "Saturn is known for its rings.",
+      "options": [
+        {
+          "text": "Saturn",
+          "isCorrect": true
+        },
+        {
+          "text": "Mars",
+          "isCorrect": false
+        },
+        {
+          "text": "Jupiter",
+          "isCorrect": false
+        },
+        {
+          "text": "Uranus",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

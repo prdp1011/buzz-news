@@ -1,6 +1,12 @@
 import { fetchQuizApi } from "@/lib/internal-api";
 
-export type SectionNavItem = { slug: string; label: string };
+export type SectionNavItem = {
+  slug: string;
+  label: string;
+  emoji?: string;
+  description?: string;
+  coverImageUrl?: string | null;
+};
 
 export type QuizListItem = {
   id: string;
@@ -13,7 +19,6 @@ export type QuizListItem = {
   questionCount: number;
 };
 
-/** Quiz play metadata (questions loaded per URL via API). */
 export type QuizMeta = {
   slug: string;
   title: string;
@@ -42,73 +47,41 @@ export async function getQuizSections(): Promise<SectionNavItem[]> {
   return res.json() as Promise<SectionNavItem[]>;
 }
 
-/** @deprecated */
-export async function getQuizTopics(): Promise<SectionNavItem[]> {
-  return getQuizSections();
-}
-
-export type QuizTopicNav = SectionNavItem;
-
-export type ListQuizzesPaginatedResult = {
-  items: QuizListItem[];
+export type QuizSectionsPageResult = {
+  items: SectionNavItem[];
   total: number;
   page: number;
   pageSize: number;
   totalPages: number;
 };
 
-export async function listQuizzesPaginated(opts: {
+export async function getQuizSectionsPaginated(opts: {
   page: number;
   pageSize: number;
-}): Promise<ListQuizzesPaginatedResult> {
+}): Promise<QuizSectionsPageResult> {
   const q = new URLSearchParams({
     page: String(opts.page),
     pageSize: String(opts.pageSize),
   });
-  const res = await fetchQuizApi(`/api/quiz/list?${q}`);
+  const res = await fetchQuizApi(`/api/quiz/sections?${q}`);
   if (!res.ok) {
     return {
       items: [],
       total: 0,
-      page: opts.page,
+      page: 1,
       pageSize: opts.pageSize,
       totalPages: 1,
     };
   }
-  return res.json() as Promise<ListQuizzesPaginatedResult>;
+  return res.json() as Promise<QuizSectionsPageResult>;
 }
 
-export async function listQuizzes(sectionSlug?: string): Promise<QuizListItem[]> {
-  const q = new URLSearchParams({ page: "1", pageSize: "200" });
-  if (sectionSlug) q.set("section", sectionSlug);
-  const res = await fetchQuizApi(`/api/quiz/list?${q}`);
-  if (!res.ok) return [];
-  const data = (await res.json()) as ListQuizzesPaginatedResult;
-  return data.items;
+/** @deprecated */
+export async function getQuizTopics(): Promise<SectionNavItem[]> {
+  return getQuizSections();
 }
 
-export type SectionRecord = {
-  id: string;
-  slug: string;
-  label: string;
-  coverImageUrl: string | null;
-};
-
-export async function loadSectionPage(slug: string): Promise<{
-  section: SectionRecord;
-  quizzes: QuizListItem[];
-} | null> {
-  const res = await fetchQuizApi(`/api/quiz/section/${encodeURIComponent(slug)}`);
-  if (res.status === 404) return null;
-  if (!res.ok) return null;
-  return res.json() as Promise<{ section: SectionRecord; quizzes: QuizListItem[] }>;
-}
-
-/** @deprecated Use loadSectionPage */
-export async function getSectionBySlug(slug: string) {
-  const data = await loadSectionPage(slug);
-  return data?.section ?? null;
-}
+export type QuizTopicNav = SectionNavItem;
 
 export async function getQuizMeta(slug: string): Promise<QuizMeta | null> {
   const res = await fetchQuizApi(`/api/quiz/${encodeURIComponent(slug)}/meta`);

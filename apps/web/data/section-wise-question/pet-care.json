@@ -1,0 +1,239 @@
+{
+  "slug": "pet-care",
+  "title": "Are You A Pet Expert?",
+  "description": "Are You A Pet Expert? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83d\udc3e",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Which pet is known as man's best friend?",
+      "description": "Dogs are famously loyal companions.",
+      "options": [
+        {
+          "text": "Dog",
+          "isCorrect": true
+        },
+        {
+          "text": "Cat",
+          "isCorrect": false
+        },
+        {
+          "text": "Fish",
+          "isCorrect": false
+        },
+        {
+          "text": "Bird",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which animal purrs?",
+      "description": "Cats purr when content.",
+      "options": [
+        {
+          "text": "Cat",
+          "isCorrect": true
+        },
+        {
+          "text": "Dog",
+          "isCorrect": false
+        },
+        {
+          "text": "Rabbit",
+          "isCorrect": false
+        },
+        {
+          "text": "Parrot",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "What do rabbits eat?",
+      "description": "They eat carrots and leafy greens.",
+      "options": [
+        {
+          "text": "Carrots/greens",
+          "isCorrect": true
+        },
+        {
+          "text": "Meat",
+          "isCorrect": false
+        },
+        {
+          "text": "Fish",
+          "isCorrect": false
+        },
+        {
+          "text": "Bread only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Which pet can mimic speech?",
+      "description": "Parrots can mimic human speech.",
+      "options": [
+        {
+          "text": "Parrot",
+          "isCorrect": true
+        },
+        {
+          "text": "Dog",
+          "isCorrect": false
+        },
+        {
+          "text": "Cat",
+          "isCorrect": false
+        },
+        {
+          "text": "Hamster",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "What do fish need to breathe?",
+      "description": "They use gills in water.",
+      "options": [
+        {
+          "text": "Gills",
+          "isCorrect": true
+        },
+        {
+          "text": "Lungs",
+          "isCorrect": false
+        },
+        {
+          "text": "Skin only",
+          "isCorrect": false
+        },
+        {
+          "text": "Nose",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Which pet needs regular walks?",
+      "description": "Dogs require daily walks.",
+      "options": [
+        {
+          "text": "Dog",
+          "isCorrect": true
+        },
+        {
+          "text": "Fish",
+          "isCorrect": false
+        },
+        {
+          "text": "Turtle",
+          "isCorrect": false
+        },
+        {
+          "text": "Hamster",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "What is a kitten?",
+      "description": "A baby cat.",
+      "options": [
+        {
+          "text": "Baby cat",
+          "isCorrect": true
+        },
+        {
+          "text": "Baby dog",
+          "isCorrect": false
+        },
+        {
+          "text": "Baby bird",
+          "isCorrect": false
+        },
+        {
+          "text": "Baby fish",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Which pet is nocturnal?",
+      "description": "Hamsters are active at night.",
+      "options": [
+        {
+          "text": "Hamster",
+          "isCorrect": true
+        },
+        {
+          "text": "Dog",
+          "isCorrect": false
+        },
+        {
+          "text": "Cat",
+          "isCorrect": false
+        },
+        {
+          "text": "Fish",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "What do birds have?",
+      "description": "Feathers cover birds.",
+      "options": [
+        {
+          "text": "Feathers",
+          "isCorrect": true
+        },
+        {
+          "text": "Fur",
+          "isCorrect": false
+        },
+        {
+          "text": "Scales",
+          "isCorrect": false
+        },
+        {
+          "text": "Skin only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Which pet lives in a tank?",
+      "description": "Fish live in aquariums.",
+      "options": [
+        {
+          "text": "Fish",
+          "isCorrect": true
+        },
+        {
+          "text": "Dog",
+          "isCorrect": false
+        },
+        {
+          "text": "Cat",
+          "isCorrect": false
+        },
+        {
+          "text": "Rabbit",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

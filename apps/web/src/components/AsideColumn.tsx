@@ -17,7 +17,7 @@ export async function AsideColumn() {
             {quizzes.map((q) => (
               <Link
                 key={q.slug}
-                href={`/quiz/${q.slug}/1`}
+                href={`/quiz/${q.slug}`}
                 className="flex items-center gap-2 text-sm text-zinc-400 hover:text-amber-400"
               >
                 <span>{q.emoji ?? "❓"}</span>

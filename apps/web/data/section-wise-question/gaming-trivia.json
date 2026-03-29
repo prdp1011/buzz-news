@@ -1,0 +1,239 @@
+{
+  "slug": "gaming-trivia",
+  "title": "Are You A True Gamer?",
+  "description": "Are You A True Gamer? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83c\udfae",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Which device is used for gaming?",
+      "description": "Consoles are gaming devices.",
+      "options": [
+        {
+          "text": "Console",
+          "isCorrect": true
+        },
+        {
+          "text": "Printer",
+          "isCorrect": false
+        },
+        {
+          "text": "Scanner",
+          "isCorrect": false
+        },
+        {
+          "text": "Router",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "What is FPS?",
+      "description": "Frames per second.",
+      "options": [
+        {
+          "text": "Frames per second",
+          "isCorrect": true
+        },
+        {
+          "text": "Fast play style",
+          "isCorrect": false
+        },
+        {
+          "text": "Final power score",
+          "isCorrect": false
+        },
+        {
+          "text": "Full play system",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Which genre is FIFA?",
+      "description": "Sports game.",
+      "options": [
+        {
+          "text": "Sports",
+          "isCorrect": true
+        },
+        {
+          "text": "RPG",
+          "isCorrect": false
+        },
+        {
+          "text": "Shooter",
+          "isCorrect": false
+        },
+        {
+          "text": "Puzzle",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is a joystick?",
+      "description": "Controller for games.",
+      "options": [
+        {
+          "text": "Game controller",
+          "isCorrect": true
+        },
+        {
+          "text": "Keyboard",
+          "isCorrect": false
+        },
+        {
+          "text": "Mouse",
+          "isCorrect": false
+        },
+        {
+          "text": "Monitor",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which company makes PlayStation?",
+      "description": "Sony makes PlayStation.",
+      "options": [
+        {
+          "text": "Sony",
+          "isCorrect": true
+        },
+        {
+          "text": "Microsoft",
+          "isCorrect": false
+        },
+        {
+          "text": "Nintendo",
+          "isCorrect": false
+        },
+        {
+          "text": "Apple",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "What is multiplayer?",
+      "description": "Many players together.",
+      "options": [
+        {
+          "text": "Many players",
+          "isCorrect": true
+        },
+        {
+          "text": "Single player",
+          "isCorrect": false
+        },
+        {
+          "text": "Offline mode",
+          "isCorrect": false
+        },
+        {
+          "text": "Demo",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "Which game is battle royale?",
+      "description": "Fortnite is battle royale.",
+      "options": [
+        {
+          "text": "Fortnite",
+          "isCorrect": true
+        },
+        {
+          "text": "Chess",
+          "isCorrect": false
+        },
+        {
+          "text": "Tetris",
+          "isCorrect": false
+        },
+        {
+          "text": "Sudoku",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What is lag?",
+      "description": "Delay in game response.",
+      "options": [
+        {
+          "text": "Delay",
+          "isCorrect": true
+        },
+        {
+          "text": "Speed boost",
+          "isCorrect": false
+        },
+        {
+          "text": "Sound effect",
+          "isCorrect": false
+        },
+        {
+          "text": "Graphics",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which device uses VR?",
+      "description": "Headset for virtual reality.",
+      "options": [
+        {
+          "text": "VR headset",
+          "isCorrect": true
+        },
+        {
+          "text": "Keyboard",
+          "isCorrect": false
+        },
+        {
+          "text": "Mouse",
+          "isCorrect": false
+        },
+        {
+          "text": "Speaker",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is a level up?",
+      "description": "Advancing progress.",
+      "options": [
+        {
+          "text": "Advance progress",
+          "isCorrect": true
+        },
+        {
+          "text": "Restart",
+          "isCorrect": false
+        },
+        {
+          "text": "Pause",
+          "isCorrect": false
+        },
+        {
+          "text": "Quit",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,814 @@
+{
+  "slug": "baking-skills",
+  "title": "Baking Skills Quiz",
+  "description": "Master baking skills with 12 practical and engaging questions.",
+  "emoji": "🎯",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "You are starting with baking skills. What is the most sensible first move?",
+      "description": "Foundations matter: Baking Skills rewards patience more than impulse buys.",
+      "options": [
+        {
+          "text": "Learn the basics, then add gear or complexity gradually",
+          "isCorrect": true
+        },
+        {
+          "text": "Buy every popular accessory on day one",
+          "isCorrect": false
+        },
+        {
+          "text": "Skip safety or setup steps to save time",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy a random viral trend without context",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which habit usually hurts progress in baking skills?",
+      "description": "Consistency beats intensity for most people exploring Baking Skills.",
+      "options": [
+        {
+          "text": "Doing nothing regularly and only binge-practicing",
+          "isCorrect": true
+        },
+        {
+          "text": "Tracking small wins week to week",
+          "isCorrect": false
+        },
+        {
+          "text": "Asking experienced people targeted questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Adjusting your approach when something clearly fails",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "In baking skills, why is it risky to ignore fundamentals?",
+      "description": "Core concepts in Baking Skills prevent expensive or discouraging setbacks.",
+      "options": [
+        {
+          "text": "Mistakes compound and become harder to untangle later",
+          "isCorrect": true
+        },
+        {
+          "text": "Fundamentals never matter for hobbies",
+          "isCorrect": false
+        },
+        {
+          "text": "You will automatically absorb basics without study",
+          "isCorrect": false
+        },
+        {
+          "text": "Only experts need to understand the basics",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is a realistic expectation when learning baking skills?",
+      "description": "Baking Skills is a skill curve: early progress can feel slow.",
+      "options": [
+        {
+          "text": "Noticeable improvement often takes weeks of steady practice",
+          "isCorrect": true
+        },
+        {
+          "text": "You should master it perfectly within a few days",
+          "isCorrect": false
+        },
+        {
+          "text": "If it feels hard, you are not suited for it",
+          "isCorrect": false
+        },
+        {
+          "text": "Talent alone replaces practice",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which approach helps you learn baking skills from feedback?",
+      "description": "Useful feedback speeds up learning in Baking Skills.",
+      "options": [
+        {
+          "text": "Change one variable at a time and observe the outcome",
+          "isCorrect": true
+        },
+        {
+          "text": "Change five things at once every session",
+          "isCorrect": false
+        },
+        {
+          "text": "Ignore results that contradict your assumptions",
+          "isCorrect": false
+        },
+        {
+          "text": "Avoid ever repeating a failed attempt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "When budgeting time for baking skills, what usually works best?",
+      "description": "Short regular sessions often beat rare marathons for Baking Skills.",
+      "options": [
+        {
+          "text": "Short, frequent sessions that fit your calendar",
+          "isCorrect": true
+        },
+        {
+          "text": "Only practice once a month for eight hours straight",
+          "isCorrect": false
+        },
+        {
+          "text": "Wait until you feel 100% motivated",
+          "isCorrect": false
+        },
+        {
+          "text": "Quit the first day you miss a session",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "How can you avoid misinformation about baking skills?",
+      "description": "Cross-checking sources helps with Baking Skills, where myths spread quickly.",
+      "options": [
+        {
+          "text": "Compare multiple reputable sources and look for consensus",
+          "isCorrect": true
+        },
+        {
+          "text": "Trust the first bold claim you see online",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume older advice is always outdated",
+          "isCorrect": false
+        },
+        {
+          "text": "Believe anything that uses technical jargon",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What role does community play in baking skills?",
+      "description": "Many people improve faster in Baking Skills with peers or mentors.",
+      "options": [
+        {
+          "text": "Communities can answer niche questions and share sane defaults",
+          "isCorrect": true
+        },
+        {
+          "text": "Communities always agree and never argue",
+          "isCorrect": false
+        },
+        {
+          "text": "You should never share your beginner questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Online advice is never useful",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which goal-setting style fits baking skills for most beginners?",
+      "description": "Small measurable goals keep motivation for Baking Skills.",
+      "options": [
+        {
+          "text": "One clear, achievable milestone per week",
+          "isCorrect": true
+        },
+        {
+          "text": "A vague goal to be the best in the world immediately",
+          "isCorrect": false
+        },
+        {
+          "text": "No goals—only random experimentation forever",
+          "isCorrect": false
+        },
+        {
+          "text": "Only goals you cannot measure or verify",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is a sign you should slow down in baking skills?",
+      "description": "Pacing prevents injury, burnout, or wasted money in Baking Skills.",
+      "options": [
+        {
+          "text": "You feel constant frustration, pain, or overspending",
+          "isCorrect": true
+        },
+        {
+          "text": "You still enjoy it and stay within your limits",
+          "isCorrect": false
+        },
+        {
+          "text": "You completed a small task successfully",
+          "isCorrect": false
+        },
+        {
+          "text": "You asked a thoughtful question",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "text": "How should you document what you learn in baking skills?",
+      "description": "Notes turn experiments into reusable knowledge for Baking Skills.",
+      "options": [
+        {
+          "text": "Keep a simple log: what you tried, what happened, what next",
+          "isCorrect": true
+        },
+        {
+          "text": "Rely only on memory for every detail",
+          "isCorrect": false
+        },
+        {
+          "text": "Never write anything because it feels slow",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy others' notes without understanding them",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "text": "Which attitude helps long-term growth in baking skills?",
+      "description": "\"Baking Skills Quiz\" rewards curiosity over perfectionism.",
+      "options": [
+        {
+          "text": "Treat mistakes as data and iterate calmly",
+          "isCorrect": true
+        },
+        {
+          "text": "Quit after the first imperfect attempt",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume you must never ask basic questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Compare your day one to someone else's year five",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "text": "What happens if you overmix cake batter?",
+      "description": "Overmixing develops too much gluten, making cakes dense.",
+      "options": [
+        { "text": "Cake becomes dense and tough", "isCorrect": true },
+        { "text": "Cake becomes fluffier", "isCorrect": false },
+        { "text": "Cake rises faster", "isCorrect": false },
+        { "text": "Cake becomes sweeter", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 13,
+      "text": "Why is sifting flour important in baking?",
+      "description": "Sifting removes lumps and adds air for lighter texture.",
+      "options": [
+        { "text": "Improves texture and removes lumps", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Increases moisture", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 14,
+      "text": "What is the purpose of baking powder in cakes?",
+      "description": "It helps the cake rise by releasing gas.",
+      "options": [
+        { "text": "Leavening agent", "isCorrect": true },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Adds moisture", "isCorrect": false },
+        { "text": "Improves color only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 15,
+      "text": "Why do cookies become hard after baking?",
+      "description": "Overbaking removes too much moisture.",
+      "options": [
+        { "text": "Overbaking", "isCorrect": true },
+        { "text": "Too much sugar", "isCorrect": false },
+        { "text": "Too much butter", "isCorrect": false },
+        { "text": "Cold oven", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 16,
+      "text": "What is the function of eggs in baking?",
+      "description": "Eggs bind ingredients and add structure.",
+      "options": [
+        { "text": "Binding and structure", "isCorrect": true },
+        { "text": "Only sweetness", "isCorrect": false },
+        { "text": "Only color", "isCorrect": false },
+        { "text": "Only moisture", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 17,
+      "text": "Why is butter often creamed with sugar?",
+      "description": "Creaming incorporates air for a lighter texture.",
+      "options": [
+        { "text": "To add air for light texture", "isCorrect": true },
+        { "text": "To melt butter", "isCorrect": false },
+        { "text": "To add moisture only", "isCorrect": false },
+        { "text": "To reduce sweetness", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 18,
+      "text": "What happens if you use too much flour in baking?",
+      "description": "Too much flour makes baked goods dry and dense.",
+      "options": [
+        { "text": "Dry and dense texture", "isCorrect": true },
+        { "text": "Fluffy texture", "isCorrect": false },
+        { "text": "Sweeter result", "isCorrect": false },
+        { "text": "Faster baking", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 19,
+      "text": "Why is oven temperature accuracy important?",
+      "description": "Incorrect temperature can ruin texture and rise.",
+      "options": [
+        { "text": "Ensures proper baking results", "isCorrect": true },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Reduces ingredients", "isCorrect": false },
+        { "text": "Improves color only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 20,
+      "text": "What is proofing in baking?",
+      "description": "Proofing allows yeast dough to rise before baking.",
+      "options": [
+        { "text": "Allowing dough to rise", "isCorrect": true },
+        { "text": "Cooling dough", "isCorrect": false },
+        { "text": "Adding sugar", "isCorrect": false },
+        { "text": "Mixing ingredients", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 21,
+      "text": "Why do cakes crack on top?",
+      "description": "Often caused by high oven temperature.",
+      "options": [
+        { "text": "Too high temperature", "isCorrect": true },
+        { "text": "Too much sugar", "isCorrect": false },
+        { "text": "Too much milk", "isCorrect": false },
+        { "text": "Too little flour", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 22,
+      "text": "What causes a cake to become dry after baking?",
+      "description": "Overbaking removes too much moisture from the cake.",
+      "options": [
+        { "text": "Overbaking", "isCorrect": true },
+        { "text": "Too much sugar", "isCorrect": false },
+        { "text": "Too little butter", "isCorrect": false },
+        { "text": "Cold oven", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 23,
+      "text": "Why is room temperature butter used in cake recipes?",
+      "description": "It mixes more evenly and traps air when creamed.",
+      "options": [
+        { "text": "Better mixing and aeration", "isCorrect": true },
+        { "text": "Adds more flavor only", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Prevents rising", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 24,
+      "text": "What happens if you open the oven door too early while baking a cake?",
+      "description": "Sudden temperature drop can cause the cake to collapse.",
+      "options": [
+        { "text": "Cake may sink in the middle", "isCorrect": true },
+        { "text": "Cake rises faster", "isCorrect": false },
+        { "text": "Cake becomes sweeter", "isCorrect": false },
+        { "text": "No effect", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 25,
+      "text": "What is the purpose of parchment paper in baking?",
+      "description": "It prevents sticking and makes cleanup easier.",
+      "options": [
+        { "text": "Prevents sticking", "isCorrect": true },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Increases heat", "isCorrect": false },
+        { "text": "Improves sweetness", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 26,
+      "text": "Why is yeast activated in warm water?",
+      "description": "Warm water helps yeast become active and start fermentation.",
+      "options": [
+        { "text": "To activate fermentation", "isCorrect": true },
+        { "text": "To cool the dough", "isCorrect": false },
+        { "text": "To reduce sugar", "isCorrect": false },
+        { "text": "To harden dough", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 27,
+      "text": "What happens if water is too hot when activating yeast?",
+      "description": "High temperatures can kill yeast.",
+      "options": [
+        { "text": "Yeast dies", "isCorrect": true },
+        { "text": "Yeast multiplies faster", "isCorrect": false },
+        { "text": "Dough rises more", "isCorrect": false },
+        { "text": "Adds sweetness", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 28,
+      "text": "Why is kneading dough important for bread?",
+      "description": "Kneading develops gluten, giving structure.",
+      "options": [
+        { "text": "Develops gluten structure", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Changes color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 29,
+      "text": "What does overproofing dough lead to?",
+      "description": "Overproofed dough can collapse and lose structure.",
+      "options": [
+        { "text": "Collapsed structure", "isCorrect": true },
+        { "text": "Better rise", "isCorrect": false },
+        { "text": "Sweeter bread", "isCorrect": false },
+        { "text": "Faster baking", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 30,
+      "text": "What is the role of milk in baking?",
+      "description": "Milk adds moisture, flavor, and tenderness.",
+      "options": [
+        { "text": "Adds moisture and tenderness", "isCorrect": true },
+        { "text": "Only sweetens", "isCorrect": false },
+        { "text": "Only colors", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 31,
+      "text": "Why do muffins become dense instead of fluffy?",
+      "description": "Overmixing batter can make muffins dense.",
+      "options": [
+        { "text": "Overmixing batter", "isCorrect": true },
+        { "text": "Too little sugar", "isCorrect": false },
+        { "text": "Too much air", "isCorrect": false },
+        { "text": "Cold oven", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 32,
+      "text": "What is the purpose of icing or frosting?",
+      "description": "It adds flavor and decorative finish.",
+      "options": [
+        { "text": "Flavor and decoration", "isCorrect": true },
+        { "text": "Helps baking", "isCorrect": false },
+        { "text": "Reduces moisture", "isCorrect": false },
+        { "text": "Adds structure", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 33,
+      "text": "Why should cakes be cooled before slicing?",
+      "description": "Cooling allows structure to set properly.",
+      "options": [
+        { "text": "Prevents crumbling", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Improves baking", "isCorrect": false },
+        { "text": "Changes color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 34,
+      "text": "What causes bread crust to become hard?",
+      "description": "Overbaking or too much heat can harden crust.",
+      "options": [
+        { "text": "Overbaking", "isCorrect": true },
+        { "text": "Too much water", "isCorrect": false },
+        { "text": "Too little flour", "isCorrect": false },
+        { "text": "Cold oven", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 35,
+      "text": "Why is sugar important in yeast baking?",
+      "description": "Sugar feeds yeast and helps fermentation.",
+      "options": [
+        { "text": "Feeds yeast", "isCorrect": true },
+        { "text": "Only sweetens", "isCorrect": false },
+        { "text": "Stops rising", "isCorrect": false },
+        { "text": "Adds color only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 36,
+      "text": "What is the role of oil in baking?",
+      "description": "Oil keeps baked goods moist.",
+      "options": [
+        { "text": "Adds moisture", "isCorrect": true },
+        { "text": "Adds structure", "isCorrect": false },
+        { "text": "Adds air", "isCorrect": false },
+        { "text": "Adds crispiness only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 37,
+      "text": "Why do brownies become cakey instead of fudgy?",
+      "description": "Too much flour or overbaking can make them cakey.",
+      "options": [
+        { "text": "Too much flour", "isCorrect": true },
+        { "text": "Too little sugar", "isCorrect": false },
+        { "text": "Too much butter", "isCorrect": false },
+        { "text": "Low temperature", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 38,
+      "text": "What is the function of vanilla extract in baking?",
+      "description": "It enhances flavor and aroma.",
+      "options": [
+        { "text": "Enhances flavor", "isCorrect": true },
+        { "text": "Adds structure", "isCorrect": false },
+        { "text": "Adds color", "isCorrect": false },
+        { "text": "Reduces sweetness", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 39,
+      "text": "Why is flour type important in baking?",
+      "description": "Different flours have different protein levels.",
+      "options": [
+        { "text": "Affects texture and structure", "isCorrect": true },
+        { "text": "Only changes color", "isCorrect": false },
+        { "text": "Only adds sweetness", "isCorrect": false },
+        { "text": "Has no effect", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 40,
+      "text": "What happens if dough is too sticky?",
+      "description": "It may need more flour or proper kneading.",
+      "options": [
+        { "text": "Needs adjustment with flour", "isCorrect": true },
+        { "text": "It is perfect always", "isCorrect": false },
+        { "text": "Add water only", "isCorrect": false },
+        { "text": "Bake immediately", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 41,
+      "text": "Why is resting dough important?",
+      "description": "Resting relaxes gluten and improves texture.",
+      "options": [
+        { "text": "Relaxes gluten", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Adds color", "isCorrect": false },
+        { "text": "Stops fermentation", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 42,
+      "text": "What causes cookies to burn on the bottom?",
+      "description": "Direct heat or thin baking trays can cause burning.",
+      "options": [
+        { "text": "Too much bottom heat", "isCorrect": true },
+        { "text": "Too much sugar", "isCorrect": false },
+        { "text": "Too much butter", "isCorrect": false },
+        { "text": "Cold oven", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 43,
+      "text": "Why is using the correct baking pan size important?",
+      "description": "Pan size affects cooking time and texture.",
+      "options": [
+        { "text": "Ensures even baking", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Reduces ingredients", "isCorrect": false },
+        { "text": "Changes color only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 44,
+      "text": "What happens if you bake at too high a temperature?",
+      "description": "The outside cooks too quickly while inside remains raw.",
+      "options": [
+        { "text": "Burnt outside, raw inside", "isCorrect": true },
+        { "text": "Perfect baking", "isCorrect": false },
+        { "text": "Faster even baking", "isCorrect": false },
+        { "text": "Better texture", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 45,
+      "text": "Why is butter sometimes replaced with oil in recipes?",
+      "description": "Oil provides more moisture and a softer texture.",
+      "options": [
+        { "text": "Adds moisture and softness", "isCorrect": true },
+        { "text": "Adds structure", "isCorrect": false },
+        { "text": "Reduces flavor", "isCorrect": false },
+        { "text": "Increases baking time", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 46,
+      "text": "What is the purpose of glazing baked goods?",
+      "description": "Glazing adds shine and enhances appearance.",
+      "options": [
+        { "text": "Adds shine and finish", "isCorrect": true },
+        { "text": "Improves structure", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Adds air", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 47,
+      "text": "Why is it important to not overcrowd baking trays?",
+      "description": "Crowding prevents even heat circulation.",
+      "options": [
+        { "text": "Ensures even baking", "isCorrect": true },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Speeds up baking", "isCorrect": false },
+        { "text": "Improves color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 48,
+      "text": "What happens if you use expired baking powder?",
+      "description": "It loses effectiveness and baked goods may not rise.",
+      "options": [
+        { "text": "Poor rise", "isCorrect": true },
+        { "text": "Better texture", "isCorrect": false },
+        { "text": "Sweeter taste", "isCorrect": false },
+        { "text": "No effect", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 49,
+      "text": "Why is chilling cookie dough recommended sometimes?",
+      "description": "Chilling controls spread and improves flavor.",
+      "options": [
+        { "text": "Controls spread and enhances flavor", "isCorrect": true },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Adds moisture", "isCorrect": false },
+        { "text": "Changes color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 50,
+      "text": "What is the purpose of dusting flour on surfaces?",
+      "description": "It prevents dough from sticking.",
+      "options": [
+        { "text": "Prevents sticking", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Improves flavor", "isCorrect": false },
+        { "text": "Adds color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 51,
+      "text": "What does a toothpick test indicate in baking?",
+      "description": "It checks if the inside is fully cooked.",
+      "options": [
+        { "text": "Doneness of baked item", "isCorrect": true },
+        { "text": "Flavor level", "isCorrect": false },
+        { "text": "Sweetness level", "isCorrect": false },
+        { "text": "Moisture content only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 52,
+      "text": "Why is rotating trays during baking useful?",
+      "description": "It ensures even heat distribution in the oven.",
+      "options": [
+        { "text": "Ensures even baking", "isCorrect": true },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Changes texture", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 53,
+      "text": "What causes uneven browning in baked goods?",
+      "description": "Uneven heat or poor oven circulation can cause this.",
+      "options": [
+        { "text": "Uneven heat distribution", "isCorrect": true },
+        { "text": "Too much sugar", "isCorrect": false },
+        { "text": "Too much flour", "isCorrect": false },
+        { "text": "Cold ingredients", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 54,
+      "text": "Why is cooling rack used after baking?",
+      "description": "It allows air circulation and prevents sogginess.",
+      "options": [
+        { "text": "Prevents soggy bottoms", "isCorrect": true },
+        { "text": "Adds flavor", "isCorrect": false },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Changes color", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 55,
+      "text": "What is blind baking?",
+      "description": "Pre-baking crust before adding filling.",
+      "options": [
+        { "text": "Pre-baking crust", "isCorrect": true },
+        { "text": "Baking without oven", "isCorrect": false },
+        { "text": "Cold baking", "isCorrect": false },
+        { "text": "Decorative baking", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 56,
+      "text": "Why is steam used in bread baking?",
+      "description": "Steam helps create a crisp crust.",
+      "options": [
+        { "text": "Creates crispy crust", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Reduces baking time", "isCorrect": false },
+        { "text": "Improves color only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 57,
+      "text": "What causes cake to stick to the pan?",
+      "description": "Lack of greasing or lining can cause sticking.",
+      "options": [
+        { "text": "Improper greasing", "isCorrect": true },
+        { "text": "Too much sugar", "isCorrect": false },
+        { "text": "Too much flour", "isCorrect": false },
+        { "text": "Cold oven", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 58,
+      "text": "Why is leveling cake layers important?",
+      "description": "It ensures even stacking and stability.",
+      "options": [
+        { "text": "Even layers and structure", "isCorrect": true },
+        { "text": "Adds sweetness", "isCorrect": false },
+        { "text": "Improves baking", "isCorrect": false },
+        { "text": "Adds moisture", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 59,
+      "text": "What defines a well-baked cake?",
+      "description": "Even texture, proper rise, and balanced moisture.",
+      "options": [
+        { "text": "Even texture and proper rise", "isCorrect": true },
+        { "text": "Maximum sweetness", "isCorrect": false },
+        { "text": "Hard crust only", "isCorrect": false },
+        { "text": "Dark color only", "isCorrect": false }
+      ]
+    }
+
+  ]
+}

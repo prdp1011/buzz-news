@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
-import { prisma } from "database";
+import { readSectionIndex } from "@/lib/quiz-file-store";
 import { AdminLayout } from "@/components/AdminLayout";
 import { ImportJsonForm } from "./ImportJsonForm";
 import { SectionCoverUpload } from "./SectionCoverUpload";
@@ -9,10 +9,15 @@ export default async function QuizImportPage() {
   const session = await getSession();
   if (!session) redirect("/login");
 
-  const sections = await prisma.quizSection.findMany({
-    orderBy: { label: "asc" },
-    select: { id: true, slug: true, label: true, coverImageUrl: true },
-  });
+  const idx = await readSectionIndex();
+  const sections = idx.sections
+    .slice()
+    .sort((a, b) => a.label.localeCompare(b.label))
+    .map((s) => ({
+      slug: s.slug,
+      label: s.label,
+      coverImageUrl: typeof s.coverImageUrl === "string" ? s.coverImageUrl : "",
+    }));
 
   return (
     <AdminLayout>
@@ -20,9 +25,9 @@ export default async function QuizImportPage() {
         <div>
           <h1 className="text-2xl font-bold">Import quizzes (JSON)</h1>
           <p className="mt-2 text-sm text-zinc-400">
-            Paste JSON to create or update sections, quizzes, and questions. New section slugs are
-            created automatically. You can set <code className="text-cyan-400">coverImageUrl</code>{" "}
-            per section in JSON, or upload a cover per section below.
+            Writes directly to <code className="text-cyan-400">apps/web/data/section.json</code> and{" "}
+            <code className="text-cyan-400">section-wise-question/*.json</code> (same files the public site reads). You
+            can set <code className="text-cyan-400">coverImageUrl</code> in JSON or upload below.
           </p>
         </div>
 

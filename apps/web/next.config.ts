@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return [{ source: "/topic/:slug", destination: "/section/:slug", permanent: true }];
+    return [{ source: "/topic/:slug", destination: "/quiz/:slug", permanent: true }];
   },
   webpack: (config, { isServer }) => {
     if (isServer) {

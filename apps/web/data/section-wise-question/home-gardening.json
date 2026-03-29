@@ -1,0 +1,239 @@
+{
+  "slug": "home-gardening",
+  "title": "Are You A Green Thumb?",
+  "description": "Are You A Green Thumb? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83c\udf31",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "What do plants need for photosynthesis?",
+      "description": "Sunlight, water, and carbon dioxide.",
+      "options": [
+        {
+          "text": "Sunlight, water, CO\u2082",
+          "isCorrect": true
+        },
+        {
+          "text": "Only soil",
+          "isCorrect": false
+        },
+        {
+          "text": "Only fertilizer",
+          "isCorrect": false
+        },
+        {
+          "text": "Only oxygen",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which soil drains fastest?",
+      "description": "Sandy soil drains quickly.",
+      "options": [
+        {
+          "text": "Sandy soil",
+          "isCorrect": true
+        },
+        {
+          "text": "Clay soil",
+          "isCorrect": false
+        },
+        {
+          "text": "Peat",
+          "isCorrect": false
+        },
+        {
+          "text": "Loam (slowest)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "What is compost?",
+      "description": "Decomposed organic matter used as fertilizer.",
+      "options": [
+        {
+          "text": "Decomposed organic matter",
+          "isCorrect": true
+        },
+        {
+          "text": "Chemical fertilizer",
+          "isCorrect": false
+        },
+        {
+          "text": "Sand mix",
+          "isCorrect": false
+        },
+        {
+          "text": "Plastic mulch",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Best time to water plants?",
+      "description": "Early morning reduces evaporation and disease.",
+      "options": [
+        {
+          "text": "Early morning",
+          "isCorrect": true
+        },
+        {
+          "text": "Midday sun",
+          "isCorrect": false
+        },
+        {
+          "text": "Late night only",
+          "isCorrect": false
+        },
+        {
+          "text": "Anytime equal",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "What does pruning do?",
+      "description": "Encourages healthy growth and shape.",
+      "options": [
+        {
+          "text": "Promotes healthy growth",
+          "isCorrect": true
+        },
+        {
+          "text": "Kills plants",
+          "isCorrect": false
+        },
+        {
+          "text": "Adds nutrients",
+          "isCorrect": false
+        },
+        {
+          "text": "Changes soil pH",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Which nutrient boosts leaf growth?",
+      "description": "Nitrogen promotes leafy growth.",
+      "options": [
+        {
+          "text": "Nitrogen",
+          "isCorrect": true
+        },
+        {
+          "text": "Phosphorus",
+          "isCorrect": false
+        },
+        {
+          "text": "Potassium",
+          "isCorrect": false
+        },
+        {
+          "text": "Calcium",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "What is mulch used for?",
+      "description": "Retains moisture and suppresses weeds.",
+      "options": [
+        {
+          "text": "Retain moisture",
+          "isCorrect": true
+        },
+        {
+          "text": "Increase pests",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduce sunlight fully",
+          "isCorrect": false
+        },
+        {
+          "text": "Harden soil",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Which plant is succulent?",
+      "description": "Succulents store water in leaves.",
+      "options": [
+        {
+          "text": "Aloe vera",
+          "isCorrect": true
+        },
+        {
+          "text": "Fern",
+          "isCorrect": false
+        },
+        {
+          "text": "Rose",
+          "isCorrect": false
+        },
+        {
+          "text": "Wheat",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "What is pH neutral soil?",
+      "description": "Around pH 7.",
+      "options": [
+        {
+          "text": "pH 7",
+          "isCorrect": true
+        },
+        {
+          "text": "pH 4",
+          "isCorrect": false
+        },
+        {
+          "text": "pH 10",
+          "isCorrect": false
+        },
+        {
+          "text": "pH 2",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Why rotate crops?",
+      "description": "Prevents soil depletion and pests.",
+      "options": [
+        {
+          "text": "Prevent pests/depletion",
+          "isCorrect": true
+        },
+        {
+          "text": "Increase weeds",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduce sunlight",
+          "isCorrect": false
+        },
+        {
+          "text": "Add water",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

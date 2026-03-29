@@ -1,0 +1,239 @@
+{
+  "slug": "movies-entertainment",
+  "title": "Movies Mix Quiz",
+  "description": "Test your movie knowledge.",
+  "emoji": "🎬",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Who played Jack in Titanic?",
+      "description": "Leonardo DiCaprio starred as Jack.",
+      "options": [
+        {
+          "text": "Leonardo DiCaprio",
+          "isCorrect": true
+        },
+        {
+          "text": "Brad Pitt",
+          "isCorrect": false
+        },
+        {
+          "text": "Tom Cruise",
+          "isCorrect": false
+        },
+        {
+          "text": "Johnny Depp",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which movie features Hogwarts?",
+      "description": "Hogwarts appears in Harry Potter series.",
+      "options": [
+        {
+          "text": "Harry Potter",
+          "isCorrect": true
+        },
+        {
+          "text": "Narnia",
+          "isCorrect": false
+        },
+        {
+          "text": "LOTR",
+          "isCorrect": false
+        },
+        {
+          "text": "Avatar",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Who is King Khan?",
+      "description": "Nickname of Shah Rukh Khan.",
+      "options": [
+        {
+          "text": "Shah Rukh Khan",
+          "isCorrect": true
+        },
+        {
+          "text": "Salman Khan",
+          "isCorrect": false
+        },
+        {
+          "text": "Aamir Khan",
+          "isCorrect": false
+        },
+        {
+          "text": "Saif Ali Khan",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Oscar Best Picture 2020?",
+      "description": "Parasite won the award.",
+      "options": [
+        {
+          "text": "Parasite",
+          "isCorrect": true
+        },
+        {
+          "text": "Joker",
+          "isCorrect": false
+        },
+        {
+          "text": "1917",
+          "isCorrect": false
+        },
+        {
+          "text": "Ford v Ferrari",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Dark Knight refers to?",
+      "description": "Batman is known by this name.",
+      "options": [
+        {
+          "text": "Batman",
+          "isCorrect": true
+        },
+        {
+          "text": "Superman",
+          "isCorrect": false
+        },
+        {
+          "text": "Iron Man",
+          "isCorrect": false
+        },
+        {
+          "text": "Flash",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Movie with dinosaurs?",
+      "description": "Jurassic Park features dinosaurs.",
+      "options": [
+        {
+          "text": "Jurassic Park",
+          "isCorrect": true
+        },
+        {
+          "text": "Matrix",
+          "isCorrect": false
+        },
+        {
+          "text": "Avengers",
+          "isCorrect": false
+        },
+        {
+          "text": "Transformers",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "Director of Avatar?",
+      "description": "James Cameron directed Avatar.",
+      "options": [
+        {
+          "text": "James Cameron",
+          "isCorrect": true
+        },
+        {
+          "text": "Nolan",
+          "isCorrect": false
+        },
+        {
+          "text": "Spielberg",
+          "isCorrect": false
+        },
+        {
+          "text": "Scott",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "‘All is Well’ song from?",
+      "description": "Song from 3 Idiots.",
+      "options": [
+        {
+          "text": "3 Idiots",
+          "isCorrect": true
+        },
+        {
+          "text": "PK",
+          "isCorrect": false
+        },
+        {
+          "text": "Dangal",
+          "isCorrect": false
+        },
+        {
+          "text": "Lagaan",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Who played Iron Man?",
+      "description": "Robert Downey Jr. played the role.",
+      "options": [
+        {
+          "text": "Robert Downey Jr.",
+          "isCorrect": true
+        },
+        {
+          "text": "Chris Evans",
+          "isCorrect": false
+        },
+        {
+          "text": "Hemsworth",
+          "isCorrect": false
+        },
+        {
+          "text": "Ruffalo",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Stranger Things platform?",
+      "description": "It is produced by Netflix.",
+      "options": [
+        {
+          "text": "Netflix",
+          "isCorrect": true
+        },
+        {
+          "text": "Amazon",
+          "isCorrect": false
+        },
+        {
+          "text": "Disney+",
+          "isCorrect": false
+        },
+        {
+          "text": "Hulu",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

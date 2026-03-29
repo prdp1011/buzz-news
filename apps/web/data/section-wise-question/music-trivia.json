@@ -1,0 +1,239 @@
+{
+  "slug": "music-trivia",
+  "title": "How Musical Are You?",
+  "description": "How Musical Are You? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83c\udfb5",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "Which instrument has keys?",
+      "description": "Piano uses a keyboard layout.",
+      "options": [
+        {
+          "text": "Piano",
+          "isCorrect": true
+        },
+        {
+          "text": "Guitar",
+          "isCorrect": false
+        },
+        {
+          "text": "Drums",
+          "isCorrect": false
+        },
+        {
+          "text": "Violin",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "What does tempo mean?",
+      "description": "Speed of the music.",
+      "options": [
+        {
+          "text": "Speed of music",
+          "isCorrect": true
+        },
+        {
+          "text": "Volume",
+          "isCorrect": false
+        },
+        {
+          "text": "Pitch",
+          "isCorrect": false
+        },
+        {
+          "text": "Harmony",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Which symbol raises pitch?",
+      "description": "Sharp (#) raises pitch.",
+      "options": [
+        {
+          "text": "Sharp (#)",
+          "isCorrect": true
+        },
+        {
+          "text": "Flat (b)",
+          "isCorrect": false
+        },
+        {
+          "text": "Natural",
+          "isCorrect": false
+        },
+        {
+          "text": "Rest",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is a chorus?",
+      "description": "Repeated main section of a song.",
+      "options": [
+        {
+          "text": "Repeated section",
+          "isCorrect": true
+        },
+        {
+          "text": "Intro",
+          "isCorrect": false
+        },
+        {
+          "text": "Outro",
+          "isCorrect": false
+        },
+        {
+          "text": "Bridge only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which genre is electronic dance music?",
+      "description": "EDM is electronic dance music.",
+      "options": [
+        {
+          "text": "EDM",
+          "isCorrect": true
+        },
+        {
+          "text": "Jazz",
+          "isCorrect": false
+        },
+        {
+          "text": "Blues",
+          "isCorrect": false
+        },
+        {
+          "text": "Classical",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "What does octave mean?",
+      "description": "Interval between one note and the next same note.",
+      "options": [
+        {
+          "text": "Same note range",
+          "isCorrect": true
+        },
+        {
+          "text": "Volume range",
+          "isCorrect": false
+        },
+        {
+          "text": "Tempo change",
+          "isCorrect": false
+        },
+        {
+          "text": "Chord type",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "Which instrument is percussion?",
+      "description": "Drums are percussion.",
+      "options": [
+        {
+          "text": "Drums",
+          "isCorrect": true
+        },
+        {
+          "text": "Flute",
+          "isCorrect": false
+        },
+        {
+          "text": "Violin",
+          "isCorrect": false
+        },
+        {
+          "text": "Piano",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What is harmony?",
+      "description": "Combination of notes played together.",
+      "options": [
+        {
+          "text": "Notes together",
+          "isCorrect": true
+        },
+        {
+          "text": "Single note",
+          "isCorrect": false
+        },
+        {
+          "text": "Silence",
+          "isCorrect": false
+        },
+        {
+          "text": "Noise",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which clef is common for high notes?",
+      "description": "Treble clef is used.",
+      "options": [
+        {
+          "text": "Treble clef",
+          "isCorrect": true
+        },
+        {
+          "text": "Bass clef",
+          "isCorrect": false
+        },
+        {
+          "text": "Alto clef",
+          "isCorrect": false
+        },
+        {
+          "text": "Tenor clef",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is a beat?",
+      "description": "Basic unit of time in music.",
+      "options": [
+        {
+          "text": "Unit of time",
+          "isCorrect": true
+        },
+        {
+          "text": "Pitch",
+          "isCorrect": false
+        },
+        {
+          "text": "Scale",
+          "isCorrect": false
+        },
+        {
+          "text": "Chord",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

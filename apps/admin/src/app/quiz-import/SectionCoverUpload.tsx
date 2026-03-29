@@ -4,13 +4,13 @@ import { useState, useTransition, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { updateSectionCoverImage } from "./actions";
 
-type Section = { id: string; slug: string; label: string; coverImageUrl: string | null };
+type Section = { slug: string; label: string; coverImageUrl: string };
 
 export function SectionCoverUpload({ sections }: { sections: Section[] }) {
   if (sections.length === 0) {
     return (
       <p className="text-sm text-zinc-500">
-        No sections yet. Import JSON with a new section, or create one under Sections.
+        No sections in section.json yet. Import JSON or edit apps/web/data/section.json.
       </p>
     );
   }
@@ -18,7 +18,7 @@ export function SectionCoverUpload({ sections }: { sections: Section[] }) {
   return (
     <div className="space-y-4">
       {sections.map((s) => (
-        <SectionRow key={s.id} section={s} />
+        <SectionRow key={s.slug} section={s} />
       ))}
     </div>
   );
@@ -52,7 +52,7 @@ function SectionRow({ section }: { section: Section }) {
         return;
       }
       startTransition(async () => {
-        const r = await updateSectionCoverImage(section.id, data.url!);
+        const r = await updateSectionCoverImage(section.slug, data.url!);
         if (r.ok) {
           setStatus("Cover image saved.");
           router.refresh();
@@ -70,7 +70,7 @@ function SectionRow({ section }: { section: Section }) {
         <p className="text-xs text-zinc-500">
           slug: <code className="text-zinc-400">{section.slug}</code>
         </p>
-        {section.coverImageUrl ? (
+        {section.coverImageUrl?.trim() ? (
           <p className="mt-1 truncate text-xs text-zinc-600" title={section.coverImageUrl}>
             {section.coverImageUrl}
           </p>

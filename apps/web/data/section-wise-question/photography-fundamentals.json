@@ -1,0 +1,239 @@
+{
+  "slug": "photography-fundamentals",
+  "title": "Can You Capture The Perfect Shot?",
+  "description": "Can You Capture The Perfect Shot? \u2014 fun, shareable, and packed with surprising facts.",
+  "emoji": "\ud83d\udcf8",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "What does ISO control?",
+      "description": "ISO adjusts sensor sensitivity to light.",
+      "options": [
+        {
+          "text": "Light sensitivity",
+          "isCorrect": true
+        },
+        {
+          "text": "Aperture size",
+          "isCorrect": false
+        },
+        {
+          "text": "Shutter speed",
+          "isCorrect": false
+        },
+        {
+          "text": "White balance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "What is aperture measured in?",
+      "description": "Aperture is measured in f-stops.",
+      "options": [
+        {
+          "text": "f-stops",
+          "isCorrect": true
+        },
+        {
+          "text": "Lux",
+          "isCorrect": false
+        },
+        {
+          "text": "Pixels",
+          "isCorrect": false
+        },
+        {
+          "text": "Kelvin",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Which setting freezes fast motion?",
+      "description": "A fast shutter speed reduces motion blur.",
+      "options": [
+        {
+          "text": "Fast shutter speed",
+          "isCorrect": true
+        },
+        {
+          "text": "Low ISO",
+          "isCorrect": false
+        },
+        {
+          "text": "Wide aperture only",
+          "isCorrect": false
+        },
+        {
+          "text": "Manual focus",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is bokeh?",
+      "description": "The aesthetic quality of out-of-focus areas.",
+      "options": [
+        {
+          "text": "Blurred background effect",
+          "isCorrect": true
+        },
+        {
+          "text": "Image noise",
+          "isCorrect": false
+        },
+        {
+          "text": "Lens flare",
+          "isCorrect": false
+        },
+        {
+          "text": "Overexposure",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Golden hour occurs when?",
+      "description": "Shortly after sunrise or before sunset for soft light.",
+      "options": [
+        {
+          "text": "After sunrise/before sunset",
+          "isCorrect": true
+        },
+        {
+          "text": "At noon",
+          "isCorrect": false
+        },
+        {
+          "text": "Midnight",
+          "isCorrect": false
+        },
+        {
+          "text": "Anytime",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "Rule of thirds helps with?",
+      "description": "It improves composition by placing subjects on grid lines.",
+      "options": [
+        {
+          "text": "Composition",
+          "isCorrect": true
+        },
+        {
+          "text": "Exposure",
+          "isCorrect": false
+        },
+        {
+          "text": "Focus speed",
+          "isCorrect": false
+        },
+        {
+          "text": "File size",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "RAW format advantage?",
+      "description": "More data for editing flexibility.",
+      "options": [
+        {
+          "text": "Greater editing flexibility",
+          "isCorrect": true
+        },
+        {
+          "text": "Smaller size",
+          "isCorrect": false
+        },
+        {
+          "text": "Faster shooting",
+          "isCorrect": false
+        },
+        {
+          "text": "Built-in filters",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What does white balance fix?",
+      "description": "Color temperature casts in images.",
+      "options": [
+        {
+          "text": "Color temperature",
+          "isCorrect": true
+        },
+        {
+          "text": "Focus distance",
+          "isCorrect": false
+        },
+        {
+          "text": "Zoom level",
+          "isCorrect": false
+        },
+        {
+          "text": "Frame rate",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which lens is best for portraits?",
+      "description": "A short telephoto (e.g., 85mm) flatters faces.",
+      "options": [
+        {
+          "text": "85mm (telephoto)",
+          "isCorrect": true
+        },
+        {
+          "text": "Ultra-wide",
+          "isCorrect": false
+        },
+        {
+          "text": "Fish-eye",
+          "isCorrect": false
+        },
+        {
+          "text": "Macro only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is depth of field?",
+      "description": "Range of acceptable sharpness in a photo.",
+      "options": [
+        {
+          "text": "Area in focus",
+          "isCorrect": true
+        },
+        {
+          "text": "Image brightness",
+          "isCorrect": false
+        },
+        {
+          "text": "File format",
+          "isCorrect": false
+        },
+        {
+          "text": "Sensor size only",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

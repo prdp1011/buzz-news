@@ -1,0 +1,813 @@
+{
+  "slug": "book-reading",
+  "title": "Book Reading Quiz",
+  "description": "Master book reading with 12 practical and engaging questions.",
+  "emoji": "🎯",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "You are starting with book reading. What is the most sensible first move?",
+      "description": "Foundations matter: Book Reading rewards patience more than impulse buys.",
+      "options": [
+        {
+          "text": "Learn the basics, then add gear or complexity gradually",
+          "isCorrect": true
+        },
+        {
+          "text": "Buy every popular accessory on day one",
+          "isCorrect": false
+        },
+        {
+          "text": "Skip safety or setup steps to save time",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy a random viral trend without context",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which habit usually hurts progress in book reading?",
+      "description": "Consistency beats intensity for most people exploring Book Reading.",
+      "options": [
+        {
+          "text": "Doing nothing regularly and only binge-practicing",
+          "isCorrect": true
+        },
+        {
+          "text": "Tracking small wins week to week",
+          "isCorrect": false
+        },
+        {
+          "text": "Asking experienced people targeted questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Adjusting your approach when something clearly fails",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "In book reading, why is it risky to ignore fundamentals?",
+      "description": "Core concepts in Book Reading prevent expensive or discouraging setbacks.",
+      "options": [
+        {
+          "text": "Mistakes compound and become harder to untangle later",
+          "isCorrect": true
+        },
+        {
+          "text": "Fundamentals never matter for hobbies",
+          "isCorrect": false
+        },
+        {
+          "text": "You will automatically absorb basics without study",
+          "isCorrect": false
+        },
+        {
+          "text": "Only experts need to understand the basics",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is a realistic expectation when learning book reading?",
+      "description": "Book Reading is a skill curve: early progress can feel slow.",
+      "options": [
+        {
+          "text": "Noticeable improvement often takes weeks of steady practice",
+          "isCorrect": true
+        },
+        {
+          "text": "You should master it perfectly within a few days",
+          "isCorrect": false
+        },
+        {
+          "text": "If it feels hard, you are not suited for it",
+          "isCorrect": false
+        },
+        {
+          "text": "Talent alone replaces practice",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which approach helps you learn book reading from feedback?",
+      "description": "Useful feedback speeds up learning in Book Reading.",
+      "options": [
+        {
+          "text": "Change one variable at a time and observe the outcome",
+          "isCorrect": true
+        },
+        {
+          "text": "Change five things at once every session",
+          "isCorrect": false
+        },
+        {
+          "text": "Ignore results that contradict your assumptions",
+          "isCorrect": false
+        },
+        {
+          "text": "Avoid ever repeating a failed attempt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "When budgeting time for book reading, what usually works best?",
+      "description": "Short regular sessions often beat rare marathons for Book Reading.",
+      "options": [
+        {
+          "text": "Short, frequent sessions that fit your calendar",
+          "isCorrect": true
+        },
+        {
+          "text": "Only practice once a month for eight hours straight",
+          "isCorrect": false
+        },
+        {
+          "text": "Wait until you feel 100% motivated",
+          "isCorrect": false
+        },
+        {
+          "text": "Quit the first day you miss a session",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "How can you avoid misinformation about book reading?",
+      "description": "Cross-checking sources helps with Book Reading, where myths spread quickly.",
+      "options": [
+        {
+          "text": "Compare multiple reputable sources and look for consensus",
+          "isCorrect": true
+        },
+        {
+          "text": "Trust the first bold claim you see online",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume older advice is always outdated",
+          "isCorrect": false
+        },
+        {
+          "text": "Believe anything that uses technical jargon",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What role does community play in book reading?",
+      "description": "Many people improve faster in Book Reading with peers or mentors.",
+      "options": [
+        {
+          "text": "Communities can answer niche questions and share sane defaults",
+          "isCorrect": true
+        },
+        {
+          "text": "Communities always agree and never argue",
+          "isCorrect": false
+        },
+        {
+          "text": "You should never share your beginner questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Online advice is never useful",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which goal-setting style fits book reading for most beginners?",
+      "description": "Small measurable goals keep motivation for Book Reading.",
+      "options": [
+        {
+          "text": "One clear, achievable milestone per week",
+          "isCorrect": true
+        },
+        {
+          "text": "A vague goal to be the best in the world immediately",
+          "isCorrect": false
+        },
+        {
+          "text": "No goals—only random experimentation forever",
+          "isCorrect": false
+        },
+        {
+          "text": "Only goals you cannot measure or verify",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is a sign you should slow down in book reading?",
+      "description": "Pacing prevents injury, burnout, or wasted money in Book Reading.",
+      "options": [
+        {
+          "text": "You feel constant frustration, pain, or overspending",
+          "isCorrect": true
+        },
+        {
+          "text": "You still enjoy it and stay within your limits",
+          "isCorrect": false
+        },
+        {
+          "text": "You completed a small task successfully",
+          "isCorrect": false
+        },
+        {
+          "text": "You asked a thoughtful question",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "text": "How should you document what you learn in book reading?",
+      "description": "Notes turn experiments into reusable knowledge for Book Reading.",
+      "options": [
+        {
+          "text": "Keep a simple log: what you tried, what happened, what next",
+          "isCorrect": true
+        },
+        {
+          "text": "Rely only on memory for every detail",
+          "isCorrect": false
+        },
+        {
+          "text": "Never write anything because it feels slow",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy others' notes without understanding them",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "text": "Which attitude helps long-term growth in book reading?",
+      "description": "\"Book Reading Quiz\" rewards curiosity over perfectionism.",
+      "options": [
+        {
+          "text": "Treat mistakes as data and iterate calmly",
+          "isCorrect": true
+        },
+        {
+          "text": "Quit after the first imperfect attempt",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume you must never ask basic questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Compare your day one to someone else's year five",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "text": "What is the difference between fiction and non-fiction?",
+      "description": "Fiction is imaginary, while non-fiction is based on real facts.",
+      "options": [
+        { "text": "Fiction is imaginary, non-fiction is factual", "isCorrect": true },
+        { "text": "Both are imaginary", "isCorrect": false },
+        { "text": "Both are factual", "isCorrect": false },
+        { "text": "No difference", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 13,
+      "text": "What does 'skimming' a text mean?",
+      "description": "Skimming is reading quickly to get the main idea.",
+      "options": [
+        { "text": "Reading quickly for main idea", "isCorrect": true },
+        { "text": "Reading word by word slowly", "isCorrect": false },
+        { "text": "Skipping reading entirely", "isCorrect": false },
+        { "text": "Memorizing every word", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 14,
+      "text": "What is a common benefit of reading regularly?",
+      "description": "Reading improves vocabulary and comprehension.",
+      "options": [
+        { "text": "Improves vocabulary", "isCorrect": true },
+        { "text": "Reduces thinking ability", "isCorrect": false },
+        { "text": "Decreases focus", "isCorrect": false },
+        { "text": "No benefit", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 15,
+      "text": "What is the purpose of a bookmark?",
+      "description": "It helps track your place in a book.",
+      "options": [
+        { "text": "Mark your reading position", "isCorrect": true },
+        { "text": "Decorate book only", "isCorrect": false },
+        { "text": "Add notes automatically", "isCorrect": false },
+        { "text": "Highlight text", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 16,
+      "text": "What is an author?",
+      "description": "An author is the person who writes a book.",
+      "options": [
+        { "text": "Writer of a book", "isCorrect": true },
+        { "text": "Reader", "isCorrect": false },
+        { "text": "Publisher", "isCorrect": false },
+        { "text": "Editor only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 17,
+      "text": "What is a genre in books?",
+      "description": "A genre is a category or type of book based on content.",
+      "options": [
+        { "text": "A category of books", "isCorrect": true },
+        { "text": "A book cover design", "isCorrect": false },
+        { "text": "A writing tool", "isCorrect": false },
+        { "text": "A reading device", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 18,
+      "text": "What does 'reading comprehension' mean?",
+      "description": "It refers to understanding what you read.",
+      "options": [
+        { "text": "Understanding the text", "isCorrect": true },
+        { "text": "Reading quickly", "isCorrect": false },
+        { "text": "Skipping content", "isCorrect": false },
+        { "text": "Memorizing only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 19,
+      "text": "What is a novel?",
+      "description": "A novel is a long fictional narrative book.",
+      "options": [
+        { "text": "A long fictional story", "isCorrect": true },
+        { "text": "A short article", "isCorrect": false },
+        { "text": "A poem", "isCorrect": false },
+        { "text": "A dictionary", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 20,
+      "text": "What is the purpose of a table of contents?",
+      "description": "It helps locate chapters or sections in a book.",
+      "options": [
+        { "text": "Shows chapters and sections", "isCorrect": true },
+        { "text": "Summarizes the story", "isCorrect": false },
+        { "text": "Lists authors", "isCorrect": false },
+        { "text": "Shows images", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 21,
+      "text": "What is a summary in reading?",
+      "description": "A summary gives the main points of a text in brief.",
+      "options": [
+        { "text": "Short version of main ideas", "isCorrect": true },
+        { "text": "Full text copy", "isCorrect": false },
+        { "text": "Random notes", "isCorrect": false },
+        { "text": "Book title", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 22,
+      "text": "What does 'deep reading' involve?",
+      "description": "Deep reading means focused and thoughtful understanding.",
+      "options": [
+        { "text": "Careful and focused reading", "isCorrect": true },
+        { "text": "Reading fast only", "isCorrect": false },
+        { "text": "Skipping difficult parts", "isCorrect": false },
+        { "text": "Reading headlines only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 23,
+      "text": "Why is taking notes while reading helpful?",
+      "description": "Notes improve memory and understanding.",
+      "options": [
+        { "text": "Improves retention and clarity", "isCorrect": true },
+        { "text": "Slows reading only", "isCorrect": false },
+        { "text": "Adds no value", "isCorrect": false },
+        { "text": "Reduces comprehension", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 24,
+      "text": "What is an eBook?",
+      "description": "An eBook is a digital version of a book.",
+      "options": [
+        { "text": "Digital book", "isCorrect": true },
+        { "text": "Printed book", "isCorrect": false },
+        { "text": "Audio file", "isCorrect": false },
+        { "text": "Magazine only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 25,
+      "text": "What is an audiobook?",
+      "description": "An audiobook is a recorded narration of a book.",
+      "options": [
+        { "text": "Spoken version of a book", "isCorrect": true },
+        { "text": "Printed version", "isCorrect": false },
+        { "text": "Summary only", "isCorrect": false },
+        { "text": "Short story", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 26,
+      "text": "What does 'highlighting text' help with?",
+      "description": "Highlighting marks important parts for quick review.",
+      "options": [
+        { "text": "Identifying key points", "isCorrect": true },
+        { "text": "Decorating book", "isCorrect": false },
+        { "text": "Reducing reading", "isCorrect": false },
+        { "text": "Skipping sections", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 27,
+      "text": "What is a chapter in a book?",
+      "description": "A chapter is a section of a book.",
+      "options": [
+        { "text": "A section of the book", "isCorrect": true },
+        { "text": "A title page", "isCorrect": false },
+        { "text": "An image", "isCorrect": false },
+        { "text": "A bookmark", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 28,
+      "text": "What is a plot in a story?",
+      "description": "Plot refers to the sequence of events in a story.",
+      "options": [
+        { "text": "Sequence of events", "isCorrect": true },
+        { "text": "Book cover", "isCorrect": false },
+        { "text": "Author name", "isCorrect": false },
+        { "text": "Book price", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 29,
+      "text": "What is a character in a book?",
+      "description": "A character is a person or figure in a story.",
+      "options": [
+        { "text": "Person in a story", "isCorrect": true },
+        { "text": "Chapter title", "isCorrect": false },
+        { "text": "Reading tool", "isCorrect": false },
+        { "text": "Book format", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 30,
+      "text": "Why is reading environment important?",
+      "description": "A quiet space improves focus and comprehension.",
+      "options": [
+        { "text": "Improves focus", "isCorrect": true },
+        { "text": "Adds speed only", "isCorrect": false },
+        { "text": "Changes book content", "isCorrect": false },
+        { "text": "Reduces vocabulary", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 31,
+      "text": "What is the benefit of re-reading a book?",
+      "description": "Re-reading improves deeper understanding.",
+      "options": [
+        { "text": "Better understanding", "isCorrect": true },
+        { "text": "Waste of time", "isCorrect": false },
+        { "text": "No benefit", "isCorrect": false },
+        { "text": "Reduces memory", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 32,
+      "text": "What is a biography?",
+      "description": "A biography is a real-life story of a person.",
+      "options": [
+        { "text": "Life story of a person", "isCorrect": true },
+        { "text": "Fiction story", "isCorrect": false },
+        { "text": "Poetry", "isCorrect": false },
+        { "text": "Science book", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 33,
+      "text": "What is the main purpose of reading fiction?",
+      "description": "Fiction provides entertainment and imagination.",
+      "options": [
+        { "text": "Entertainment and imagination", "isCorrect": true },
+        { "text": "Only facts", "isCorrect": false },
+        { "text": "Only data", "isCorrect": false },
+        { "text": "Only instructions", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 34,
+      "text": "What is the benefit of reading non-fiction?",
+      "description": "Non-fiction provides factual knowledge.",
+      "options": [
+        { "text": "Gain real-world knowledge", "isCorrect": true },
+        { "text": "Only imagination", "isCorrect": false },
+        { "text": "No benefit", "isCorrect": false },
+        { "text": "Only stories", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 35,
+      "text": "What is a glossary in a book?",
+      "description": "A glossary explains difficult terms.",
+      "options": [
+        { "text": "List of definitions", "isCorrect": true },
+        { "text": "List of chapters", "isCorrect": false },
+        { "text": "List of authors", "isCorrect": false },
+        { "text": "List of images", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 36,
+      "text": "Why is reading regularly important?",
+      "description": "Consistency improves skills over time.",
+      "options": [
+        { "text": "Builds habit and improves skills", "isCorrect": true },
+        { "text": "No effect", "isCorrect": false },
+        { "text": "Reduces knowledge", "isCorrect": false },
+        { "text": "Only improves speed", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 37,
+      "text": "What is an index in a book?",
+      "description": "An index lists important topics and their page numbers.",
+      "options": [
+        { "text": "List of topics with page numbers", "isCorrect": true },
+        { "text": "Chapter summary", "isCorrect": false },
+        { "text": "Book introduction", "isCorrect": false },
+        { "text": "Author details", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 38,
+      "text": "What is a foreword in a book?",
+      "description": "A foreword is an introductory note, often written by someone other than the author.",
+      "options": [
+        { "text": "Introductory note by another person", "isCorrect": true },
+        { "text": "Final chapter", "isCorrect": false },
+        { "text": "Glossary section", "isCorrect": false },
+        { "text": "List of references", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 39,
+      "text": "What is the difference between a paperback and hardcover book?",
+      "description": "Paperback has a flexible cover, while hardcover has a rigid cover.",
+      "options": [
+        { "text": "Paperback is flexible, hardcover is rigid", "isCorrect": true },
+        { "text": "Both are same", "isCorrect": false },
+        { "text": "Paperback is digital", "isCorrect": false },
+        { "text": "Hardcover is shorter", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 40,
+      "text": "What is a reading goal?",
+      "description": "A reading goal is a target for how much or how often you read.",
+      "options": [
+        { "text": "Target for reading progress", "isCorrect": true },
+        { "text": "Book summary", "isCorrect": false },
+        { "text": "List of books", "isCorrect": false },
+        { "text": "Writing method", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 41,
+      "text": "What does 'speed reading' aim to improve?",
+      "description": "Speed reading focuses on increasing reading speed while maintaining comprehension.",
+      "options": [
+        { "text": "Reading speed", "isCorrect": true },
+        { "text": "Book size", "isCorrect": false },
+        { "text": "Writing skills", "isCorrect": false },
+        { "text": "Book design", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 42,
+      "text": "What is a library?",
+      "description": "A library is a place where books are stored and can be borrowed.",
+      "options": [
+        { "text": "Place to borrow books", "isCorrect": true },
+        { "text": "Bookstore only", "isCorrect": false },
+        { "text": "Reading device", "isCorrect": false },
+        { "text": "Publishing company", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 43,
+      "text": "What is a bookmark used for?",
+      "description": "A bookmark helps you remember where you stopped reading.",
+      "options": [
+        { "text": "Mark reading position", "isCorrect": true },
+        { "text": "Highlight text", "isCorrect": false },
+        { "text": "Decorate pages", "isCorrect": false },
+        { "text": "Summarize book", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 44,
+      "text": "What is a reading habit?",
+      "description": "A reading habit is a consistent practice of reading regularly.",
+      "options": [
+        { "text": "Regular reading routine", "isCorrect": true },
+        { "text": "Single reading session", "isCorrect": false },
+        { "text": "Book list", "isCorrect": false },
+        { "text": "Writing skill", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 45,
+      "text": "What is the role of an editor in publishing?",
+      "description": "An editor reviews and improves the content before publication.",
+      "options": [
+        { "text": "Improves and reviews content", "isCorrect": true },
+        { "text": "Prints books", "isCorrect": false },
+        { "text": "Sells books", "isCorrect": false },
+        { "text": "Writes books only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 46,
+      "text": "What is a publisher?",
+      "description": "A publisher produces and distributes books.",
+      "options": [
+        { "text": "Company that produces books", "isCorrect": true },
+        { "text": "Reader", "isCorrect": false },
+        { "text": "Writer only", "isCorrect": false },
+        { "text": "Library staff", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 47,
+      "text": "What is the purpose of book reviews?",
+      "description": "Reviews help readers decide if a book is worth reading.",
+      "options": [
+        { "text": "Help decide book choice", "isCorrect": true },
+        { "text": "Summarize entire book", "isCorrect": false },
+        { "text": "Replace reading", "isCorrect": false },
+        { "text": "Write new book", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 48,
+      "text": "What is a reading list?",
+      "description": "A reading list is a collection of books planned to read.",
+      "options": [
+        { "text": "List of books to read", "isCorrect": true },
+        { "text": "Book summary", "isCorrect": false },
+        { "text": "Writing notes", "isCorrect": false },
+        { "text": "Chapter titles", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 49,
+      "text": "What is fiction writing mainly focused on?",
+      "description": "Fiction focuses on imagination and storytelling.",
+      "options": [
+        { "text": "Imagination and storytelling", "isCorrect": true },
+        { "text": "Only facts", "isCorrect": false },
+        { "text": "Scientific data", "isCorrect": false },
+        { "text": "Instructions", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 50,
+      "text": "What is non-fiction writing mainly focused on?",
+      "description": "Non-fiction focuses on real facts and information.",
+      "options": [
+        { "text": "Real facts and information", "isCorrect": true },
+        { "text": "Imagination only", "isCorrect": false },
+        { "text": "Poetry", "isCorrect": false },
+        { "text": "Fantasy stories", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 51,
+      "text": "Why is reading aloud helpful sometimes?",
+      "description": "It improves pronunciation and understanding.",
+      "options": [
+        { "text": "Improves clarity and comprehension", "isCorrect": true },
+        { "text": "Slows learning", "isCorrect": false },
+        { "text": "Reduces focus", "isCorrect": false },
+        { "text": "Has no benefit", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 52,
+      "text": "What is the main benefit of diverse reading?",
+      "description": "Reading different genres expands knowledge and perspective.",
+      "options": [
+        { "text": "Expands knowledge and perspective", "isCorrect": true },
+        { "text": "Reduces understanding", "isCorrect": false },
+        { "text": "Limits vocabulary", "isCorrect": false },
+        { "text": "No benefit", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 53,
+      "text": "What is annotation in reading?",
+      "description": "Annotation means adding notes or comments to a text.",
+      "options": [
+        { "text": "Adding notes to text", "isCorrect": true },
+        { "text": "Skipping text", "isCorrect": false },
+        { "text": "Reading quickly", "isCorrect": false },
+        { "text": "Highlighting only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 54,
+      "text": "What is the benefit of setting a daily reading time?",
+      "description": "It helps build consistency and discipline.",
+      "options": [
+        { "text": "Builds consistency", "isCorrect": true },
+        { "text": "Reduces interest", "isCorrect": false },
+        { "text": "Slows progress", "isCorrect": false },
+        { "text": "Has no effect", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 55,
+      "text": "What is a classic book?",
+      "description": "A classic is a book widely recognized for its lasting value.",
+      "options": [
+        { "text": "Book with lasting importance", "isCorrect": true },
+        { "text": "New book only", "isCorrect": false },
+        { "text": "Short book", "isCorrect": false },
+        { "text": "Picture book", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 56,
+      "text": "What is the role of a book cover?",
+      "description": "It represents the book and attracts readers.",
+      "options": [
+        { "text": "Attract and represent content", "isCorrect": true },
+        { "text": "Only protect pages", "isCorrect": false },
+        { "text": "Summarize story fully", "isCorrect": false },
+        { "text": "Replace reading", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 57,
+      "text": "Why is reading before sleep beneficial?",
+      "description": "It helps relax the mind and improve sleep quality.",
+      "options": [
+        { "text": "Relaxes mind", "isCorrect": true },
+        { "text": "Reduces sleep", "isCorrect": false },
+        { "text": "Adds stress", "isCorrect": false },
+        { "text": "No effect", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 58,
+      "text": "What is the purpose of a preface?",
+      "description": "A preface is written by the author to explain the book’s purpose.",
+      "options": [
+        { "text": "Author’s introduction", "isCorrect": true },
+        { "text": "Ending summary", "isCorrect": false },
+        { "text": "Glossary", "isCorrect": false },
+        { "text": "Index", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 59,
+      "text": "What defines an effective reader?",
+      "description": "An effective reader understands, reflects, and applies what they read.",
+      "options": [
+        { "text": "Understands and applies content", "isCorrect": true },
+        { "text": "Reads fast only", "isCorrect": false },
+        { "text": "Reads randomly", "isCorrect": false },
+        { "text": "Avoids difficult texts", "isCorrect": false }
+      ]
+    }
+  ]
+}

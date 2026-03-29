@@ -1,0 +1,239 @@
+{
+  "slug": "technology",
+  "title": "Modern Tech Quiz",
+  "description": "Test your tech knowledge.",
+  "emoji": "💻",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "What does CPU stand for?",
+      "description": "Main processor of a computer.",
+      "options": [
+        {
+          "text": "Central Processing Unit",
+          "isCorrect": true
+        },
+        {
+          "text": "Control Unit",
+          "isCorrect": false
+        },
+        {
+          "text": "Computer Unit",
+          "isCorrect": false
+        },
+        {
+          "text": "Core Unit",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which language runs in browser?",
+      "description": "JavaScript powers web pages.",
+      "options": [
+        {
+          "text": "JavaScript",
+          "isCorrect": true
+        },
+        {
+          "text": "Python",
+          "isCorrect": false
+        },
+        {
+          "text": "Java",
+          "isCorrect": false
+        },
+        {
+          "text": "C++",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "Git is used for?",
+      "description": "Tracks and manages code changes.",
+      "options": [
+        {
+          "text": "Version control",
+          "isCorrect": true
+        },
+        {
+          "text": "Testing",
+          "isCorrect": false
+        },
+        {
+          "text": "Deployment",
+          "isCorrect": false
+        },
+        {
+          "text": "Design",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "Android owner?",
+      "description": "Google develops Android.",
+      "options": [
+        {
+          "text": "Google",
+          "isCorrect": true
+        },
+        {
+          "text": "Apple",
+          "isCorrect": false
+        },
+        {
+          "text": "Microsoft",
+          "isCorrect": false
+        },
+        {
+          "text": "Samsung",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "HTML full form?",
+      "description": "Used to structure web content.",
+      "options": [
+        {
+          "text": "HyperText Markup Language",
+          "isCorrect": true
+        },
+        {
+          "text": "HighText",
+          "isCorrect": false
+        },
+        {
+          "text": "Hyper Tool",
+          "isCorrect": false
+        },
+        {
+          "text": "Home Tool",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "NoSQL database?",
+      "description": "Stores flexible document data.",
+      "options": [
+        {
+          "text": "MongoDB",
+          "isCorrect": true
+        },
+        {
+          "text": "MySQL",
+          "isCorrect": false
+        },
+        {
+          "text": "Postgres",
+          "isCorrect": false
+        },
+        {
+          "text": "Oracle",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "Docker used for?",
+      "description": "Runs apps in containers.",
+      "options": [
+        {
+          "text": "Containerization",
+          "isCorrect": true
+        },
+        {
+          "text": "Coding",
+          "isCorrect": false
+        },
+        {
+          "text": "Testing",
+          "isCorrect": false
+        },
+        {
+          "text": "Storage",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "Secure protocol?",
+      "description": "Encrypts web communication.",
+      "options": [
+        {
+          "text": "HTTPS",
+          "isCorrect": true
+        },
+        {
+          "text": "HTTP",
+          "isCorrect": false
+        },
+        {
+          "text": "FTP",
+          "isCorrect": false
+        },
+        {
+          "text": "SMTP",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "URL full form?",
+      "description": "Identifies web resources.",
+      "options": [
+        {
+          "text": "Uniform Resource Locator",
+          "isCorrect": true
+        },
+        {
+          "text": "Universal Link",
+          "isCorrect": false
+        },
+        {
+          "text": "Reference Locator",
+          "isCorrect": false
+        },
+        {
+          "text": "Routing Link",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "Windows developed by?",
+      "description": "Microsoft created Windows OS.",
+      "options": [
+        {
+          "text": "Microsoft",
+          "isCorrect": true
+        },
+        {
+          "text": "Apple",
+          "isCorrect": false
+        },
+        {
+          "text": "IBM",
+          "isCorrect": false
+        },
+        {
+          "text": "Google",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

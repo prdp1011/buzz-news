@@ -1,0 +1,354 @@
+{
+  "sections": [
+    {
+      "slug": "coffee-lover",
+      "label": "Coffee Lover Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master coffee lover with 60 practical and engaging questions."
+    },
+    {
+      "slug": "tea-enthusiast",
+      "label": "Tea Enthusiast Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master tea enthusiast with 60 practical and engaging questions."
+    },
+    {
+      "slug": "home-cooking",
+      "label": "Home Cooking Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master home cooking with 60 practical and engaging questions."
+    },
+    {
+      "slug": "baking-skills",
+      "label": "Baking Skills Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master baking skills with 60 practical and engaging questions."
+    },
+    {
+      "slug": "street-food",
+      "label": "Street Food Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master street food with 60 practical and engaging questions."
+    },
+    {
+      "slug": "fitness-daily",
+      "label": "Fitness Daily Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master fitness daily with 60 practical and engaging questions."
+    },
+    {
+      "slug": "yoga-lifestyle",
+      "label": "Yoga Lifestyle Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master yoga lifestyle with 60 practical and engaging questions."
+    },
+    {
+      "slug": "running-habits",
+      "label": "Running Habits Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master running habits with 60 practical and engaging questions."
+    },
+    {
+      "slug": "cycling-life",
+      "label": "Cycling Life Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master cycling life with 60 practical and engaging questions."
+    },
+    {
+      "slug": "gym-knowledge",
+      "label": "Gym Knowledge Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master gym knowledge with 60 practical and engaging questions."
+    },
+    {
+      "slug": "travel-habits",
+      "label": "Travel Habits Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master travel habits with 60 practical and engaging questions."
+    },
+    {
+      "slug": "budget-travel",
+      "label": "Budget Travel Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master budget travel with 60 practical and engaging questions."
+    },
+    {
+      "slug": "luxury-travel",
+      "label": "Luxury Travel Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master luxury travel with 60 practical and engaging questions."
+    },
+    {
+      "slug": "solo-travel",
+      "label": "Solo Travel Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master solo travel with 60 practical and engaging questions."
+    },
+    {
+      "slug": "food-explorer",
+      "label": "Food Explorer Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master food explorer with 60 practical and engaging questions."
+    },
+    {
+      "slug": "music-taste",
+      "label": "Music Taste Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master music taste with 60 practical and engaging questions."
+    },
+    {
+      "slug": "instrument-basics",
+      "label": "Instrument Basics Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master instrument basics with 60 practical and engaging questions."
+    },
+    {
+      "slug": "dance-style",
+      "label": "Dance Style Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master dance style with 60 practical and engaging questions."
+    },
+    {
+      "slug": "movie-buff",
+      "label": "Movie Buff Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master movie buff with 60 practical and engaging questions."
+    },
+    {
+      "slug": "web-series-fan",
+      "label": "Web Series Fan Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master web series fan with 60 practical and engaging questions."
+    },
+    {
+      "slug": "pet-lover",
+      "label": "Pet Lover Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master pet lover with 60 practical and engaging questions."
+    },
+    {
+      "slug": "dog-care",
+      "label": "Dog Care Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master dog care with 60 practical and engaging questions."
+    },
+    {
+      "slug": "cat-behavior",
+      "label": "Cat Behavior Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master cat behavior with 60 practical and engaging questions."
+    },
+    {
+      "slug": "aquarium-life",
+      "label": "Aquarium Life Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master aquarium life with 60 practical and engaging questions."
+    },
+    {
+      "slug": "gardening-tips",
+      "label": "Gardening Tips Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master gardening tips with 60 practical and engaging questions."
+    },
+    {
+      "slug": "plant-care",
+      "label": "Plant Care Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master plant care with 60 practical and engaging questions."
+    },
+    {
+      "slug": "indoor-plants",
+      "label": "Indoor Plants Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master indoor plants with 60 practical and engaging questions."
+    },
+    {
+      "slug": "photography-skills",
+      "label": "Photography Skills Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master photography skills with 60 practical and engaging questions."
+    },
+    {
+      "slug": "mobile-photography",
+      "label": "Mobile Photography Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master mobile photography with 60 practical and engaging questions."
+    },
+    {
+      "slug": "camera-basics",
+      "label": "Camera Basics Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master camera basics with 60 practical and engaging questions."
+    },
+    {
+      "slug": "diy-projects",
+      "label": "Diy Projects Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master diy projects with 60 practical and engaging questions."
+    },
+    {
+      "slug": "craft-skills",
+      "label": "Craft Skills Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master craft skills with 60 practical and engaging questions."
+    },
+    {
+      "slug": "woodworking",
+      "label": "Woodworking Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master woodworking with 60 practical and engaging questions."
+    },
+    {
+      "slug": "painting-art",
+      "label": "Painting Art Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master painting art with 60 practical and engaging questions."
+    },
+    {
+      "slug": "sketching-basics",
+      "label": "Sketching Basics Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master sketching basics with 60 practical and engaging questions."
+    },
+    {
+      "slug": "fashion-style",
+      "label": "Fashion Style Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master fashion style with 60 practical and engaging questions."
+    },
+    {
+      "slug": "outfit-choice",
+      "label": "Outfit Choice Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master outfit choice with 60 practical and engaging questions."
+    },
+    {
+      "slug": "makeup-basics",
+      "label": "Makeup Basics Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master makeup basics with 60 practical and engaging questions."
+    },
+    {
+      "slug": "skincare-routine",
+      "label": "Skincare Routine Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master skincare routine with 60 practical and engaging questions."
+    },
+    {
+      "slug": "hair-care",
+      "label": "Hair Care Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master hair care with 60 practical and engaging questions."
+    },
+    {
+      "slug": "gaming-habits",
+      "label": "Gaming Habits Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master gaming habits with 60 practical and engaging questions."
+    },
+    {
+      "slug": "mobile-gaming",
+      "label": "Mobile Gaming Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master mobile gaming with 60 practical and engaging questions."
+    },
+    {
+      "slug": "console-gaming",
+      "label": "Console Gaming Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master console gaming with 60 practical and engaging questions."
+    },
+    {
+      "slug": "board-games",
+      "label": "Board Games Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master board games with 60 practical and engaging questions."
+    },
+    {
+      "slug": "puzzle-solving",
+      "label": "Puzzle Solving Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master puzzle solving with 60 practical and engaging questions."
+    },
+    {
+      "slug": "language-learning",
+      "label": "Language Learning Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master language learning with 60 practical and engaging questions."
+    },
+    {
+      "slug": "book-reading",
+      "label": "Book Reading Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master book reading with 60 practical and engaging questions."
+    },
+    {
+      "slug": "writing-skills",
+      "label": "Writing Skills Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master writing skills with 60 practical and engaging questions."
+    },
+    {
+      "slug": "public-speaking",
+      "label": "Public Speaking Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master public speaking with 60 practical and engaging questions."
+    },
+    {
+      "slug": "home-decor",
+      "label": "Home Decor Quiz",
+      "emoji": "🎯",
+      "coverImageUrl": "",
+      "description": "Master home decor with 60 practical and engaging questions."
+    }
+  ]
+}

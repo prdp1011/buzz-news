@@ -6,10 +6,8 @@ import { LogoutButton } from "./LogoutButton";
 
 const QUIZ_NAV = [
   { href: "/", label: "Dashboard" },
+  { href: "/quiz-data", label: "Web quizzes (JSON)" },
   { href: "/quiz-import", label: "JSON import" },
-  { href: "/quiz-sections", label: "Sections" },
-  { href: "/quiz-items", label: "Quizzes" },
-  { href: "/quiz-questions", label: "Questions" },
 ] as const;
 
 const LEGACY_NAV = [
@@ -26,7 +24,7 @@ export function AdminSidebar({ onNavigate }: { onNavigate?: () => void }) {
     <div className="flex h-full flex-col">
       <div className="border-b border-zinc-800 p-4">
         <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Quiz admin</p>
-        <p className="mt-1 text-sm text-zinc-400">Sections & quizzes — no catalog.</p>
+        <p className="mt-1 text-sm text-zinc-400">Edit site quiz JSON from here.</p>
       </div>
 
       <nav className="flex flex-col gap-1 p-3">

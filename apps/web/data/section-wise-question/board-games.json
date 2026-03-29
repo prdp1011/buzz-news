@@ -1,0 +1,604 @@
+{
+  "slug": "board-games",
+  "title": "Board Games Quiz",
+  "description": "Master board games with 12 practical and engaging questions.",
+  "emoji": "🎯",
+  "published": true,
+  "questions": [
+    {
+      "order": 0,
+      "text": "You are starting with board games. What is the most sensible first move?",
+      "description": "Foundations matter: Board Games rewards patience more than impulse buys.",
+      "options": [
+        {
+          "text": "Learn the basics, then add gear or complexity gradually",
+          "isCorrect": true
+        },
+        {
+          "text": "Buy every popular accessory on day one",
+          "isCorrect": false
+        },
+        {
+          "text": "Skip safety or setup steps to save time",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy a random viral trend without context",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 1,
+      "text": "Which habit usually hurts progress in board games?",
+      "description": "Consistency beats intensity for most people exploring Board Games.",
+      "options": [
+        {
+          "text": "Doing nothing regularly and only binge-practicing",
+          "isCorrect": true
+        },
+        {
+          "text": "Tracking small wins week to week",
+          "isCorrect": false
+        },
+        {
+          "text": "Asking experienced people targeted questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Adjusting your approach when something clearly fails",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "text": "In board games, why is it risky to ignore fundamentals?",
+      "description": "Core concepts in Board Games prevent expensive or discouraging setbacks.",
+      "options": [
+        {
+          "text": "Mistakes compound and become harder to untangle later",
+          "isCorrect": true
+        },
+        {
+          "text": "Fundamentals never matter for hobbies",
+          "isCorrect": false
+        },
+        {
+          "text": "You will automatically absorb basics without study",
+          "isCorrect": false
+        },
+        {
+          "text": "Only experts need to understand the basics",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "text": "What is a realistic expectation when learning board games?",
+      "description": "Board Games is a skill curve: early progress can feel slow.",
+      "options": [
+        {
+          "text": "Noticeable improvement often takes weeks of steady practice",
+          "isCorrect": true
+        },
+        {
+          "text": "You should master it perfectly within a few days",
+          "isCorrect": false
+        },
+        {
+          "text": "If it feels hard, you are not suited for it",
+          "isCorrect": false
+        },
+        {
+          "text": "Talent alone replaces practice",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "text": "Which approach helps you learn board games from feedback?",
+      "description": "Useful feedback speeds up learning in Board Games.",
+      "options": [
+        {
+          "text": "Change one variable at a time and observe the outcome",
+          "isCorrect": true
+        },
+        {
+          "text": "Change five things at once every session",
+          "isCorrect": false
+        },
+        {
+          "text": "Ignore results that contradict your assumptions",
+          "isCorrect": false
+        },
+        {
+          "text": "Avoid ever repeating a failed attempt",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "text": "When budgeting time for board games, what usually works best?",
+      "description": "Short regular sessions often beat rare marathons for Board Games.",
+      "options": [
+        {
+          "text": "Short, frequent sessions that fit your calendar",
+          "isCorrect": true
+        },
+        {
+          "text": "Only practice once a month for eight hours straight",
+          "isCorrect": false
+        },
+        {
+          "text": "Wait until you feel 100% motivated",
+          "isCorrect": false
+        },
+        {
+          "text": "Quit the first day you miss a session",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "text": "How can you avoid misinformation about board games?",
+      "description": "Cross-checking sources helps with Board Games, where myths spread quickly.",
+      "options": [
+        {
+          "text": "Compare multiple reputable sources and look for consensus",
+          "isCorrect": true
+        },
+        {
+          "text": "Trust the first bold claim you see online",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume older advice is always outdated",
+          "isCorrect": false
+        },
+        {
+          "text": "Believe anything that uses technical jargon",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "text": "What role does community play in board games?",
+      "description": "Many people improve faster in Board Games with peers or mentors.",
+      "options": [
+        {
+          "text": "Communities can answer niche questions and share sane defaults",
+          "isCorrect": true
+        },
+        {
+          "text": "Communities always agree and never argue",
+          "isCorrect": false
+        },
+        {
+          "text": "You should never share your beginner questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Online advice is never useful",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "text": "Which goal-setting style fits board games for most beginners?",
+      "description": "Small measurable goals keep motivation for Board Games.",
+      "options": [
+        {
+          "text": "One clear, achievable milestone per week",
+          "isCorrect": true
+        },
+        {
+          "text": "A vague goal to be the best in the world immediately",
+          "isCorrect": false
+        },
+        {
+          "text": "No goals—only random experimentation forever",
+          "isCorrect": false
+        },
+        {
+          "text": "Only goals you cannot measure or verify",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "text": "What is a sign you should slow down in board games?",
+      "description": "Pacing prevents injury, burnout, or wasted money in Board Games.",
+      "options": [
+        {
+          "text": "You feel constant frustration, pain, or overspending",
+          "isCorrect": true
+        },
+        {
+          "text": "You still enjoy it and stay within your limits",
+          "isCorrect": false
+        },
+        {
+          "text": "You completed a small task successfully",
+          "isCorrect": false
+        },
+        {
+          "text": "You asked a thoughtful question",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "text": "How should you document what you learn in board games?",
+      "description": "Notes turn experiments into reusable knowledge for Board Games.",
+      "options": [
+        {
+          "text": "Keep a simple log: what you tried, what happened, what next",
+          "isCorrect": true
+        },
+        {
+          "text": "Rely only on memory for every detail",
+          "isCorrect": false
+        },
+        {
+          "text": "Never write anything because it feels slow",
+          "isCorrect": false
+        },
+        {
+          "text": "Copy others' notes without understanding them",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "text": "Which attitude helps long-term growth in board games?",
+      "description": "\"Board Games Quiz\" rewards curiosity over perfectionism.",
+      "options": [
+        {
+          "text": "Treat mistakes as data and iterate calmly",
+          "isCorrect": true
+        },
+        {
+          "text": "Quit after the first imperfect attempt",
+          "isCorrect": false
+        },
+        {
+          "text": "Assume you must never ask basic questions",
+          "isCorrect": false
+        },
+        {
+          "text": "Compare your day one to someone else's year five",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "text": "In Monopoly, what happens if you land on an unowned property?",
+      "description": "You have the option to purchase it from the bank.",
+      "options": [
+        { "text": "You can buy it", "isCorrect": true },
+        { "text": "You skip your turn", "isCorrect": false },
+        { "text": "You pay rent", "isCorrect": false },
+        { "text": "Nothing happens", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 13,
+      "text": "What is the goal in the board game Catan?",
+      "description": "Players aim to reach 10 victory points.",
+      "options": [
+        { "text": "Reach 10 victory points", "isCorrect": true },
+        { "text": "Collect the most money", "isCorrect": false },
+        { "text": "Capture all players", "isCorrect": false },
+        { "text": "Build the biggest army only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 14,
+      "text": "In chess, what does 'checkmate' mean?",
+      "description": "The king is under attack and cannot escape.",
+      "options": [
+        { "text": "King cannot escape attack", "isCorrect": true },
+        { "text": "Game is paused", "isCorrect": false },
+        { "text": "King is safe", "isCorrect": false },
+        { "text": "Draw game", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 15,
+      "text": "What is the function of the robber in Catan?",
+      "description": "It blocks resource production and steals from players.",
+      "options": [
+        { "text": "Blocks resources and steals", "isCorrect": true },
+        { "text": "Adds resources", "isCorrect": false },
+        { "text": "Ends the game", "isCorrect": false },
+        { "text": "Gives bonus points", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 16,
+      "text": "In chess, how does a knight move?",
+      "description": "The knight moves in an L-shape.",
+      "options": [
+        { "text": "L-shape move", "isCorrect": true },
+        { "text": "Straight line", "isCorrect": false },
+        { "text": "Diagonal only", "isCorrect": false },
+        { "text": "One square only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 17,
+      "text": "What is the main strategy in Scrabble?",
+      "description": "Players aim to score high-value words using bonus tiles.",
+      "options": [
+        { "text": "Form high-scoring words", "isCorrect": true },
+        { "text": "Use random letters", "isCorrect": false },
+        { "text": "Avoid bonus tiles", "isCorrect": false },
+        { "text": "Play shortest words only", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 18,
+      "text": "In Ludo, what is required to move a token from the start?",
+      "description": "A player must roll a six.",
+      "options": [
+        { "text": "Roll a six", "isCorrect": true },
+        { "text": "Roll a one", "isCorrect": false },
+        { "text": "Roll any number", "isCorrect": false },
+        { "text": "Skip turn", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 19,
+      "text": "What is a 'draw' in chess?",
+      "description": "A game where neither player wins.",
+      "options": [
+        { "text": "No winner", "isCorrect": true },
+        { "text": "One player wins", "isCorrect": false },
+        { "text": "Game stops early", "isCorrect": false },
+        { "text": "Extra points awarded", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 20,
+      "text": "In Monopoly, what happens when you land on someone else's property?",
+      "description": "You must pay rent.",
+      "options": [
+        { "text": "Pay rent", "isCorrect": true },
+        { "text": "Take property", "isCorrect": false },
+        { "text": "Skip turn", "isCorrect": false },
+        { "text": "Gain money", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 32,
+      "text": "In chess, what is castling used for?",
+      "description": "Castling helps protect the king and develop the rook.",
+      "options": [
+        { "text": "Protect the king and activate rook", "isCorrect": true },
+        { "text": "Capture opponent pieces", "isCorrect": false },
+        { "text": "End the game", "isCorrect": false },
+        { "text": "Move two pawns", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 33,
+      "text": "In Monopoly, what is the benefit of owning all properties of a color group?",
+      "description": "Owning a set allows building houses and increasing rent.",
+      "options": [
+        { "text": "You can build houses and charge higher rent", "isCorrect": true },
+        { "text": "You win instantly", "isCorrect": false },
+        { "text": "You skip rent payments", "isCorrect": false },
+        { "text": "You collect free money", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 34,
+      "text": "In Catan, what resource is required to build roads?",
+      "description": "Roads require brick and wood.",
+      "options": [
+        { "text": "Brick and wood", "isCorrect": true },
+        { "text": "Stone and wheat", "isCorrect": false },
+        { "text": "Wood and sheep", "isCorrect": false },
+        { "text": "Gold and wheat", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 35,
+      "text": "In Scrabble, which tile has the highest point value?",
+      "description": "The Q and Z tiles typically have the highest value.",
+      "options": [
+        { "text": "Q or Z", "isCorrect": true },
+        { "text": "A", "isCorrect": false },
+        { "text": "E", "isCorrect": false },
+        { "text": "S", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 36,
+      "text": "In Ludo, what happens when your token lands on an opponent's token?",
+      "description": "The opponent’s token is sent back to start.",
+      "options": [
+        { "text": "Opponent returns to start", "isCorrect": true },
+        { "text": "Both tokens stay", "isCorrect": false },
+        { "text": "You lose turn", "isCorrect": false },
+        { "text": "Opponent wins", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 37,
+      "text": "What is the objective of the game Risk?",
+      "description": "Players aim to conquer territories and eliminate opponents.",
+      "options": [
+        { "text": "Conquer territories", "isCorrect": true },
+        { "text": "Collect money", "isCorrect": false },
+        { "text": "Solve puzzles", "isCorrect": false },
+        { "text": "Build houses", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 38,
+      "text": "In chess, what piece can move diagonally any number of squares?",
+      "description": "The bishop moves diagonally across the board.",
+      "options": [
+        { "text": "Bishop", "isCorrect": true },
+        { "text": "Rook", "isCorrect": false },
+        { "text": "Knight", "isCorrect": false },
+        { "text": "Pawn", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 39,
+      "text": "In Monopoly, what happens if you cannot pay rent?",
+      "description": "You may mortgage properties or go bankrupt.",
+      "options": [
+        { "text": "Mortgage or declare bankruptcy", "isCorrect": true },
+        { "text": "Skip payment", "isCorrect": false },
+        { "text": "Take loan automatically", "isCorrect": false },
+        { "text": "Restart game", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 40,
+      "text": "In Catan, what does the longest road card provide?",
+      "description": "It gives bonus victory points.",
+      "options": [
+        { "text": "Extra victory points", "isCorrect": true },
+        { "text": "Extra resources", "isCorrect": false },
+        { "text": "Extra turns", "isCorrect": false },
+        { "text": "Free trades", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 41,
+      "text": "In chess, what is stalemate?",
+      "description": "A draw where a player has no legal moves but is not in check.",
+      "options": [
+        { "text": "Draw with no legal moves", "isCorrect": true },
+        { "text": "Checkmate", "isCorrect": false },
+        { "text": "Victory", "isCorrect": false },
+        { "text": "Piece capture", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 42,
+      "text": "In Scrabble, what does a blank tile represent?",
+      "description": "It can represent any letter but has no point value.",
+      "options": [
+        { "text": "Any letter with zero points", "isCorrect": true },
+        { "text": "Highest value letter", "isCorrect": false },
+        { "text": "Extra turn", "isCorrect": false },
+        { "text": "Bonus points", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 43,
+      "text": "In Ludo, how do you win the game?",
+      "description": "You must move all tokens to the home area.",
+      "options": [
+        { "text": "Get all tokens home", "isCorrect": true },
+        { "text": "Capture all tokens", "isCorrect": false },
+        { "text": "Roll highest number", "isCorrect": false },
+        { "text": "Finish first turn", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 44,
+      "text": "In Risk, what determines the number of dice you can roll in attack?",
+      "description": "It depends on the number of attacking armies.",
+      "options": [
+        { "text": "Number of armies", "isCorrect": true },
+        { "text": "Territory size", "isCorrect": false },
+        { "text": "Player rank", "isCorrect": false },
+        { "text": "Turn number", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 45,
+      "text": "In chess, which piece can move in any direction but only one square?",
+      "description": "The king moves one square in any direction.",
+      "options": [
+        { "text": "King", "isCorrect": true },
+        { "text": "Queen", "isCorrect": false },
+        { "text": "Rook", "isCorrect": false },
+        { "text": "Bishop", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 46,
+      "text": "In Monopoly, what is the purpose of houses and hotels?",
+      "description": "They increase the rent value of properties.",
+      "options": [
+        { "text": "Increase rent", "isCorrect": true },
+        { "text": "Reduce taxes", "isCorrect": false },
+        { "text": "Skip turns", "isCorrect": false },
+        { "text": "End game faster", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 47,
+      "text": "In Catan, what happens when a 7 is rolled?",
+      "description": "The robber is activated.",
+      "options": [
+        { "text": "Robber is activated", "isCorrect": true },
+        { "text": "Everyone gains resources", "isCorrect": false },
+        { "text": "Game ends", "isCorrect": false },
+        { "text": "Free trade", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 48,
+      "text": "In chess, what is promotion?",
+      "description": "A pawn reaching the end can be promoted to another piece.",
+      "options": [
+        { "text": "Pawn becomes another piece", "isCorrect": true },
+        { "text": "Pawn moves backward", "isCorrect": false },
+        { "text": "Pawn disappears", "isCorrect": false },
+        { "text": "Pawn skips turn", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 49,
+      "text": "In Scrabble, what is a double word score?",
+      "description": "It doubles the total word score.",
+      "options": [
+        { "text": "Word score is doubled", "isCorrect": true },
+        { "text": "Letter score doubles", "isCorrect": false },
+        { "text": "Turn doubles", "isCorrect": false },
+        { "text": "Points reset", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 50,
+      "text": "In Ludo, what is a safe zone?",
+      "description": "A position where tokens cannot be captured.",
+      "options": [
+        { "text": "Token cannot be captured", "isCorrect": true },
+        { "text": "Extra move area", "isCorrect": false },
+        { "text": "Start point only", "isCorrect": false },
+        { "text": "Winning zone", "isCorrect": false }
+      ]
+    },
+    {
+      "order": 51,
+      "text": "What is the main goal in most board strategy games?",
+      "description": "Players aim to outscore or outmaneuver opponents.",
+      "options": [
+        { "text": "Outscore or outplay opponents", "isCorrect": true },
+        { "text": "End quickly", "isCorrect": false },
+        { "text": "Avoid moves", "isCorrect": false },
+        { "text": "Random play", "isCorrect": false }
+      ]
+    }
+  ]
+}

@@ -83,22 +83,22 @@ async function callOpenAI(
   return content;
 }
 
+const aiModuleDebug = () => process.env.AI_MODULE_DEBUG === "true";
+
 /**
  * Rewrites raw content for Gen Z audience
  */
 export async function rewriteContent(rawText: string): Promise<string> {
-  console.log('[ai-module] - > Start ');
   const clean = rawText.replace(/\s+/g, " ").trim().slice(0, 8000);
-  console.log('[ai-module] - > Start 2');
-  const hasKey = !!process.env.OPENAI_API_KEY;
-  console.log("[ai-module] rewriteContent", {
-    inputLen: rawText.length,
-    cleanLen: clean.length,
-    hasOpenAiKey: hasKey,
-  });
+  if (aiModuleDebug()) {
+    console.log("[ai-module] rewriteContent", {
+      inputLen: rawText.length,
+      cleanLen: clean.length,
+      hasOpenAiKey: !!process.env.OPENAI_API_KEY,
+    });
+  }
 
   if (!openai) {
-    console.log("[ai-module] No OpenAI key, using fallback (truncate)");
     return clean.slice(0, 5000);
   }
   try {
@@ -109,12 +109,97 @@ export async function rewriteContent(rawText: string): Promise<string> {
         content: `Rewrite this article as BULLET POINTS for a Gen Z audience. Each line should start with "•" and be one key fact or takeaway. Keep bullets punchy (under 15 words). Make it scannable and interactive. No long paragraphs.\n\n${clean}`,
       },
     ]);
-    console.log('[ai-module] - > rewriteContent ', result);
-    console.log("[ai-module] rewriteContent success", { outputLen: result?.length ?? 0 });
+    if (aiModuleDebug()) {
+      console.log("[ai-module] rewriteContent success", { outputLen: result?.length ?? 0 });
+    }
     return result.slice(0, 10000);
   } catch (err) {
-    console.warn("[ai-module] rewriteContent failed, using fallback:", err);
+    if (aiModuleDebug()) {
+      console.warn("[ai-module] rewriteContent failed, using fallback:", err);
+    }
     return clean.slice(0, 5000);
+  }
+}
+
+export type GeneratedQuizMcq = {
+  text: string;
+  description: string;
+  options: { text: string; isCorrect: boolean }[];
+};
+
+function parseGeneratedMcqJson(raw: string): GeneratedQuizMcq | null {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch {
+    return null;
+  }
+  if (typeof parsed !== "object" || parsed === null || Array.isArray(parsed)) return null;
+  const o = parsed as Record<string, unknown>;
+  const text = typeof o.text === "string" ? o.text.trim() : "";
+  const description = typeof o.description === "string" ? o.description.trim() : "";
+  if (!text) return null;
+  const opts = o.options;
+  if (!Array.isArray(opts) || opts.length !== 4) return null;
+  const out: { text: string; isCorrect: boolean }[] = [];
+  let correct = 0;
+  for (const item of opts) {
+    if (typeof item !== "object" || item === null || Array.isArray(item)) return null;
+    const r = item as Record<string, unknown>;
+    const t = typeof r.text === "string" ? r.text.trim() : "";
+    if (!t) return null;
+    const isCorrect = r.isCorrect === true;
+    if (isCorrect) correct++;
+    out.push({ text: t, isCorrect });
+  }
+  if (correct !== 1) return null;
+  return { text, description, options: out };
+}
+
+/**
+ * One multiple-choice question (4 options, exactly one correct). Returns null if no API key or parse fails.
+ */
+export async function generateQuizMcqQuestion(params: {
+  topicHint: string;
+  quizTitle?: string;
+  quizDescription?: string;
+}): Promise<GeneratedQuizMcq | null> {
+  if (!openai) return null;
+  const hint = params.topicHint.replace(/\s+/g, " ").trim().slice(0, 500);
+  if (!hint) return null;
+  const ctx = [
+    params.quizTitle ? `Quiz title: ${params.quizTitle}` : "",
+    params.quizDescription ? `Quiz blurb: ${params.quizDescription.slice(0, 400)}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  const system = `You write one educational multiple-choice question as JSON only, no markdown.
+Schema: {"text":"string","description":"1-2 sentence explanation of the correct answer","options":[{"text":"string","isCorrect":boolean},...]}
+Rules: exactly 4 options; exactly one option has "isCorrect": true; others false; text must be concise and unambiguous.`;
+
+  try {
+    const res = await openai.chat.completions.create({
+      model: process.env.OPENAI_MODEL ?? "gpt-4o-mini",
+      messages: [
+        { role: "system", content: system },
+        {
+          role: "user",
+          content: `${ctx ? `${ctx}\n\n` : ""}Topic or direction for the new question:\n${hint}`,
+        },
+      ],
+      max_tokens: 600,
+      temperature: 0.65,
+      response_format: { type: "json_object" },
+    });
+    const content = res.choices[0]?.message?.content?.trim();
+    if (!content) return null;
+    return parseGeneratedMcqJson(content);
+  } catch (err) {
+    if (aiModuleDebug()) {
+      console.warn("[ai-module] generateQuizMcqQuestion failed:", err);
+    }
+    return null;
   }
 }
 
