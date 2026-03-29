@@ -4,7 +4,7 @@ import { getBaseUrl, SITE_NAME } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${SITE_NAME} — quick trivia quizzes, topics, and instant scoring.`,
+  description: `Learn about ${SITE_NAME} — quick trivia quizzes by section and instant scoring.`,
   alternates: { canonical: `${getBaseUrl()}/about` },
   openGraph: { url: `${getBaseUrl()}/about`, type: "website" },
 };
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <h2 className="text-base font-semibold text-zinc-100 md:text-lg">How it works</h2>
           <ul className="list-disc space-y-1 pl-6">
             <li>
-              <strong>Browse</strong> quizzes on the home page or by topic in the sidebar.
+              <strong>Browse</strong> quizzes on the home page or open the menu to jump to a section.
             </li>
             <li>
               <strong>Play</strong> — each step shows one question and four options.

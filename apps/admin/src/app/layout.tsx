@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Admin | Buzz News",
-  description: "Admin panel for Buzz News platform",
+  title: "Admin | QuizLab",
+  description: "Admin panel for QuizLab",
 };
 
 export default function RootLayout({

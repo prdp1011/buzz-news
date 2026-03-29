@@ -159,7 +159,22 @@ async function main() {
     },
   });
 
-  // Quiz: Nursery Rhyme Mastermind–style trivia
+  // Quiz section + quiz (section has cover image; quizzes are text/emoji only)
+  const nurserySection = await prisma.quizSection.upsert({
+    where: { slug: "nursery-rhymes" },
+    update: {
+      label: "Nursery rhymes",
+      coverImageUrl:
+        "https://images.unsplash.com/photo-1544716278-ca5e3f16abd8?auto=format&fit=crop&w=1600&q=80",
+    },
+    create: {
+      slug: "nursery-rhymes",
+      label: "Nursery rhymes",
+      coverImageUrl:
+        "https://images.unsplash.com/photo-1544716278-ca5e3f16abd8?auto=format&fit=crop&w=1600&q=80",
+    },
+  });
+
   const nurseryQuiz = await prisma.quiz.upsert({
     where: { slug: "nursery-rhyme-mastermind" },
     update: {
@@ -167,9 +182,8 @@ async function main() {
       description:
         "Classic lines, characters, and twists from nursery rhymes — pick the right finish.",
       emoji: "🎵",
-      topicSlug: "nursery-rhymes",
-      topicLabel: "Nursery rhymes",
       published: true,
+      sectionId: nurserySection.id,
     },
     create: {
       slug: "nursery-rhyme-mastermind",
@@ -177,20 +191,26 @@ async function main() {
       description:
         "Classic lines, characters, and twists from nursery rhymes — pick the right finish.",
       emoji: "🎵",
-      topicSlug: "nursery-rhymes",
-      topicLabel: "Nursery rhymes",
       published: true,
+      sectionId: nurserySection.id,
     },
   });
 
   await prisma.quizQuestion.deleteMany({ where: { quizId: nurseryQuiz.id } });
 
-  type Q = { text: string; options: [string, string, string, string]; correctIndex: number };
+  type Q = {
+    text: string;
+    options: [string, string, string, string];
+    correctIndex: number;
+    description?: string | null;
+  };
   const nurseryQuestions: Q[] = [
     {
       text: "Humpty Dumpty sat on a…",
       options: ["Wall", "Stool", "Fence", "Roof"],
       correctIndex: 0,
+      description:
+        "The nursery rhyme goes: Humpty Dumpty sat on a wall — “wall” is the classic answer.",
     },
     {
       text: "Jack and Jill went up the…",
@@ -236,6 +256,7 @@ async function main() {
         quizId: nurseryQuiz.id,
         order: i,
         text: q.text,
+        description: q.description ?? null,
         options: {
           create: q.options.map((text, j) => ({
             order: j,
@@ -253,6 +274,7 @@ async function main() {
   console.log(`   - ${tags.length} tags`);
   console.log(`   - 1 admin user (buzznnews@gmail.com / admin123)`);
   console.log(`   - 1 sample post`);
+  console.log(`   - 1 quiz section (nursery-rhymes) with cover image`);
   console.log(`   - 1 quiz (nursery-rhyme-mastermind)`);
 }
 

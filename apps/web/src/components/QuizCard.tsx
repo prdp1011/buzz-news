@@ -4,7 +4,7 @@ import type { QuizListItem } from "@/lib/quiz";
 export function QuizCard({ quiz }: { quiz: QuizListItem }) {
   return (
     <Link
-      href={`/quiz/${quiz.slug}`}
+      href={`/quiz/${quiz.slug}/1`}
       className="group block rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 transition hover:border-amber-500/40 hover:bg-zinc-900/80"
     >
       <div className="mb-3 flex items-start justify-between gap-3">
@@ -21,7 +21,9 @@ export function QuizCard({ quiz }: { quiz: QuizListItem }) {
       {quiz.description && (
         <p className="mt-2 line-clamp-2 text-sm text-zinc-500">{quiz.description}</p>
       )}
-      <p className="mt-3 text-xs font-medium text-zinc-600">{quiz.topicLabel}</p>
+      <p className="mt-3 text-xs font-medium text-zinc-600">
+        <span className="text-zinc-500">Section</span> · {quiz.sectionLabel}
+      </p>
     </Link>
   );
 }

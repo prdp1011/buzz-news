@@ -14,6 +14,15 @@ config({ path: envPath });
 const nextConfig: NextConfig = {
   transpilePackages: ["database", "shared"],
   output: "standalone",
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
+      { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
+    ],
+  },
+  async redirects() {
+    return [{ source: "/topic/:slug", destination: "/section/:slug", permanent: true }];
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.plugins = [...(config.plugins ?? []), new PrismaPlugin()];

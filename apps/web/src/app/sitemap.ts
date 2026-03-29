@@ -1,5 +1,4 @@
 import { MetadataRoute } from "next";
-import { prisma } from "database";
 import { getBaseUrl } from "@/lib/seo";
 
 export const revalidate = 3600;
@@ -15,32 +14,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   try {
-    const [quizzes, topicRows] = await Promise.all([
-      prisma.quiz.findMany({
-        where: { published: true },
-        select: { slug: true, updatedAt: true },
-      }),
-      prisma.quiz.groupBy({
-        by: ["topicSlug"],
-        where: { published: true },
-      }),
-    ]);
+    const res = await fetch(`${baseUrl}/api/quiz/sitemap`, {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return staticPages;
 
-    const quizUrls: MetadataRoute.Sitemap = quizzes.map((q) => ({
-      url: `${baseUrl}/quiz/${q.slug}`,
-      lastModified: q.updatedAt,
+    const data = (await res.json()) as {
+      quizzes: { slug: string; updatedAt: string }[];
+      sections: { slug: string; updatedAt: string }[];
+    };
+
+    const quizUrls: MetadataRoute.Sitemap = data.quizzes.map((q) => ({
+      url: `${baseUrl}/quiz/${q.slug}/1`,
+      lastModified: new Date(q.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.85,
     }));
 
-    const topicUrls: MetadataRoute.Sitemap = topicRows.map((t) => ({
-      url: `${baseUrl}/topic/${t.topicSlug}`,
-      lastModified: new Date(),
+    const sectionUrls: MetadataRoute.Sitemap = data.sections.map((s) => ({
+      url: `${baseUrl}/section/${s.slug}`,
+      lastModified: new Date(s.updatedAt),
       changeFrequency: "weekly" as const,
       priority: 0.7,
     }));
 
-    return [...staticPages, ...topicUrls, ...quizUrls];
+    return [...staticPages, ...sectionUrls, ...quizUrls];
   } catch {
     return staticPages;
   }

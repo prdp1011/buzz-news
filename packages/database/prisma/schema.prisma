@@ -181,29 +181,44 @@ model ContentHash {
 
 // ============ QUIZ (public web app) ============
 
+model QuizSection {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  label         String
+  coverImageUrl String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  quizzes Quiz[]
+
+  @@index([slug])
+}
+
 model Quiz {
-  id          String   @id @default(cuid())
-  slug        String   @unique
+  id          String      @id @default(cuid())
+  slug        String      @unique
   title       String
-  description String?  @db.Text
+  description String?     @db.Text
   emoji       String?
-  topicSlug   String
-  topicLabel  String
-  published   Boolean  @default(true)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  published   Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  sectionId String
+  section   QuizSection @relation(fields: [sectionId], references: [id], onDelete: Restrict)
 
   questions QuizQuestion[]
 
-  @@index([published, topicSlug])
+  @@index([published, sectionId])
 }
 
 model QuizQuestion {
-  id     String @id @default(cuid())
-  quizId String
-  quiz   Quiz   @relation(fields: [quizId], references: [id], onDelete: Cascade)
-  order  Int
-  text   String @db.Text
+  id          String  @id @default(cuid())
+  quizId      String
+  quiz        Quiz    @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  order       Int
+  text        String  @db.Text
+  description String? @db.Text
 
   options QuizOption[]
 

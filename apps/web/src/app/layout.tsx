@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-
-/** Quiz nav and sidebars load topics from DB; avoid static prerender without DATABASE_URL. */
-export const dynamic = "force-dynamic";
 import { Outfit } from "next/font/google";
-import { prisma } from "database";
 import { Footer } from "@/components/Footer";
-import { LeftSidebar } from "@/components/LeftSidebar";
-import { MobileNav } from "@/components/MobileNav";
-import { RightSidebar } from "@/components/RightSidebar";
+import { SiteHeader } from "@/components/SiteHeader";
+import { AsideColumn } from "@/components/AsideColumn";
 import { NavigationLoader } from "@/components/NavigationLoader";
+import { AdSenseLoader, AdSlot } from "@/components/ads/GoogleAdSense";
+import { getQuizSections } from "@/lib/quiz";
 import { SITE_NAME, SITE_DESCRIPTION, getBaseUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -20,6 +17,8 @@ const outfit = Outfit({
 
 const baseUrl = getBaseUrl();
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
@@ -27,7 +26,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  keywords: ["quiz", "trivia", "multiple choice", "games", "nursery rhymes"],
+  keywords: ["quiz", "trivia", "multiple choice", "games"],
   authors: [{ name: SITE_NAME, url: baseUrl }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
@@ -62,13 +61,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const topicRows = await prisma.quiz.groupBy({
-    by: ["topicSlug", "topicLabel"],
-    where: { published: true },
-  });
-  const quizTopics = topicRows
-    .map((t) => ({ slug: t.topicSlug, label: t.topicLabel }))
-    .sort((a, b) => a.label.localeCompare(b.label));
+  const sections = await getQuizSections();
 
   const organizationJsonLd = {
     "@context": "https://schema.org",
@@ -90,6 +83,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <body className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100 antialiased font-sans">
+        <AdSenseLoader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -99,20 +93,31 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <NavigationLoader />
-        <LeftSidebar topics={quizTopics} />
-        <MobileNav topics={quizTopics} />
+        <SiteHeader sections={sections} />
 
-        {/* Main content - offset for left sidebar on desktop */}
-        <div className="flex flex-1 flex-col lg:pl-16 px-3 py-4 md:p-2 md:py-0">
-          <div className="mx-auto flex max-w-6xl gap-8 px-0 py-0 md:px-4 md:py-6">
-            {/* Center - main feed: 470px width on desktop, full width on mobile */}
-            <main className="w-full shrink-0 md:mx-auto md:max-w-[470px] md:flex-1">
+        <div className="flex flex-1 flex-col px-3 pb-6 pt-0 md:px-4">
+          <div className="mx-auto w-full max-w-7xl">
+            <AdSlot placement="top" className="mb-4" />
+          </div>
+
+          <div className="mx-auto flex w-full max-w-7xl flex-1 gap-4 lg:gap-6">
+            <div className="hidden w-[160px] shrink-0 lg:block">
+              <div className="sticky top-20">
+                <AdSlot placement="rail-left" />
+              </div>
+            </div>
+
+            <main className="min-w-0 flex-1 md:max-w-2xl md:mx-auto lg:mx-0 w-full">
               {children}
             </main>
 
-            {/* Right sidebar */}
-            <RightSidebar />
+            <AsideColumn />
           </div>
+
+          <div className="mx-auto mt-8 w-full max-w-7xl">
+            <AdSlot placement="bottom" />
+          </div>
+
           <Footer />
         </div>
       </body>
